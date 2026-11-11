@@ -15,20 +15,21 @@ export default function render(ctx) {
   return `<article class="about-page case-study">
     <header class="about-hero">
       <div class="about-introduction">
-        <h1>I’m Monisha—a product designer with a spatial and systems perspective.</h1>
+        <h1>Hi, I'm Monisha!</h1>
         <div class="about-intro-copy">
-          <p>I began in architecture, designing around how people move through and use spaces. A master’s in Human-Computer Interaction and Design at Indiana University Bloomington brought that perspective into digital products. Today, I connect research, interface design, and workflow automation to make complex systems easier to use.</p>
-          <p>Originally from Bangalore, I enjoy working with people who bring different perspectives and learning across disciplines.</p>
+          <p>I'm a multidisciplinary Product Designer with a background in architecture and a master's in Human-Computer Interaction and Design from Indiana University Bloomington. My journey from designing physical spaces to digital experiences has shaped how I approach design—combining spatial thinking, user research, and a systems perspective to create intuitive, meaningful products.</p>
+          <p>Today, I work at the intersection of design, strategy, and technology, turning complex problems into simple, human-centered solutions. From interfaces to AI-powered tools, I love bringing ideas to life while balancing form, function, and impact.</p>
+          <p>Originally from Bangalore and now based in NYC, I enjoy collaborating across disciplines, exploring new ideas, and creating experiences that make a difference.</p>
         </div>
       </div>
-      <figure class="about-portrait"><img src="/assets/monisha-mansukhani-portrait.png" alt="Monisha Mansukhani" width="576" height="576" fetchpriority="high" decoding="async"></figure>
+      <figure class="about-portrait"><img src="/assets/monisha-mansukhani-portrait.jpeg" alt="Monisha Mansukhani" width="1280" height="1280" fetchpriority="high" decoding="async"></figure>
     </header>
 
     ${section({
       id:'approach',
       kicker:'Philosophy & process',
       title:'How I work',
-      body:`<div class="about-values">${values.map(([title,copy]) => `<div><h3>${e(title)}</h3><p>${e(copy)}</p></div>`).join('')}</div>`
+      body:`<div class="about-strengths">${values.map(([title,copy]) => `<div><h3>${e(title)}</h3><p>${e(copy)}</p></div>`).join('')}</div>`
     })}
 
     ${section({

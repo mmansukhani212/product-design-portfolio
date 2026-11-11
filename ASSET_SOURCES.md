@@ -25,6 +25,6 @@ No generated project UI, stock project imagery, or reference-portfolio media is 
 | block-party-feedback.webp | ../Block Party/Figma Screens/Feedback Page.png, 852 × 393, uncropped. |
 | block-party-submit.webp | ../Block Party/Figma Screens/Build Page Submit.png, 852 × 393, uncropped. |
 | iheart-iteration.webp | https://framerusercontent.com/images/nQge63Wbg8QBb6KmyICqSsJgHag.png via the approved shared case study. Full original composition resized to 2400 × 1560; credit is visible on the case-study page. Shows shared location-setting and playback-label iterations. Raw source in qa/iheart-iteration-source.png. |
-| monisha-mansukhani-portrait.png | ../assets/monisha-mansukhani-portrait.png. Byte-identical copy, 576 × 576. Only a rounded CSS frame is applied. |
+| monisha-mansukhani-portrait.jpeg | /Users/monishamansukhani/Downloads/Monisha Mansukhani_Picture.jpeg. User-selected replacement, November 11, 2026. Byte-identical 1280 × 1280 JPEG; CSS rounds the corners and limits display width without a coloured backdrop. Previous supplied portrait remains preserved in the parent workspace. |
 
 The before/after Rokt workflow uses selectable HTML and the confirmed project sequence. It is labeled as a reconstructed explainer, not a captured production artifact. Block Party’s Figma access failure was rechecked in-browser; no native frames are claimed as inspected.
