@@ -1,4 +1,5 @@
 export function pageTools(site, e) {
+  const caseNav = items => `<nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links">${items.map(([id, label]) => `<a href="#${e(id)}"><span>${e(label)}</span></a>`).join('')}</div></details></nav>`;
   const media = ({src, alt, caption, width, height, className = '', eager = false}) => `
     <figure class="case-figure ${e(className)}">
       <a class="inspect-link" data-inspect href="${e(src)}" target="_blank" rel="noopener" aria-label="Inspect image: ${e(alt)} (opens larger)">
@@ -31,7 +32,7 @@ export function pageTools(site, e) {
       <p class="preview-status" role="status"></p>
     </section>`;
   const nextProject = project => `<nav class="next-project" aria-label="Next project"><div><p class="eyebrow">Next project</p><a href="/work/${e(project.slug)}"><h2>${e(project.name)} <span aria-hidden="true">↗</span></h2><p>${e(project.title)}</p></a></div></nav>`;
-  return {site, e, media, section, caseHeader, overview, preview, nextProject};
+  return {site, e, media, section, caseHeader, overview, preview, nextProject, caseNav};
 }
 
 export const imageViewer = `<dialog class="image-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">Project visual</h2><div><button type="button" class="viewer-zoom" aria-pressed="false">Zoom in</button><a class="viewer-original" target="_blank" rel="noopener">Open image ↗<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="viewer-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button></div></div><div class="viewer-canvas" tabindex="0" aria-label="Image viewing area; scroll to inspect when zoomed"><img alt=""></div><p class="viewer-caption"></p></dialog>`;

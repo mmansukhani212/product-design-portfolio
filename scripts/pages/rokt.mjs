@@ -1,6 +1,6 @@
 /** Rokt narrative: confirmed workflow and role; demo imagery is illustrative. */
 export default function render(ctx) {
-  const {e, project, media, section, caseHeader, overview, preview, nextProject, next} = ctx;
+  const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next} = ctx;
   const step = (title, detail) => `<li><strong>${e(title)}</strong><span>${e(detail)}</span></li>`;
 
   const workflow = `<div class="rokt-workflows" aria-label="Before and after reporting workflows">
@@ -52,9 +52,16 @@ export default function render(ctx) {
       outcome: {title: 'Daily shared visibility', body: 'Broader access to churn-risk information, with faster preparation of retention action plans reported from the project.'}
     })}
 
-    <nav class="case-wrap rokt-page-nav" aria-label="On this page">
-      <a href="#rokt-problem">The problem</a><a href="#rokt-workflow">Workflow</a><a href="#rokt-review">Manager review</a><a href="#rokt-demo">Explore the demo</a>
-    </nav>
+    <div class="case-reading-layout">
+      ${caseNav([
+        ['rokt-problem', 'The problem'],
+        ['rokt-workflow', 'Workflow'],
+        ['rokt-review', 'Manager review'],
+        ['rokt-dashboard', 'Dashboard'],
+        ['rokt-demo', 'Explore the demo'],
+        ['rokt-reflection', 'Reflection']
+      ])}
+      <div class="case-reading-content">
 
     ${section({
       id: 'rokt-problem', kicker: '01 · The problem', title: 'Important signals depended on someone passing them along.',
@@ -92,6 +99,8 @@ export default function render(ctx) {
       body: '<div class="case-prose"><p>A review deadline can improve reporting coverage while leaving uncertainty about the underlying information. The next refinement I would prioritize is making the validation state unmistakable, so stakeholders can judge what is ready for action and what needs follow-up.</p></div>'
     })}
 
+      </div>
+    </div>
     ${nextProject(next)}
   </article>`;
 }

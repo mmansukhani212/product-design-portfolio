@@ -1,5 +1,5 @@
-.rokt-page-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 25px;margin-top:4px;margin-bottom:30px;padding-top:18px;padding-bottom:18px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.rokt-page-nav a{font-size:12px;color:var(--deep);min-height:32px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:5px;text-decoration-color:#aebfdb}
+
+
 .rokt-workflows{display:grid;gap:23px}
 .rokt-flow{padding:30px;border:1px solid var(--border);border-radius:22px;background:#fff}
 .rokt-flow-after{background:var(--wash)}
@@ -22,4 +22,4 @@
 .rokt-validation h3{font-size:21px;line-height:1.4;margin:12px 0 10px;letter-spacing:-.025em}
 .rokt-validation>div>p:not(.eyebrow){font-size:13px;line-height:1.8;color:var(--body)}
 @media(max-width:1050px){.rokt-flow-five{grid-template-columns:repeat(3,minmax(0,1fr))}.rokt-flow-five li:nth-child(3):after{display:none}}
-@media(max-width:767px){.rokt-page-nav{justify-content:flex-start;gap:7px 19px}.rokt-page-nav a{font-size:11px;min-height:36px}.rokt-flow{padding:22px}.rokt-flow-label{display:block;margin-bottom:19px}.rokt-flow-label h3{font-size:21px;margin-top:9px}.rokt-flow-three,.rokt-flow-five{grid-template-columns:1fr;gap:19px}.rokt-flow-steps li{padding:17px 18px}.rokt-flow-steps strong{font-size:14px}.rokt-flow-steps li>span{font-size:12px}.rokt-flow-steps li:not(:last-child):after{content:'↓';right:22px;top:auto;bottom:-17px}.rokt-flow-five li:nth-child(3):after{display:block}.rokt-flow-note{font-size:12px}.rokt-validation{grid-template-columns:1fr;gap:15px}.rokt-validation>div{padding:24px}.rokt-validation h3{font-size:22px}.rokt-validation>div>p:not(.eyebrow){font-size:14px}}
+@media(max-width:767px){.rokt-flow{padding:22px}.rokt-flow-label{display:block;margin-bottom:19px}.rokt-flow-label h3{font-size:21px;margin-top:9px}.rokt-flow-three,.rokt-flow-five{grid-template-columns:1fr;gap:19px}.rokt-flow-steps li{padding:17px 18px}.rokt-flow-steps strong{font-size:14px}.rokt-flow-steps li>span{font-size:12px}.rokt-flow-steps li:not(:last-child):after{content:'↓';right:22px;top:auto;bottom:-17px}.rokt-flow-five li:nth-child(3):after{display:block}.rokt-flow-note{font-size:12px}.rokt-validation{grid-template-columns:1fr;gap:15px}.rokt-validation>div{padding:24px}.rokt-validation h3{font-size:22px}.rokt-validation>div>p:not(.eyebrow){font-size:14px}}

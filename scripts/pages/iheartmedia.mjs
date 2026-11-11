@@ -4,7 +4,7 @@
  * undocumented. Do not infer exclusive ownership or quantified retention impact.
  */
 export default function render(ctx) {
-  const {caseHeader, overview, section, media, nextProject, next} = ctx;
+  const {caseNav, caseHeader, overview, section, media, nextProject, next} = ctx;
   const reference = 'https://www.manasighutukade.work/iheartmedia';
   const sourceLink = `<a href="${reference}" target="_blank" rel="noopener">Shared project account by Manasi Ghutukade <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>`;
 
@@ -36,12 +36,14 @@ export default function render(ctx) {
         ],
         outcome: null
       })}
-      <nav class="case-jump-nav" aria-label="On this page">
-        <a href="#iheart-problem">The challenge</a>
-        <a href="#iheart-decisions">Design decisions</a>
-        <a href="#iheart-iteration">Iteration</a>
-        <a href="#iheart-reflection">Reflection</a>
-      </nav>
+      <div class="case-reading-layout">
+      ${caseNav([
+        ['iheart-problem', 'The challenge'],
+        ['iheart-decisions', 'Design decisions'],
+        ['iheart-iteration', 'Iteration'],
+        ['iheart-reflection', 'Reflection']
+      ])}
+      <div class="case-reading-content">
       ${section({
         id: 'iheart-problem',
         kicker: '01 / The challenge',
@@ -79,6 +81,8 @@ export default function render(ctx) {
         title: 'Clarity before more features.',
         body: '<div class="case-prose"><p>For a next iteration, I would test core-action comprehension before expanding social features.</p></div>'
       })}
+      </div>
+      </div>
     </div>
     ${nextProject(next)}
   </article>`;

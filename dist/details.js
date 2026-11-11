@@ -1,3 +1,44 @@
+// Native anchors and disclosure remain usable without JavaScript.
+for (const nav of document.querySelectorAll('.case-section-nav')) {
+  const disclosure = nav.querySelector('details');
+  const desktop = matchMedia('(min-width: 960px)');
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const links = [...nav.querySelectorAll('a[href^="#"]')];
+  const targets = links.map(link => document.getElementById(link.hash.slice(1)));
+  const setLayout = () => { disclosure.open = desktop.matches; };
+  setLayout();
+  desktop.addEventListener('change', setLayout);
+  const markCurrent = index => links.forEach((link, i) => {
+    if (i === index) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  let scheduled = false;
+  const updateCurrent = () => {
+    scheduled = false;
+    const threshold = document.querySelector('.site-header').getBoundingClientRect().bottom + 48;
+    let index = -1;
+    targets.forEach((target, i) => { if (target.getBoundingClientRect().top <= threshold) index = i; });
+    markCurrent(index);
+  };
+  const scheduleCurrent = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(updateCurrent); }
+  };
+  window.addEventListener('scroll', scheduleCurrent, {passive: true});
+  window.addEventListener('resize', scheduleCurrent, {passive: true});
+  updateCurrent();
+  links.forEach((link, index) => link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    event.preventDefault();
+    if (!desktop.matches) disclosure.open = false;
+    const target = targets[index];
+    history.pushState(null, '', link.hash);
+    target.tabIndex = -1;
+    target.focus({preventScroll: true});
+    target.scrollIntoView({behavior: event.detail === 0 || reducedMotion.matches ? 'instant' : 'smooth', block: 'start'});
+    markCurrent(index);
+  }));
+}
+
 // Images remain ordinary open-image links when JavaScript is unavailable.
 const viewer = document.querySelector('.image-viewer');
 let imageTrigger;

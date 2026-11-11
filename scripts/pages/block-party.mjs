@@ -1,6 +1,6 @@
 /** Block Party: reviewed capstone narrative and original landscape screen exports. */
 export default function render(ctx) {
-  const {caseHeader, overview, media, section, preview, nextProject, next} = ctx;
+  const {caseNav, caseHeader, overview, media, section, preview, nextProject, next} = ctx;
   const screen = (name, alt, caption, eager = false) => media({
     src: `/assets/block-party-${name}.webp`, alt, caption,
     width: 852, height: 393, eager,
@@ -39,12 +39,17 @@ export default function render(ctx) {
       },
     })}
 
-    <nav class="case-wrap bp-page-nav" aria-label="Block Party page sections">
-      <a href="#block-party-research">Research</a>
-      <a href="#block-party-journey">Design journey</a>
-      <a href="#block-party-testing">Testing</a>
-      <a href="#block-party-reflection">Reflection</a>
-    </nav>
+    <div class="case-reading-layout">
+      ${caseNav([
+        ['block-party-problem', 'The problem'],
+        ['block-party-research', 'Research'],
+        ['block-party-journey', 'Design journey'],
+        ['block-party-participation', 'Participation'],
+        ['block-party-testing', 'Testing'],
+        ['block-party-prototype', 'Prototype'],
+        ['block-party-reflection', 'Reflection']
+      ])}
+      <div class="case-reading-content">
 
     ${section({
       id: 'block-party-problem', kicker: 'The challenge', title: 'Participation starts with understanding a place.',
@@ -105,6 +110,8 @@ export default function render(ctx) {
       body: `<div class="case-prose"><p>The next iteration needs to address residents’ comfort with digital interfaces, planners’ ability to interpret conflicting submissions, and officials’ confidence that feedback is valid and representative.</p><p>I would test these questions with residents and planning stakeholders alongside the interface refinements.</p></div>`,
     })}
 
+      </div>
+    </div>
     ${nextProject(next)}
   </article>`;
 }
