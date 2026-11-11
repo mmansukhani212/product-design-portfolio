@@ -2,14 +2,16 @@
 export default function render(ctx) {
   const {e, section} = ctx;
   const values = [
-    ['Make participation easier.', 'Accessibility and inclusion shape how I think about different abilities, contexts, and levels of digital confidence.'],
-    ['Let evidence change the direction.', 'I value adaptability: learning about the problem, questioning assumptions, and refining a design as needs evolve.'],
-    ['Give every interaction a purpose.', 'My architecture background informs my belief that visual decisions should help people understand and use an experience.'],
-    ['Connect disciplines.', 'I bring design into conversation with research, engineering, and business so the experience and the system behind it can work together.']
+    ["Human first", "I design for different abilities, contexts, and levels of confidence, with clarity and accessibility built into the experience."],
+    ["Stay curious", "I ask questions early and use research to check whether we're solving the right problem."],
+    ["Make complexity clear", "I simplify workflows and interactions while keeping the detail people need to make confident decisions."],
+    ["Keep learning", "I adapt to feedback, new evidence, and changing constraints, treating each iteration as a chance to improve."]
   ];
   const strengths = [
-    ['A spatial perspective', 'Architecture taught me to consider how individual details shape a larger experience.'],
-    ['Interface and workflow thinking', 'My Rokt work spans UX/UI, research, automation, and CRM integration.']
+    ["User research", "I turn interviews, usability tests, and feedback into clear design decisions."],
+    ["Product thinking", "I connect user needs, business goals, and technical constraints to help the team decide what to build."],
+    ["Design systems", "I build reusable components and interaction patterns that keep interfaces consistent as products grow."],
+    ["Collaboration", "I work with product, engineering, and stakeholders to share context, resolve trade-offs, and move ideas into implementation."]
   ];
 
   return `<article class="about-page case-study">
