@@ -1,32 +1,28 @@
-.about-hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:72px;align-items:start;padding:74px 0 66px;border-bottom:1px solid var(--border)}
-.about-introduction h1{font-size:45px;letter-spacing:-.045em;line-height:1.17;margin:17px 0 24px;max-width:650px}
+.about-hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;column-gap:72px;row-gap:24px;align-items:center;padding:74px 0 66px;border-bottom:1px solid var(--border)}
+.about-hero h1{grid-column:1/-1;font-size:45px;letter-spacing:-.045em;line-height:1.17;margin:0;max-width:650px}
 .about-intro-copy p{font-size:15px;line-height:1.9;color:var(--body)}
 .about-intro-copy p+p{margin-top:20px}
-.about-actions{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:28px}
-.about-portrait{max-width:320px;width:100%;justify-self:end;margin-top:18px}
-.about-portrait img{width:100%;height:auto;border-radius:16px}
-
-
-
-
+.about-portrait{grid-column:2;grid-row:2;max-width:300px;width:100%;justify-self:end;align-self:center}
+.portrait-crop{position:relative;aspect-ratio:10/11;overflow:hidden;border-radius:16px}
+.about-portrait img{position:absolute;left:50%;top:50%;width:320%;max-width:none;height:auto;transform:translate(-53%,-55%)}
 .about-strengths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:35px;margin-top:32px}
 .about-strengths>div{border-left:2px solid #cad7ed;padding-left:23px}
 .about-strengths h3{font-size:20px;line-height:1.4;margin-bottom:12px}
 .about-strengths p{font-size:14px;line-height:1.85}
-.about-interests{display:grid;grid-template-columns:.95fr 1.05fr;gap:65px;margin-top:56px;padding:43px;background:var(--wash);border:1px solid var(--border);border-radius:25px;align-items:center}
-.about-interests h2{font-size:31px;line-height:1.27;margin-top:13px;letter-spacing:-.035em}
-.about-interests p:not(.eyebrow){font-size:14px;line-height:1.9;color:var(--body);max-width:500px}
-.about-interest-list{display:flex;gap:9px;flex-wrap:wrap;list-style:none;padding:0;margin-top:21px}
-.about-interest-list li{border:1px solid #c9d7ec;background:rgba(255,255,255,.5);border-radius:25px;padding:5px 12px;font-size:11px;color:var(--deep);line-height:1.6}
-.about-work-link{padding:58px 0 67px}
-.about-work-link h2{font-size:35px;line-height:1.3;margin:13px 0}
-.about-work-link h2 span{display:inline-block;font-weight:400;margin-left:8px;transition:transform .18s ease}
-.about-work-link a:hover h2 span{transform:translate(3px,-3px)}
-.about-work-link p:not(.eyebrow){font-size:13px;color:var(--muted);max-width:600px;line-height:1.8}
-@media(max-width:1279px){.about-hero{gap:45px}.about-introduction h1{font-size:40px}.about-interests{gap:40px;padding:35px}.about-strengths{gap:25px}}
-@media(max-width:959px){.about-hero{grid-template-columns:1fr;gap:35px;padding:55px 0 48px}.about-introduction h1{font-size:42px;max-width:740px}.about-intro-copy{max-width:730px}.about-portrait{max-width:320px;justify-self:start;margin-top:0}.about-strengths{grid-template-columns:1fr;gap:25px}.about-strengths p{max-width:650px}.about-interests{grid-template-columns:1fr;gap:24px}.about-interests h2 br{display:none}.about-work-link h2{font-size:32px}}
-@media(max-width:767px){.about-hero{padding:40px 0 37px;gap:30px}.about-introduction h1{font-size:35px;line-height:1.2;margin-top:15px;margin-bottom:21px}.about-intro-copy p{font-size:14px;line-height:1.9}.about-intro-copy p+p{margin-top:18px}.about-actions{gap:22px;margin-top:24px}.about-actions .button{font-size:11px;min-height:44px;padding:12px 20px}.about-portrait{max-width:280px}.about-portrait img{border-radius:16px}.about-strengths{margin-top:25px;gap:23px}.about-strengths>div{padding-left:19px}.about-strengths h3{font-size:20px}.about-strengths p{font-size:14px}.about-interests{margin-top:34px;padding:26px 22px;gap:20px;border-radius:20px}.about-interests h2{font-size:27px}.about-interests p:not(.eyebrow){font-size:13px}.about-interest-list{gap:7px;margin-top:19px}.about-interest-list li{font-size:10px;padding:5px 10px}.about-work-link{padding:39px 0 45px}.about-work-link h2{font-size:29px}.about-work-link p:not(.eyebrow){font-size:12px}}
-@media(prefers-reduced-motion:reduce){.about-work-link h2 span{transition:none}}
-
-.about-interests{margin-bottom:60px}.about-interests h2{margin-top:0}
-@media(max-width:767px){.about-interests{margin-bottom:40px}}
+.about-interests{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:stretch;margin:56px 0 60px;scroll-margin-top:112px}
+.outside-copy{max-width:420px}
+.outside-copy h2{font-size:31px;line-height:1.27;letter-spacing:-.035em;margin:0 0 20px}
+.outside-copy p{font-size:15px;line-height:1.9;color:var(--body)}
+.outside-copy p+p{margin-top:18px}
+.outside-collage{position:relative;min-width:0;width:100%;max-width:460px;justify-self:end}
+.outside-photo-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));gap:8px}
+.outside-photo-grid img{width:100%;height:100%;min-height:0;object-fit:cover;border-radius:9px}
+.collage-piano{grid-column:1;grid-row:1/5;object-position:65% 62%}
+.collage-books{grid-column:2;grid-row:1/3}
+.collage-tower{grid-column:3;grid-row:1/3;object-position:50% 20%}
+.collage-beach{grid-column:2;grid-row:3;object-position:50% 86%}
+.collage-trail{grid-column:3;grid-row:3/5;object-position:50% 65%}
+.collage-architecture{grid-column:2;grid-row:4;object-position:50% 32%}
+@media(max-width:1279px){.about-hero{column-gap:45px}.about-hero h1{font-size:40px}.about-interests{gap:40px}.about-strengths{gap:25px}}
+@media(max-width:959px){.about-hero{grid-template-columns:1fr;gap:28px;padding:55px 0 48px}.about-hero h1{font-size:42px;max-width:740px}.about-intro-copy{max-width:730px}.about-portrait{grid-column:auto;grid-row:auto;justify-self:start}.about-strengths{grid-template-columns:1fr;gap:25px}.about-strengths p{max-width:650px}}
+@media(max-width:767px){.about-hero{padding:40px 0 37px;gap:25px}.about-hero h1{font-size:35px;line-height:1.2}.about-intro-copy p{font-size:14px;line-height:1.9}.about-intro-copy p+p{margin-top:18px}.about-portrait{max-width:280px}.about-strengths{margin-top:25px;gap:23px}.about-strengths>div{padding-left:19px}.about-interests{grid-template-columns:1fr;margin:34px 0 40px;gap:28px}.outside-copy h2{font-size:27px;margin-bottom:18px}.outside-copy p{font-size:14px;line-height:1.9}.outside-collage{aspect-ratio:1.32;min-height:240px}.outside-photo-grid{gap:7px}.outside-photo-grid img{border-radius:7px}}

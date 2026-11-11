@@ -16,15 +16,13 @@ export default function render(ctx) {
 
   return `<article class="about-page case-study">
     <header class="about-hero">
-      <div class="about-introduction">
-        <h1>Hi, I'm Monisha!</h1>
+      <h1>Hi, I'm Monisha!</h1>
         <div class="about-intro-copy">
           <p>I'm a multidisciplinary Product Designer with a background in architecture and a master's in Human-Computer Interaction and Design from Indiana University Bloomington. My journey from designing physical spaces to digital experiences has shaped how I approach design—combining spatial thinking, user research, and a systems perspective to create intuitive, meaningful products.</p>
           <p>Today, I work at the intersection of design, strategy, and technology, turning complex problems into simple, human-centered solutions. From interfaces to AI-powered tools, I love bringing ideas to life while balancing form, function, and impact.</p>
           <p>Originally from Bangalore and now based in NYC, I enjoy collaborating across disciplines, exploring new ideas, and creating experiences that make a difference.</p>
         </div>
-      </div>
-      <figure class="about-portrait"><img src="/assets/monisha-mansukhani-portrait.jpeg" alt="Monisha Mansukhani" width="1280" height="1280" fetchpriority="high" decoding="async"></figure>
+      <figure class="about-portrait"><div class="portrait-crop"><img src="/assets/monisha-cornfield-portrait.webp" alt="Monisha Mansukhani smiling outdoors" width="1086" height="1448" fetchpriority="high" decoding="async"></div></figure>
     </header>
 
     ${section({
@@ -41,9 +39,22 @@ export default function render(ctx) {
       body:`<div class="about-strengths">${strengths.map(([title,copy]) => `<div><h3>${e(title)}</h3><p>${e(copy)}</p></div>`).join('')}</div>`
     })}
 
-    <section class="about-interests" aria-labelledby="interests-title">
-      <div><h2 id="interests-title">Outside work</h2></div>
-      <div><p>I love traveling, discovering cultures, spending time at the piano, and heading to the beach.</p></div>
+    <section id="outside-work" class="about-interests" aria-labelledby="interests-title">
+      <div class="outside-copy">
+        <h2 id="interests-title">Outside work</h2>
+        <p>Away from my desk, you'll usually find me at the piano, lost in a book, or out on a hiking trail.</p>
+        <p>I love noticing the small details—with a camera in hand, exploring somewhere new, or taking a quick escape to the beach.</p>
+      </div>
+      <div class="outside-collage" role="group" aria-label="A few moments outside work">
+        <div class="outside-photo-grid">
+          <img class="collage-piano" src="/assets/outside-piano.webp" alt="Monisha playing the piano beside a sunlit window" width="415" height="900" loading="lazy" decoding="async">
+          <img class="collage-books" src="/assets/outside-books.webp" alt="An aisle lined with stacks of books" width="675" height="900" loading="lazy" decoding="async">
+          <img class="collage-tower" src="/assets/outside-tower.webp" alt="An ornate stone tower against a blue sky" width="675" height="900" loading="lazy" decoding="async">
+          <img class="collage-beach" src="/assets/outside-beach.webp" alt="A quiet beach with palm trees along the shore" width="1000" height="450" loading="lazy" decoding="async">
+          <img class="collage-trail" src="/assets/outside-trail.webp" alt="A woodland trail beside a flowing stream" width="675" height="900" loading="lazy" decoding="async">
+          <img class="collage-architecture" src="/assets/outside-architecture.webp" alt="A patterned museum facade with a lawn in front" width="675" height="900" loading="lazy" decoding="async">
+        </div>
+      </div>
     </section>
 
   </article>`;
