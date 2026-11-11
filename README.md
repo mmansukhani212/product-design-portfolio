@@ -15,7 +15,7 @@ Open http://127.0.0.1:4173. The preview server binds only to loopback.
 
 ## Design
 
-The approved palette uses resume blue `#1c4587`, a near-white page background, pale blue shared surfaces, and blue-grey text. Home image backdrops echo the displayed work: soft plum for Rokt, warm sand for Block Party, and pale rose for iHeartMedia. Shared color tokens live at the start of `dist/styles.css`; project styles use the same accent and wash variables.
+The approved palette uses resume blue `#1c4587`, a white page background, pale blue shared surfaces, and blue-grey text. Home image backdrops echo the displayed work: soft plum for Rokt, warm sand for Block Party, and pale rose for iHeartMedia. Shared color tokens live at the start of `dist/styles.css`; project styles use the same accent and wash variables.
 
 ## Edit
 
