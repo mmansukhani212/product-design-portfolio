@@ -81,21 +81,21 @@ for (const preview of document.querySelectorAll('[data-demo-src]')) {
   const status = preview.querySelector('.preview-status');
   load.addEventListener('click', () => {
     const url = new URL(preview.dataset.demoSrc);
-    if (url.origin !== 'https://roktcidash.netlify.app') return;
+    if (!['https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'https://mmansukhani212.github.io/block-party/'].includes(url.href)) return;
     const frame = document.createElement('iframe');
-    frame.title = 'Rokt competitive-intelligence demo — fictional data';
+    frame.title = `${document.title.split(' | ')[0]} — interactive prototype with mock data`;
     frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups');
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
     frame.src = url.href;
     frame.addEventListener('load', () => {
-      status.textContent = 'Dummy-data demo requested. If it is blank or unavailable, use the external open link or return to the static preview.';
+      status.textContent = 'Prototype requested. If it is blank or unavailable, use the external open link or return to the static preview.';
     });
     host.replaceChildren(frame);
     host.hidden = false;
     poster.hidden = true;
     load.hidden = true;
     unload.hidden = false;
-    status.textContent = 'Loading the external dummy-data demo…';
+    status.textContent = 'Loading the external prototype…';
     unload.focus();
   });
   unload.addEventListener('click', () => {

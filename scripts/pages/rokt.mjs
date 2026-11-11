@@ -1,4 +1,4 @@
-/** Rokt narrative: confirmed workflow and role; demo imagery is illustrative. */
+/** Confirmed project narrative; the revised public prototype uses fictional data. */
 export default function render(ctx) {
   const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next} = ctx;
   const step = (title, detail) => `<li><strong>${e(title)}</strong><span>${e(detail)}</span></li>`;
@@ -30,19 +30,19 @@ export default function render(ctx) {
     ${caseHeader({
       kicker: 'Rokt',
       title: 'From scattered churn signals to a shared retention workflow',
-      summary: 'AI detection, account-manager review, and a shared dashboard.',
+      summary: 'Connecting AI-detected signals, account-manager context, and a shared view of churn risk.',
       tags: project.tags
     })}
 
     <div class="case-wrap">${media({
-      src: '/assets/rokt-dashboard.webp',
-      alt: 'Dummy-data Rokt competitive-intelligence overview with account metrics, competitor mention trends, and risk distribution.',
-      caption: 'Competitive-intelligence demo. Accounts, activity, and financial figures are fictional; this is not a production screenshot.',
-      width: 1470, height: 706, className: 'case-hero-media', eager: true
+      src: '/assets/rokt-final-overview.webp',
+      alt: 'Revised Rokt demo overview with portfolio metrics, competitor mention trends, risk distribution, and competitor comparisons.',
+      caption: 'Revised public prototype · all accounts, activity, and financial figures are fictional.',
+      width: 1470, height: 919, className: 'case-hero-media', eager: true
     })}</div>
 
     ${overview({
-      summary: '<p>I led UX research and end-to-end UX/UI design, alongside AI workflow automation and CRM integration. The work connected detection, a prepared questionnaire, and shared reporting instead of leaving each step disconnected.</p>',
+      summary: '<p>I led UX research and end-to-end UX/UI design, alongside AI workflow automation and CRM integration. The workflow brought scattered competitor and churn mentions into account-manager review and daily shared reporting.</p><p>The screens below illustrate the workflow through a revised public prototype with fictional data.</p>',
       metadata: [
         ['Role', 'Lead UX Engineer'],
         ['Timeline', 'July–September 2026'],
@@ -68,35 +68,40 @@ export default function render(ctx) {
       body: '<div class="case-prose"><p>Client conversations were recorded in Gong, but competitor mentions and churn risks still depended on account managers relaying them through Google Chat or personal spreadsheets. Information was fragmented, and some signals never reached the people responsible for responding.</p><p>Stakeholders needed a common place to understand emerging risks and prepare a retention plan.</p></div>'
     })}
 
-    ${section({id: 'rokt-workflow', kicker: '02 · The workflow', title: 'Connect the steps that used to sit apart.', body: workflow})}
+    ${section({id: 'rokt-workflow', kicker: '02 · Decisions and workflow', title: 'Connect collection, review, and visibility.', body: `<ol class="decision-list rokt-decisions">
+      <li><h3>Prepare the record</h3><p>Flag mentions in Gong and prefill a HubSpot questionnaire through n8n, giving the account manager a signal to review.</p></li>
+      <li><h3>Define a review window</h3><p>Allow three days for review, then submit unactioned questionnaires automatically. Coverage improves only if unreviewed information stays identifiable.</p></li>
+      <li><h3>Share a common view</h3><p>Sync daily to a company-wide dashboard, so retention stakeholders can plan from the same collected information.</p></li>
+      </ol>${workflow}`})}
 
     ${section({
-      id: 'rokt-review', kicker: '04 · Account-manager experience', title: 'Start with a prepared questionnaire.',
-      body: `<div class="case-prose"><p>The account manager starts with a prefilled questionnaire. This demo capture illustrates that review step with fictional records.</p></div>
-      ${media({src: '/assets/rokt-review-form.webp', alt: 'Rokt dummy-data demo showing a prefilled account-manager validation form beside the review queue.', caption: 'Dummy-data demo: account-manager review form.', width: 1470, height: 762})}
+      id: 'rokt-review', kicker: '03 · Account-manager experience', title: 'Review the signal, then add the relationship context.',
+      body: `<div class="case-prose"><p>In the revised prototype, a review queue brings the account, assigned manager, deadline, time remaining, and status together. Opening a record separates AI-detected intelligence from the manager’s validation.</p><p>The prefilled form includes the conversation excerpt and AI-generated summary. The manager can assess accuracy and switching intent, clarify the offer, add context, and recommend a next action. A visible countdown and three-day policy explain what happens if no action is taken.</p></div>
+      ${media({src: '/assets/rokt-final-review-form.webp', alt: 'Fictional Rokt review form separating account information, AI-detected intelligence, and account-manager validation, with a review countdown and approval controls.', caption: 'Prefilled source context above a separate manager-validation step.', width: 1470, height: 919})}
       <div class="rokt-validation" aria-label="Submission validation states">
-        <div><h3>Manager-reviewed</h3><p>The account manager has checked the information.</p></div>
-        <div><h3>Automatically submitted</h3><p>The three-day window expired without a response. No manager confirmation is implied.</p></div>
+        <div><h3>Approved</h3><p>A manager has reviewed and approved the record in the prototype.</p></div>
+        <div><h3>Auto-Submitted</h3><p>The review window expired. Original AI-detected details enter reporting without manager confirmation.</p></div>
       </div>`
     })}
 
     ${section({
-      id: 'rokt-dashboard', kicker: '05 · Shared dashboard', title: 'One place to see the collected signals.',
-      body: '<div class="case-prose"><p>A shared view lets retention stakeholders work from the same signals when planning a response.</p></div>'
+      id: 'rokt-dashboard', kicker: '04 · Shared dashboard', title: 'See the pattern. Keep the context.',
+      body: `<div class="case-prose"><p>The revised overview brings trends, risk distribution, competitor comparisons, priority accounts, and recent activity into one view. The intelligence table then connects each mention to its client context, account manager, detection date, and review status.</p><p>Search and filters support different questions: which competitor is appearing, which accounts need attention, and which signals have been reviewed. An account detail drawer keeps the excerpt and review history available for closer inspection.</p></div>
+      ${media({src: '/assets/rokt-final-intelligence.webp', alt: 'Revised Rokt intelligence dashboard with competitor and risk charts, filters including review status, and an account intelligence table.', caption: 'Revised public prototype: move from aggregate patterns to individual records, with review status kept alongside the signal. Every displayed value is fictional.', width: 1470, height: 919})}`
     })}
 
     ${preview({
-      id: 'rokt-demo', title: 'Try the demo',
-      description: 'Fictional data only. This demo illustrates the workflow, not production scope.',
-      src: 'https://roktcidash.netlify.app/', externalUrl: 'https://roktcidash.netlify.app/',
-      image: '/assets/rokt-review-queue.webp',
-      alt: 'Static fallback of the dummy-data Rokt account-manager review queue, with review deadlines and submission statuses.',
-      width: 1470, height: 762, loadLabel: 'Load demo'
+      id: 'rokt-demo', title: 'Explore the revised demo',
+      description: 'Start at Overview, open Intelligence Dashboard, then explore the AM Review Queue. All data is fictional. The prototype runs independently of Gong, HubSpot, and n8n.',
+      src: 'https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', externalUrl: 'https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/',
+      image: '/assets/rokt-final-review-queue.webp',
+      alt: 'Static fallback of the revised fictional-data AM review queue showing deadlines, time remaining, Approved and Auto-Submitted states, and the three-day policy.',
+      width: 1470, height: 919, loadLabel: 'Load fictional-data demo'
     })}
 
     ${section({
-      id: 'rokt-reflection', kicker: '06 · Reflection', title: 'Coverage and confidence need to travel together.',
-      body: '<div class="case-prose"><p>A review deadline can improve reporting coverage while leaving uncertainty about the underlying information. The next refinement I would prioritize is making the validation state unmistakable, so stakeholders can judge what is ready for action and what needs follow-up.</p></div>'
+      id: 'rokt-reflection', kicker: '05 · Evidence and reflection', title: 'Coverage and confidence need to travel together.',
+      body: '<div class="case-prose"><p>The original project made churn-risk information accessible to more stakeholders and supported faster preparation of retention action plans. These are reported project outcomes; the prototype’s account counts, revenue figures, and risk scores are not impact measures.</p><p>The revised prototype makes the difference between approval and automatic submission visible. That distinction matters: collecting more information is useful only when people can judge its reliability. I would next test whether stakeholders can identify unreviewed signals and decide when follow-up is needed.</p></div>'
     })}
 
       </div>

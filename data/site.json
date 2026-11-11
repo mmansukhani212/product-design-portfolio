@@ -23,9 +23,9 @@
       "timeline": "Jul–Sep 2026",
       "outcome": "Daily",
       "outcomeLabel": "shared visibility into churn risk",
-      "image": "rokt-dashboard.webp",
+      "image": "rokt-final-overview.webp",
       "width": 1470,
-      "height": 706,
+      "height": 919,
       "alt": "Rokt competitive-intelligence demo with risk trends, account metrics, and review activity. All shown data is fictional.",
       "caption": "Interactive demo · Fictional accounts and financial figures",
       "home": {
@@ -50,16 +50,16 @@
       "timeline": "Jan–May 2025",
       "outcome": "6 residents",
       "outcomeLabel": "tested the prototype and saw potential for inclusive participation",
-      "image": "block-party-map.webp",
-      "width": 852,
-      "height": 393,
-      "alt": "Block Party prototype showing a virtual Bloomington neighborhood and map navigation controls.",
+      "image": "block-party-final-explore.webp",
+      "width": 1470,
+      "height": 863,
+      "alt": "Current Block Party browser prototype showing a project list and an illustrated neighborhood map.",
       "caption": "Capstone prototype · Qualitative feedback, not measured participation growth",
       "home": {
         "title": "A say in the neighborhood",
         "summary": "A civic-design prototype that helps Bloomington residents explore neighborhood proposals and share ideas.",
         "outcomeLabel": "prototype testers · qualitative feedback",
-        "caption": "Capstone prototype"
+        "caption": "Current browser prototype · 2025 capstone research"
       }
     },
     {

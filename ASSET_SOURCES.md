@@ -43,3 +43,12 @@ All six requested photos are separate WebP assets in an HTML/CSS grid. Conversio
 | outside-architecture.webp | /Users/monishamansukhani/Downloads/IMG_0833.HEIC |
 
 Supplied image 2 is a layout reference only; none of its photos or copy is reused. The preceding black-and-white About photo remains preserved at its original Downloads source and is no longer served by the site.
+
+## Final app refresh — November 11, 2026
+
+| Site assets | Source / qualification |
+|---|---|
+| rokt-final-{overview,intelligence,review-queue,review-form}.webp | Rendered final public demo at https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/. Four uncropped 1470 × 919 captures; fictional data. Revised prototype features are distinguished from original production scope. No forms submitted or live services connected. |
+| block-party-final-{explore,project,builder,activity}.webp | Rendered final public app at https://mmansukhani212.github.io/block-party/. Four uncropped 1470 × 863 captures; browser-local prototype, illustrative city map, mocked committee/progress flow. One Park was placed locally for the builder capture, with no submission. These are later revisions, not the artifact tested in 2025. |
+
+New raw PNGs and review notes are preserved outside the published repository in ../CASE_STUDY_SOURCE_DATA_2026-11-11/. Prior Netlify and Figma-export screenshots remain historical source assets; the current Home/case studies use the final app captures above. The current Block Party map includes an AI-generated expansion documented in the user-owned build chat.
