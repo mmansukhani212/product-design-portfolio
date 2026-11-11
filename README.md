@@ -13,6 +13,10 @@ npm run dev
 
 Open http://127.0.0.1:4173. The preview server binds only to loopback.
 
+## Design
+
+The approved palette uses resume blue `#1c4587`, pale blue surfaces, and blue-grey text. Shared color tokens live at the start of `dist/styles.css`; project styles use the same accent and wash variables.
+
 ## Edit
 
 - `data/site.json`: Home copy, project metadata, contact links, and image descriptions. Home-specific overrides do not change case-study copy.
