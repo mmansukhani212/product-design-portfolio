@@ -9,7 +9,7 @@ All derivatives live in the new project; source materials are preserved.
 | block-party-builder.webp | ../Block Party/Figma Screens/Build Page.png | Prepared for later case-study work; not currently used on Home. |
 | iheart-listening.webp | https://framerusercontent.com/images/zvLh8MHadCmwtnZIxF5hU1aCxk.png via https://www.manasighutukade.work/iheartmedia | User-approved shared project composition; source credited in visible caption. Original source retained in qa/iheart-source.png. |
 | manrope-variable.ttf and manrope-OFL.txt | Google Fonts github.com/google/fonts, ofl/manrope | Self-hosted Manrope variable font under SIL Open Font License. |
-| monisha-mansukhani-resume.pdf | Supplied resume PDF (original preserved outside this repository) | Separate site copy; only the email URI annotation is corrected. |
+| monisha-mansukhani-resume.pdf | ../Resume/Monisha Mansukhani_Resume.pdf, approved November 11, 2026 (original preserved) | Website copy preserves all visible content; email URI uses the confirmed Gmail address and portfolio URI uses HTTPS. |
 | favicon.svg / header mark | Original code-native geometric detail | Architectural brackets and a center point; no reference monogram used. |
 
 No generated project UI, stock project imagery, or reference-portfolio media is used. WebP copies are resized/compressed without cropping content. Rokt and iHeartMedia source folders in the parent workspace were empty at implementation time.
