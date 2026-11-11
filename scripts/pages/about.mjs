@@ -22,7 +22,7 @@ export default function render(ctx) {
           <p>Today, I work at the intersection of design, strategy, and technology, turning complex problems into simple, human-centered solutions. From interfaces to AI-powered tools, I love bringing ideas to life while balancing form, function, and impact.</p>
           <p>Originally from Bangalore and now based in NYC, I enjoy collaborating across disciplines, exploring new ideas, and creating experiences that make a difference.</p>
         </div>
-      <figure class="about-portrait"><div class="portrait-crop"><img src="/assets/monisha-cornfield-portrait.webp" alt="Monisha Mansukhani smiling outdoors" width="1086" height="1448" fetchpriority="high" decoding="async"></div></figure>
+      <figure class="about-portrait"><div class="portrait-crop"><img src="/assets/monisha-bio-portrait.webp" alt="Monisha Mansukhani smiling outdoors" width="1120" height="1182" fetchpriority="high" decoding="async"></div></figure>
     </header>
 
     ${section({
