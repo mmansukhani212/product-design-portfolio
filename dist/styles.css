@@ -21,7 +21,8 @@
 .hero-compact .hero-intro{max-width:800px;font-size:15px;line-height:1.85}
 .hero-compact{padding-top:64px;padding-bottom:36px}
 .work-section .section-heading h2{font-size:14px;line-height:1.5;letter-spacing:0}
-.work-cue{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-width:180px;min-height:48px;padding:8px 0 14px;border-bottom:1px solid var(--border);color:var(--ink)}
+.work-cue{display:inline-flex;flex-direction:column;align-items:center;gap:10px;min-width:180px;min-height:48px;padding:8px 0 0;color:var(--ink)}
+.work-cue-label{width:100%;text-align:center;padding-bottom:12px;border-bottom:1px solid var(--border)}
 .work-cue svg{color:var(--accent);flex:none}
 .project-list{scroll-margin-top:112px}
 @media(max-width:767px){.hero-compact{padding:42px 24px 28px}.hero-compact h1{font-size:32px;margin-bottom:20px}.hero-compact .hero-intro{font-size:14px;line-height:1.8}.work-cue{min-width:170px}.project-list{scroll-margin-top:100px}}
