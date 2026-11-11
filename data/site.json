@@ -1,0 +1,101 @@
+{
+  "name": "Monisha Mansukhani",
+  "email": "mmansukh2610@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/monisha-mansukhani-8632b6199/",
+  "resume": "/assets/monisha-mansukhani-resume.pdf",
+  "hero": {
+    "eyebrow": "Product designer & UX engineer",
+    "headline": "Bringing delight",
+    "accent": "to complexity.",
+    "intro": "",
+    "proof": ""
+  },
+  "projects": [
+    {
+      "id": "rokt",
+      "name": "Rokt",
+      "slug": "rokt-competitive-intelligence",
+      "title": "Turn scattered churn signals into a shared retention workflow",
+      "summary": "I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster.",
+      "tags": [
+        "Enterprise UX",
+        "AI workflows",
+        "CRM integration"
+      ],
+      "role": "Lead UX Engineer",
+      "timeline": "Jul–Sep 2026",
+      "outcome": "Daily",
+      "outcomeLabel": "shared visibility into churn risk",
+      "image": "rokt-dashboard.webp",
+      "width": 1470,
+      "height": 706,
+      "alt": "Rokt competitive-intelligence demo with risk trends, account metrics, and review activity. All shown data is fictional.",
+      "caption": "Interactive demo · Fictional accounts and financial figures",
+      "home": {
+        "title": "Churn signals, in one place",
+        "summary": "A shared workflow for spotting churn risk, reviewing signals, and planning a response.",
+        "outcomeLabel": "churn-risk reporting",
+        "caption": "Demo · All data fictional"
+      }
+    },
+    {
+      "id": "block-party",
+      "name": "Block Party",
+      "slug": "block-party",
+      "title": "Make neighborhood proposals easier to explore and shape",
+      "summary": "A simulation-based civic prototype lets younger Bloomington residents explore planning proposals and contribute ideas in context. Testing surfaced positive feedback and specific improvements to the proposal builder.",
+      "tags": [
+        "Civic design",
+        "Participatory design",
+        "Interaction design"
+      ],
+      "role": "HCI/d capstone thesis",
+      "timeline": "Jan–May 2025",
+      "outcome": "6 residents",
+      "outcomeLabel": "tested the prototype and saw potential for inclusive participation",
+      "image": "block-party-map.webp",
+      "width": 852,
+      "height": 393,
+      "alt": "Block Party prototype showing a virtual Bloomington neighborhood and map navigation controls.",
+      "caption": "Capstone prototype · Qualitative feedback, not measured participation growth",
+      "home": {
+        "title": "A say in the neighborhood",
+        "summary": "A civic-design prototype that helps Bloomington residents explore neighborhood proposals and share ideas.",
+        "outcomeLabel": "prototype testers · qualitative feedback",
+        "caption": "Capstone prototype"
+      }
+    },
+    {
+      "id": "iheartmedia",
+      "name": "iHeartMedia",
+      "slug": "iheartmedia",
+      "title": "Make listening easier to start and more social",
+      "summary": "As a product designer and product manager, I contributed to a studio team exploring simpler onboarding and more social listening experiences.",
+      "tags": [
+        "Consumer UX",
+        "Product strategy",
+        "Usability testing"
+      ],
+      "role": "Product Designer & Product Manager",
+      "timeline": "Sep–Dec 2024",
+      "outcome": "Research → iteration",
+      "outcomeLabel": "design concepts informed by usability findings",
+      "image": "iheart-listening.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "Shared iHeartMedia studio concepts showing the listening home, music player, and favorite-genre selection.",
+      "caption": "Shared studio project · Retention impact not established",
+      "credit": "Project visual: shared case study by Manasi Ghutukade",
+      "creditUrl": "https://www.manasighutukade.work/iheartmedia",
+      "home": {
+        "title": "A more connected way to listen",
+        "summary": "Simpler onboarding and social listening concepts, designed with a studio team.",
+        "outcome": "Tested concepts",
+        "outcomeLabel": "refined through usability feedback",
+        "caption": "Studio project",
+        "credit": "Shared project visual · Manasi Ghutukade",
+        "hideOutcome": true
+      }
+    }
+  ]
+}

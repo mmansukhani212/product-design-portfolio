@@ -1,0 +1,10 @@
+{
+  "name": "monisha-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "dev": "node scripts/serve.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
+  }
+}

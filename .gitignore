@@ -1,0 +1,10 @@
+node_modules/
+_site/
+qa/
+.DS_Store
+.env
+.env.*
+!.env.example
+INTERNAL_REVIEW.md
+QA.md
+scripts/prepare-resume.py
