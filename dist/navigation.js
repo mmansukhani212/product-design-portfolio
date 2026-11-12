@@ -23,3 +23,19 @@ document.querySelector('.site-header').addEventListener('focusout', event => {
   if (!event.currentTarget.contains(event.relatedTarget)) closeMenu();
 });
 matchMedia('(min-width: 768px)').addEventListener('change', () => closeMenu());
+
+// Like the reference, reveal navigation in the opening area, not on every upward scroll.
+const header = document.querySelector('.site-header');
+const updateHeader = () => {
+  header.classList.toggle('is-away', scrollY > 1000 && !header.contains(document.activeElement));
+};
+let headerScheduled = false;
+window.addEventListener('scroll', () => {
+  if (headerScheduled) return;
+  headerScheduled = true;
+  requestAnimationFrame(() => { headerScheduled = false; updateHeader(); });
+}, {passive: true});
+window.addEventListener('pageshow', updateHeader);
+header.addEventListener('focusin', () => header.classList.remove('is-away'));
+header.addEventListener('focusout', () => requestAnimationFrame(updateHeader));
+updateHeader();
