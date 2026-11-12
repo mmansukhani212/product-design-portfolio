@@ -49,10 +49,10 @@ export default function render(ctx) {
         ['My role', 'Lead UX Engineer'],
         ['Design scope', 'End-to-end UX/UI, user research, AI workflow automation, CRM integration'],
         ['Target users', 'Account managers and stakeholders planning client-retention actions'],
-        ['Team', 'Rokt · UX engineering'],
+        ['Team', 'GTM sales representatives, developers, and the finance team'],
         ['Duration', 'July–September 2026']
       ],
-      outcome: {title: 'Daily company-wide visibility', body: 'Centralized churn-risk reporting broadened access to information and helped stakeholders prepare retention action plans faster.'}
+      outcome: {title: '83% reported increase in response rate', body: 'An increase in the existing churn-risk response rate, reported from the project. Automated collection and daily shared reporting gave retention stakeholders a centralized basis for action.'}
     })}
 
     <div class="case-reading-layout">

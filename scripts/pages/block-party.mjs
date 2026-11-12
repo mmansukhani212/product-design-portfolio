@@ -35,7 +35,7 @@ export default function render(ctx) {
         ['My role', 'HCI/d capstone thesis author'],
         ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
         ['Target users', 'Civic-oriented Bloomington residents, ages 18–35'],
-        ['Team', 'Indiana University Bloomington · HCI/d capstone'],
+        ['Team', 'Bloomington urban planners and city council members'],
         ['Duration', 'January–May 2025']
       ],
       outcome: {title: '6 residents tested the concept', body: 'Participants saw potential for inclusive community engagement and identified two usability refinements. This is qualitative feedback on the 2025 prototype; participation growth and the current revision’s usability remain unmeasured.'}
