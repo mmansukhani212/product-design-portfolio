@@ -1,30 +1,30 @@
 const sectionLabels = {
-  'rokt-problem': 'The problem',
-  'rokt-evidence': 'Research insights',
-  'rokt-workflow': 'Workflow design',
+  'rokt-problem': 'The Problem',
+  'rokt-evidence': 'Research Insights',
+  'rokt-workflow': 'Workflow Design',
   'rokt-review': 'UX Design',
-  'rokt-testing': 'Testing & iteration',
-  'rokt-dashboard': 'Final solution',
-  'rokt-impact': 'The impact',
+  'rokt-testing': 'Testing & Iteration',
+  'rokt-dashboard': 'Final Solution',
+  'rokt-impact': 'The Impact',
   'rokt-reflection': 'Reflections',
-  'block-party-problem': 'The problem',
+  'block-party-problem': 'The Problem',
   'block-party-research': 'Research',
-  'block-party-exploration': 'Concept exploration',
-  'block-party-testing': 'Testing and iterations',
-  'block-party-solution': 'Final solution',
-  'block-party-impact': 'The impact',
+  'block-party-exploration': 'Concept Exploration',
+  'block-party-testing': 'Testing and Iterations',
+  'block-party-solution': 'Final Solution',
+  'block-party-impact': 'The Impact',
   'block-party-reflection': 'Reflections',
-  'iheart-problem': 'The problem',
+  'iheart-problem': 'The Problem',
   'iheart-discovery': 'Research',
-  'iheart-exploration': 'Concept exploration',
-  'iheart-iteration': 'Testing and iterations',
-  'iheart-solution': 'Final solution',
-  'iheart-impact': 'The impact',
+  'iheart-exploration': 'Concept Exploration',
+  'iheart-iteration': 'Testing and Iterations',
+  'iheart-solution': 'Final Solution',
+  'iheart-impact': 'The Impact',
   'iheart-reflection': 'Reflections'
 };
 
 export function pageTools(site, e) {
-  const caseNav = items => `<nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links">${items.map(id => `<a href="#${e(id)}"><span>${e(sectionLabels[id])}</span></a>`).join('')}</div></details></nav>`;
+  const caseNav = items => `<nav class="case-section-nav" aria-label="On This Page"><details open><summary>On This Page</summary><div class="case-section-links">${items.map(id => `<a href="#${e(id)}"><span>${e(sectionLabels[id])}</span></a>`).join('')}</div></details></nav>`;
   const media = ({src, alt, caption, width, height, className = '', eager = false}) => `
     <figure class="case-figure ${e(className)}">
       <a class="inspect-link" data-inspect href="${e(src)}" target="_blank" rel="noopener" aria-label="Inspect image: ${e(alt)} (opens larger)">
@@ -46,18 +46,18 @@ export function pageTools(site, e) {
     ${outcome ? `<aside class="case-callout" aria-label="Key Impact"><h3>Key Impact</h3><strong>${e(outcome.title)}</strong><p>${e(outcome.body)}</p></aside>` : ''}</div>
     <dl class="case-metadata">${metadata.map(([label,value]) => `<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl></section>`;
   const productLink = (href, label) => `<div class="case-product-link"><a class="button" href="${e(href)}" target="_blank" rel="noopener">${e(label)} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>`;
-  const preview = ({id, title, description, src, externalUrl, image, alt, width, height, loadLabel = 'Load demo', unavailable}) => unavailable && !src ? `
-    <section id="${e(id)}" class="interactive-preview" aria-labelledby="${e(id)}-title"><div class="preview-heading"><h2 id="${e(id)}-title">${e(title)}</h2><p>${e(unavailable)}</p></div><a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">Open Figma prototype <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></section>` : `
+  const preview = ({id, title, description, src, externalUrl, image, alt, width, height, loadLabel = 'Load Demo', unavailable}) => unavailable && !src ? `
+    <section id="${e(id)}" class="interactive-preview" aria-labelledby="${e(id)}-title"><div class="preview-heading"><h2 id="${e(id)}-title">${e(title)}</h2><p>${e(unavailable)}</p></div><a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">Open Figma Prototype <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></section>` : `
     <section id="${e(id)}" class="interactive-preview" aria-labelledby="${e(id)}-title" ${src ? `data-demo-src="${e(src)}"` : ''}>
       <div class="preview-heading"><div><h2 id="${e(id)}-title">${e(title)}</h2>${description ? `<p>${e(description)}</p>` : ''}</div></div>
       <div class="preview-static">${media({src:image,alt,caption:'',width,height})}</div>
       <div class="embed-host" id="${e(id)}-frame" hidden></div>
-      <div class="preview-actions">${src ? `<button type="button" class="button load-demo" aria-controls="${e(id)}-frame">${e(loadLabel)} <span aria-hidden="true">↗</span></button><button type="button" class="text-link unload-demo" hidden>Return to static preview</button>` : ''}
-      <a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">${src ? 'Open demo in a new tab' : externalUrl.includes('figma.com') ? 'Open Figma prototype' : 'Open original source'} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
+      <div class="preview-actions">${src ? `<button type="button" class="button load-demo" aria-controls="${e(id)}-frame">${e(loadLabel)} <span aria-hidden="true">↗</span></button><button type="button" class="text-link unload-demo" hidden>Return to Static Preview</button>` : ''}
+      <a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">${src ? 'Open Demo in a New Tab' : externalUrl.includes('figma.com') ? 'Open Figma Prototype' : 'Open Original Source'} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
       <p class="preview-status" role="status"></p>
     </section>`;
   const nextProject = project => `<nav class="next-project" aria-label="Next project"><div><p class="eyebrow">Next project</p><a href="/work/${e(project.slug)}"><h2>${e(project.name)} <span aria-hidden="true">↗</span></h2><p>${e(project.title)}</p></a></div></nav>`;
   return {site, e, media, section, caseHeader, overview, preview, nextProject, caseNav, productLink};
 }
 
-export const imageViewer = `<dialog class="image-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">Project visual</h2><div><button type="button" class="viewer-zoom" aria-pressed="false">Zoom in</button><a class="viewer-original" target="_blank" rel="noopener">Open image ↗<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="viewer-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button></div></div><div class="viewer-canvas" tabindex="0" aria-label="Image viewing area; scroll to inspect when zoomed"><img alt=""></div><p class="viewer-caption"></p></dialog>`;
+export const imageViewer = `<dialog class="image-viewer" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">Project visual</h2><div><button type="button" class="viewer-zoom" aria-pressed="false">Zoom In</button><a class="viewer-original" target="_blank" rel="noopener">Open Image ↗<span class="sr-only"> (opens in a new tab)</span></a><button type="button" class="viewer-close" aria-label="Close Image Viewer">Close <span aria-hidden="true">×</span></button></div></div><div class="viewer-canvas" tabindex="0" aria-label="Image viewing area; scroll to inspect when zoomed"><img alt=""></div><p class="viewer-caption"></p></dialog>`;

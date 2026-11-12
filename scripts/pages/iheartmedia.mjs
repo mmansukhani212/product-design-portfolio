@@ -24,8 +24,8 @@ export default function render(ctx) {
     <div class="story-video-shell"><img class="story-video-poster" src="/assets/${d.poster}.webp" width="796" height="1604" alt="Static preview of the ${e(d.id)} recorded prototype." loading="lazy" decoding="async"><video id="demo-${d.id}" controls playsinline preload="none" width="398" height="802" tabindex="0" aria-labelledby="demo-${d.id}-title" hidden></video></div>
     <div class="story-play-slot"><button type="button" class="button story-play" data-video-src="/assets/iheart-demo-${d.id}.mp4" aria-controls="demo-${d.id}" hidden>${e(d.label)} <span aria-hidden="true">▷</span></button></div>
     <p class="story-video-status" role="status"></p>
-    <a class="text-link iheart-recording" href="/assets/iheart-demo-${d.id}.mp4" target="_blank" rel="noopener">Open recording ↗<span class="sr-only"> (video, opens in a new tab)</span></a>
-    <details class="story-transcript"><summary>Text walkthrough</summary><ol>${d.steps.map(step=>`<li>${e(step)}</li>`).join('')}</ol></details>
+    <a class="text-link iheart-recording" href="/assets/iheart-demo-${d.id}.mp4" target="_blank" rel="noopener">Open Recording ↗<span class="sr-only"> (video, opens in a new tab)</span></a>
+    <details class="story-transcript"><summary>Text Walkthrough</summary><ol>${d.steps.map(step=>`<li>${e(step)}</li>`).join('')}</ol></details>
   </article>`;
 
   return `<article class="case-study iheart-study">
@@ -33,7 +33,7 @@ export default function render(ctx) {
       kicker: 'iHeart Media',
       title: 'Make listening easier to start and more social',
       summary: 'A studio collaboration exploring onboarding and participation for listeners under 35.',
-      tags: ['Consumer UX', 'Product strategy', 'Usability testing']
+      tags: ['Consumer UX', 'Product Strategy', 'Usability Testing']
     })}
     <div class="case-wrap">
       <div class="iheart-hero-art" aria-label="Listening and preference-setting concepts">
@@ -86,7 +86,7 @@ export default function render(ctx) {
               <tr><td>Navigation and controls were hard to understand.</td><td>Useful features needed more visible entry points.</td><td>Surface settings and explain actions.</td></tr>
               <tr><td>Interview feedback expressed a desire for human interaction.</td><td>Connection mattered alongside content.</td><td>Explore dedications and episode-level participation.</td></tr>
             </tbody></table></div>
-            <details class="story-support"><summary>Research scope and constraints</summary><p>The five interviews informed discovery. Later usability sessions involved 10+ users exploring the app independently. Privacy around host contact, limited moderation capacity, and advertising constraints shaped the design space.</p></details>`})}
+            <details class="story-support"><summary>Research Scope and Constraints</summary><p>The five interviews informed discovery. Later usability sessions involved 10+ users exploring the app independently. Privacy around host contact, limited moderation capacity, and advertising constraints shaped the design space.</p></details>`})}
 
           ${section({id: 'iheart-exploration', title: 'Explore broadly. Keep the prototype focused.', body: `
             <div class="case-prose"><p>Early sketches explored episode organization, live discussion, and karaoke. The recorded prototype focused on clearer onboarding, song dedication, and podcast participation. These sketches show a wider design space than the three recorded flows below.</p></div>
@@ -109,9 +109,9 @@ export default function render(ctx) {
           ${section({id: 'iheart-solution', title: 'Three ways into a more connected listening experience.', body: `
             <div class="case-prose"><p>The prototype links easier entry with ways to participate alongside the audio. Play each original interaction below; these are recorded prototypes, not a live service.</p></div>
             <div class="story-demos" role="region" aria-label="Three prototype recordings; scroll horizontally on small screens" tabindex="0">
-              ${demonstration({id:'onboarding',title:'Start with relevant preferences.',description:'Clearer questions guide location and genre choices, helping listeners shape their experience before the first session.',poster:'iheart-flow-onboarding-start',label:'Play onboarding',steps:['Start from account confirmation.','Enter listening location and choose genres.','Finish setup and start listening.']})}
-              ${demonstration({id:'dedication',title:'Make a song personal.',description:'I pitched and owned song dedication: a personal song-and-message flow, with confirmation that the request was sent.',poster:'iheart-flow-dedication-player',label:'Play dedication',steps:['Open Shoutout a Song from the player.','Add sender, recipient, song and message.','Submit and see request-sent feedback.']})}
-              ${demonstration({id:'podcast',title:'Respond to an episode.',description:'Episode-level polls and comments give listeners a concrete way to participate in the conversation around the content.',poster:'iheart-flow-podcast-episode',label:'Play podcast flow',steps:['Open the episode detail.','Visit its poll and comments.','Select a poll response and explore discussion.']})}
+              ${demonstration({id:'onboarding',title:'Start with relevant preferences.',description:'Clearer questions guide location and genre choices, helping listeners shape their experience before the first session.',poster:'iheart-flow-onboarding-start',label:'Play Onboarding',steps:['Start from account confirmation.','Enter listening location and choose genres.','Finish setup and start listening.']})}
+              ${demonstration({id:'dedication',title:'Make a song personal.',description:'I pitched and owned song dedication: a personal song-and-message flow, with confirmation that the request was sent.',poster:'iheart-flow-dedication-player',label:'Play Dedication',steps:['Open Shoutout a Song from the player.','Add sender, recipient, song and message.','Submit and see request-sent feedback.']})}
+              ${demonstration({id:'podcast',title:'Respond to an episode.',description:'Episode-level polls and comments give listeners a concrete way to participate in the conversation around the content.',poster:'iheart-flow-podcast-episode',label:'Play Podcast Flow',steps:['Open the episode detail.','Visit its poll and comments.','Select a poll response and explore discussion.']})}
             </div>`})}
 
           ${section({id: 'iheart-impact', title: 'The evidence is in the refinements.', body: `

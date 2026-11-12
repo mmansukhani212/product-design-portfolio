@@ -34,7 +34,7 @@ for (const demo of document.querySelectorAll('.story-demo')) {
     video.hidden = true;
     poster.hidden = false;
     button.hidden = false;
-    status.textContent = 'This preview could not load. Use Open recording below.';
+    status.textContent = 'This preview could not load. Use Open Recording below.';
   });
 }
 document.addEventListener('play', event => {

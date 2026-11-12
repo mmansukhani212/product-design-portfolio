@@ -48,7 +48,7 @@ if (viewer && typeof viewer.showModal === 'function') {
   const zoom = viewer.querySelector('.viewer-zoom');
   const setZoom = expanded => {
     zoom.setAttribute('aria-pressed', String(expanded));
-    zoom.textContent = expanded ? 'Fit to screen' : 'Zoom in';
+    zoom.textContent = expanded ? 'Fit to Screen' : 'Zoom In';
     canvas.classList.toggle('is-zoomed', expanded);
     image.style.width = expanded ? `${Math.max(image.naturalWidth, 1000)}px` : '';
   };

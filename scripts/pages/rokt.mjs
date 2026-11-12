@@ -3,12 +3,12 @@ export default function render(ctx) {
   const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next, productLink} = ctx;
   const demoUrl = 'https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/';
   const flows = [
-    {id:'account-manager', title:'Account manager’s flow', steps:[
+    {id:'account-manager', title:'Account Manager’s Flow', steps:[
       ['Find the review', 'Open the AM Review Queue and identify the forms that need attention.'],
       ['Review and submit', 'Check the prefilled data, add relationship context, and approve the record.'],
       ['Track account health', 'Return to Intelligence and filter to the manager’s accounts.']
     ]},
-    {id:'decision-maker', title:'Decision makers’ flow', steps:[
+    {id:'decision-maker', title:'Decision Makers’ Flow', steps:[
       ['Start with the overview', 'Spot portfolio trends and accounts that need attention.'],
       ['Customize the view', 'Open At-Risk Accounts and filter by competitor and risk level.'],
       ['Explore competitor insights', 'Compare competitors, common threats, and patterns across accounts.']
@@ -19,7 +19,7 @@ export default function render(ctx) {
     ${flows.map(flow=>`<section class="rokt-flow" id="rokt-flow-${flow.id}" aria-labelledby="rokt-flow-${flow.id}-title">
       <h3 id="rokt-flow-${flow.id}-title">${e(flow.title)}</h3>
       <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-${flow.id}-poster.png" aria-labelledby="rokt-flow-${flow.id}-title" aria-describedby="rokt-flow-${flow.id}-steps"><source src="/assets/rokt-flow-${flow.id}.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
-      <a class="text-link rokt-flow-open" href="/assets/rokt-flow-${flow.id}.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (${e(flow.title)}, opens in a new tab)</span></a>
+      <a class="text-link rokt-flow-open" href="/assets/rokt-flow-${flow.id}.mp4" target="_blank" rel="noopener">Open Flow Video <span aria-hidden="true">↗</span><span class="sr-only"> (${e(flow.title)}, opens in a new tab)</span></a>
       <ol id="rokt-flow-${flow.id}-steps">${flow.steps.map(([title,body])=>`<li><strong>${e(title)}</strong><p>${e(body)}</p></li>`).join('')}</ol>
     </section>`).join('')}</div>`;
 
@@ -38,7 +38,7 @@ export default function render(ctx) {
       width: 1470, height: 919, className: 'case-hero-media', eager: true
     })}</div>
 
-    ${productLink('https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'Open dashboard demo')}
+    ${productLink('https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'Open Dashboard Demo')}
 
     ${overview({
       summary: '<p>Competitor and churn signals from client calls were scattered across Google Chat and personal spreadsheets, leaving gaps in the information available for retention planning.</p><p>I designed a connected workflow: AI flags mentions, n8n prepares a HubSpot questionnaire, and account managers have three days to review it before submission. Real-time dashboard syncing gives stakeholders a shared view while distinguishing reviewed records from automatic submissions.</p>',
@@ -121,7 +121,7 @@ export default function render(ctx) {
       ${section({id:'rokt-dashboard',title:'One workspace for signals, review, and retention planning.',body:`
         <div class="case-prose"><p>The platform brings AI-detected competitor and churn signals into one shared workspace, with account-manager review, real-time updates, and visible review status. Account managers validate prefilled records and add relationship context. Decision makers use the overview, searchable intelligence, and filters to prioritize at-risk accounts, compare competitor patterns, and investigate the evidence behind each signal before forming a retention plan.</p></div>
         <ol class="rokt-demo-path"><li><strong>AM Review Queue</strong><span>Validate the signals</span></li><li><strong>At-Risk Accounts</strong><span>Prioritize a response</span></li><li><strong>Competitor Insights</strong><span>Understand the patterns</span></li></ol>
-        ${preview({id:'rokt-demo',title:'Try the demo here',src:demoUrl,externalUrl:demoUrl,image:'/assets/rokt-final-review-queue.webp',alt:'Static fallback of the fictional-data AM queue with deadlines, remaining time, review status and three-day submission policy.',width:1470,height:919,loadLabel:'Load dashboard demo'})}`})}
+        ${preview({id:'rokt-demo',title:'Try the demo here',src:demoUrl,externalUrl:demoUrl,image:'/assets/rokt-final-review-queue.webp',alt:'Static fallback of the fictional-data AM queue with deadlines, remaining time, review status and three-day submission policy.',width:1470,height:919,loadLabel:'Load Dashboard Demo'})}`})}
 
       ${section({id:'rokt-impact',title:'Less reporting effort. Faster retention planning.',body:`
         <div class="rokt-impact-ledger"><div><span>Before</span><strong>Manual reporting across separate channels</strong></div><span class="rokt-impact-arrow" aria-hidden="true">→</span><div><span>After</span><strong>Automated reporting with real-time shared visibility</strong></div></div>

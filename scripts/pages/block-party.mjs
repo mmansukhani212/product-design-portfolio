@@ -7,10 +7,10 @@ export default function render(ctx) {
   });
   return `<article class="case-study block-party-page">
     ${caseHeader({
-      kicker: 'Block Party',
-      title: 'Give residents a way to shape their neighborhood',
-      summary: 'An interactive community planning prototype: explore projects, create proposals, and share feedback.',
-      tags: ['Mobile product design', 'Participatory research', 'Civic technology'],
+      kicker: 'Block Party | Civic Tech Mobile App',
+      title: 'Reimagining civic participation through interactive urban design',
+      summary: 'A gamified mobile experience that empowers residents to visualize neighborhood changes, propose ideas, and shape the future of their communities.',
+      tags: ['Civic Technology', 'Gamification', 'UX Research'],
     })}
 
     <div class="case-wrap bp-hero">
@@ -21,12 +21,12 @@ export default function render(ctx) {
       <p class="bp-hero-note">Current mobile prototype · Illustrative city, sample projects, and browser-local activity.</p>
     </div>
 
-    ${productLink('/demos/block-party/', 'Open mobile demo')}
+    ${productLink('/demos/block-party/', 'Open Mobile Demo')}
 
     ${overview({
       summary: '<p>Bloomington’s public input process relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an interactive community planning prototype. Its visual planning sandbox lets residents arrange predefined features such as parks and bike lanes, create proposals, vote, and share feedback—making neighborhood planning more approachable.</p>',
       metadata: [
-        ['My role', 'HCI/d capstone thesis author'],
+        ['My role', 'UX Designer'],
         ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
         ['Target users', 'Civic-oriented Bloomington residents, ages 18–35'],
         ['Team', 'Bloomington urban planners and city council members'],
@@ -67,7 +67,7 @@ export default function render(ctx) {
           <tr><td>Proposals shown without enough spatial context.</td><td>Locate a proposed change in its neighborhood.</td></tr>
           <tr><td>Feedback could be misinterpreted.</td><td>Pair comments with visual ideas and project context.</td></tr>
         </tbody></table></div>
-        <details class="bp-support"><summary>Research scope and constraints</summary><p>Digital ethnography covered Reddit, public forums, and government websites. A workshop involved 4 participants plus me; paper-concept comparison involved 2 city planners and 2 users. Participant overlap across activities is unknown. Digital confidence, input overload, and trust in representation remain constraints.</p></details>`,
+        <details class="bp-support"><summary>Research Scope and Constraints</summary><p>Digital ethnography covered Reddit, public forums, and government websites. A workshop involved 4 participants plus me; paper-concept comparison involved 2 city planners and 2 users. Participant overlap across activities is unknown. Digital confidence, input overload, and trust in representation remain constraints.</p></details>`,
     })}
 
     ${section({
@@ -78,7 +78,7 @@ export default function render(ctx) {
           <article><div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div>${media({src:'/assets/block-party-story-concept-ar.webp',alt:'2025 hand-drawn AR concept showing a phone viewing a proposal over a physical site.',caption:'2025 AR exploration',width:1365,height:340,className:'bp-concept-art'})}</article>
           <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Visual planning sandbox</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div>${media({src:'/assets/block-party-story-concept-simulation.webp',alt:'2025 neighborhood planning sketches combining project exploration, proposal feedback, and a building-element library.',caption:'2025 selected direction',width:1740,height:305,className:'bp-concept-art'})}</article>
         </div>
-        <details class="bp-support"><summary>Inspect the original wireframes</summary><div class="bp-wireframes">
+        <details class="bp-support"><summary>Inspect the Original Wireframes</summary><div class="bp-wireframes">
           ${media({src:'/assets/block-party-story-wireframe-map.webp',alt:'Original annotated map wireframe with location search, project site, Build and Projects controls.',caption:'2025 map wireframe',width:743,height:348})}
           ${media({src:'/assets/block-party-story-wireframe-builder.webp',alt:'Original builder wireframe showing a designated plot, prefab library, submit and save-draft actions.',caption:'2025 builder wireframe',width:796,height:570})}
         </div></details>`,
@@ -92,7 +92,7 @@ export default function render(ctx) {
           <div><dt>Recognizing a result</dt><dd><span>2025 finding</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Later change</span>Placement feedback and a submission preview show the result of an action.</dd></div>
         </dl>
         <div class="bp-version-comparison" data-bp-comparison>
-          <div class="bp-version-controls" role="group" aria-label="Builder versions" hidden><button type="button" data-bp-version="capstone" aria-pressed="true" aria-controls="bp-version-capstone">2025 capstone</button><button type="button" data-bp-version="current" aria-pressed="false" aria-controls="bp-version-current">Current mobile app</button></div>
+          <div class="bp-version-controls" role="group" aria-label="Builder versions" hidden><button type="button" data-bp-version="capstone" aria-pressed="true" aria-controls="bp-version-capstone">2025 Capstone</button><button type="button" data-bp-version="current" aria-pressed="false" aria-controls="bp-version-current">Current Mobile App</button></div>
           <div class="bp-version-panel" id="bp-version-capstone" data-bp-panel="capstone">${media({src:'/assets/block-party-builder.webp',alt:'Original 2025 landscape builder export with a single uncategorized row of ready-made elements.',caption:'2025 prototype · Original landscape export',width:852,height:393})}</div>
           <div class="bp-version-panel" id="bp-version-current" data-bp-panel="current">${screen('builder','Current portrait mobile builder showing Buildings, Outdoors, and Mobility categories.','Later mobile prototype · Categorized library')}</div>
         </div>
@@ -116,7 +116,7 @@ export default function render(ctx) {
           image: '/assets/block-party-mobile-explore.webp',
           alt: 'Static mobile Explore screen; load the working app or open the phone demo below.',
           width: 393, height: 852,
-          loadLabel: 'Load interactive prototype',
+          loadLabel: 'Load Interactive Prototype',
         })}`,
     })}
 
