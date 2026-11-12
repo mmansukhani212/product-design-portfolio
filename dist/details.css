@@ -52,8 +52,17 @@
 .case-study .case-tags li{background:var(--wash);border-color:var(--border);color:var(--deep)}
 .case-product-link{display:flex;justify-content:center;margin:24px 0 0}
 .overview-title{grid-column:1/-1;font-size:25px;line-height:1.3;margin-bottom:0;color:var(--ink)}
+/* Let the taller column set the shared row height, keeping both endings aligned. */
+@media(min-width:768px){
+  .case-overview>.case-prose,.case-overview>.case-metadata{display:flex;flex-direction:column}
+  .case-overview>.case-prose>p:last-of-type{margin-bottom:auto}
+  .case-overview>.case-metadata>div:not(:last-child){flex:1}
+}
 .case-callout h3{font-size:13px;font-weight:750;line-height:1.5;letter-spacing:0;margin-bottom:12px;color:var(--deep)}
 .case-study .next-project h2{color:var(--ink)}
 .case-study .next-project a:focus-visible h2{color:var(--accent)}
 @media(hover:hover) and (pointer:fine){.case-study .next-project a:hover h2{color:var(--accent)}}
 @media(max-width:767px){.overview-title{font-size:23px}.case-product-link{margin-top:20px}.case-product-link .button{min-height:44px}}
+
+/* Match narrative mastheads to the shared section-navigation labels. */
+.case-section-heading .case-section-label{margin:0 0 12px}

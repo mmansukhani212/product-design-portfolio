@@ -56,13 +56,13 @@ export default function render(ctx) {
       })}
       <div class="case-reading-layout">
         ${caseNav([
-          ['iheart-problem', 'The problem'],
-          ['iheart-discovery', 'What research changed'],
-          ['iheart-exploration', 'Exploring directions'],
-          ['iheart-iteration', 'Testing & iteration'],
-          ['iheart-solution', 'Experience the solution'],
-          ['iheart-impact', 'What changed'],
-          ['iheart-reflection', 'Reflection']
+          'iheart-problem',
+          'iheart-discovery',
+          'iheart-exploration',
+          'iheart-iteration',
+          'iheart-solution',
+          'iheart-impact',
+          'iheart-reflection'
         ])}
         <div class="case-reading-content iheart-story">
           ${section({id: 'iheart-problem', title: 'Getting to the music took effort. Connection stopped at playback.', body: `

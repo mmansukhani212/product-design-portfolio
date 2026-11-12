@@ -44,13 +44,13 @@ export default function render(ctx) {
 
     <div class="case-reading-layout">
       ${caseNav([
-        ['rokt-problem', 'The missing handoff'],
-        ['rokt-evidence', 'Evidence to direction'],
-        ['rokt-workflow', 'The workflow'],
-        ['rokt-review', 'Human review'],
-        ['rokt-dashboard', 'Explore the solution'],
-        ['rokt-impact', 'What changed'],
-        ['rokt-reflection', 'Reflection']
+        'rokt-problem',
+        'rokt-evidence',
+        'rokt-workflow',
+        'rokt-review',
+        'rokt-dashboard',
+        'rokt-impact',
+        'rokt-reflection'
       ])}
       <div class="case-reading-content rokt-story">
 

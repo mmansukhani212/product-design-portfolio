@@ -37,13 +37,13 @@ export default function render(ctx) {
 
     <div class="case-reading-layout">
       ${caseNav([
-        ['block-party-problem', 'The problem'],
-        ['block-party-research', 'What research changed'],
-        ['block-party-exploration', 'Exploring directions'],
-        ['block-party-testing', 'Testing & iteration'],
-        ['block-party-solution', 'Experience the solution'],
-        ['block-party-impact', 'What changed'],
-        ['block-party-reflection', 'Reflection'],
+        'block-party-problem',
+        'block-party-research',
+        'block-party-exploration',
+        'block-party-testing',
+        'block-party-solution',
+        'block-party-impact',
+        'block-party-reflection',
       ])}
       <div class="case-reading-content bp-story">
 

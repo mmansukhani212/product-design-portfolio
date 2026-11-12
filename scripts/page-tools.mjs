@@ -1,14 +1,38 @@
+const sectionLabels = {
+  'rokt-problem': 'The problem',
+  'rokt-evidence': 'Key insights',
+  'rokt-workflow': 'Workflow design',
+  'rokt-review': 'Interaction design',
+  'rokt-dashboard': 'Final solution',
+  'rokt-impact': 'The impact',
+  'rokt-reflection': 'Reflections',
+  'block-party-problem': 'The problem',
+  'block-party-research': 'Research',
+  'block-party-exploration': 'Concept exploration',
+  'block-party-testing': 'Testing and iterations',
+  'block-party-solution': 'Final solution',
+  'block-party-impact': 'The impact',
+  'block-party-reflection': 'Reflections',
+  'iheart-problem': 'The problem',
+  'iheart-discovery': 'Research',
+  'iheart-exploration': 'Concept exploration',
+  'iheart-iteration': 'Testing and iterations',
+  'iheart-solution': 'Final solution',
+  'iheart-impact': 'The impact',
+  'iheart-reflection': 'Reflections'
+};
+
 export function pageTools(site, e) {
-  const caseNav = items => `<nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links">${items.map(([id, label]) => `<a href="#${e(id)}"><span>${e(label)}</span></a>`).join('')}</div></details></nav>`;
+  const caseNav = items => `<nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links">${items.map(id => `<a href="#${e(id)}"><span>${e(sectionLabels[id])}</span></a>`).join('')}</div></details></nav>`;
   const media = ({src, alt, caption, width, height, className = '', eager = false}) => `
     <figure class="case-figure ${e(className)}">
       <a class="inspect-link" data-inspect href="${e(src)}" target="_blank" rel="noopener" aria-label="Inspect image: ${e(alt)} (opens larger)">
         <img src="${e(src)}" alt="${e(alt)}" width="${width}" height="${height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" ${eager ? 'fetchpriority="high"' : ''}>
       </a>${caption ? `<figcaption>${e(caption)}</figcaption>` : ''}
     </figure>`;
-  const section = ({id, kicker, title, body, className = ''}) => `
+  const section = ({id, title, body, className = ''}) => `
     <section id="${e(id)}" class="case-section ${e(className)}" aria-labelledby="${e(id)}-title">
-      <div class="case-section-heading"><h2 id="${e(id)}-title">${e(title)}</h2></div>
+      <div class="case-section-heading">${sectionLabels[id] ? `<p class="eyebrow case-section-label">${e(sectionLabels[id])}</p>` : ''}<h2 id="${e(id)}-title">${e(title)}</h2></div>
       <div class="case-section-content">${body}</div>
     </section>`;
   const caseHeader = ({kicker, title, summary, tags = []}) => `
