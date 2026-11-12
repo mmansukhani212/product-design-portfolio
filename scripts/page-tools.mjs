@@ -49,7 +49,7 @@ export function pageTools(site, e) {
   const preview = ({id, title, description, src, externalUrl, image, alt, width, height, loadLabel = 'Load demo', unavailable}) => unavailable && !src ? `
     <section id="${e(id)}" class="interactive-preview" aria-labelledby="${e(id)}-title"><div class="preview-heading"><h2 id="${e(id)}-title">${e(title)}</h2><p>${e(unavailable)}</p></div><a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">Open Figma prototype <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></section>` : `
     <section id="${e(id)}" class="interactive-preview" aria-labelledby="${e(id)}-title" ${src ? `data-demo-src="${e(src)}"` : ''}>
-      <div class="preview-heading"><div><h2 id="${e(id)}-title">${e(title)}</h2><p>${e(description)}</p></div></div>
+      <div class="preview-heading"><div><h2 id="${e(id)}-title">${e(title)}</h2>${description ? `<p>${e(description)}</p>` : ''}</div></div>
       <div class="preview-static">${media({src:image,alt,caption:'',width,height})}</div>
       <div class="embed-host" id="${e(id)}-frame" hidden></div>
       <div class="preview-actions">${src ? `<button type="button" class="button load-demo" aria-controls="${e(id)}-frame">${e(loadLabel)} <span aria-hidden="true">↗</span></button><button type="button" class="text-link unload-demo" hidden>Return to static preview</button>` : ''}

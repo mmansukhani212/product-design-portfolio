@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-impact"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-flow-tabs"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-solution"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-flow-tabs"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
   <a class="wordmark" href="/" aria-label="Monisha Mansukhani, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Monisha<br class="mobile-break"> Mansukhani</span></a>
   <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
@@ -99,28 +99,31 @@
           <div><h3>Show why a signal was flagged.</h3><p>Reviewers needed more source context to judge relevance and check the AI summary against the original conversation.</p></div>
           <div><h3>Separate a mention from switching intent.</h3><p>Neutral and historical mentions needed to be distinguished from signals of active churn risk.</p></div>
         </div>
-        <div class="rokt-iteration-copy"><h3>Refining what counts as a churn signal.</h3><p>I refined the Gong AI tracker prompts through multiple working sessions, defining the <strong>last 180 days</strong> as the window for active churn risk. Account managers contributed edge cases from client calls to help capture nuanced competitor mentions and scope the prompts to weed out false positives.</p></div>
-        <figure class="rokt-scope" aria-labelledby="rokt-scope-caption">
-          <figcaption id="rokt-scope-caption">Narrowing the tracker’s scope</figcaption>
-          <ol>
-            <li><span>Starting scope</span><strong>Competitor mentions in client calls</strong><p>A mention alone does not establish switching intent.</p></li>
-            <li><span>Time window</span><strong>Last 180 days</strong><p>Define the timeframe for active churn risk.</p></li>
-            <li><span>Context</span><strong>Nuance + account-manager edge cases</strong><p>Refine the criteria around what clients actually mean.</p></li>
-            <li><span>Relevance</span><strong>Prompts scoped to filter false positives</strong><p>Distinguish relevant churn signals from neutral or historical references.</p></li>
-          </ol>
-        </figure>
-        <div class="rokt-source-context"><h3>A direct route back to the source.</h3><p>I added a button in the review form linking to the Gong call recording that triggered it. Reviewers can access the original call excerpts when they want to check the AI summary’s reliability.</p><ol aria-label="Source verification path"><li>Review form</li><li>Source Gong recording</li><li>Original call context</li></ol></div></div>
+        <div class="rokt-iteration-layout">
+          <div class="rokt-iteration-copy"><h3>Refining what counts as a churn signal.</h3><p>I refined the Gong AI tracker prompts through multiple working sessions, defining the <strong>last 180 days</strong> as the window for active churn risk. Account managers contributed edge cases from client calls to help capture nuanced competitor mentions and scope the prompts to weed out false positives.</p>
+            <div class="rokt-source-context"><h3>A direct route back to the source.</h3><p>I added a button in the review form linking to the Gong call recording that triggered it. Reviewers can access the original call excerpts when they want to check the AI summary’s reliability.</p><ol aria-label="Source verification path"><li>Review form</li><li>Source Gong recording</li><li>Original call context</li></ol></div>
+          </div>
+          <figure class="rokt-scope" aria-labelledby="rokt-scope-caption">
+            <figcaption id="rokt-scope-caption">Refining the Gong AI trackers</figcaption>
+            <ol>
+              <li><span>Starting scope</span><strong>Competitor mentions</strong></li>
+              <li><span>Time window</span><strong>Last 180 days</strong></li>
+              <li><span>Context</span><strong>Client nuance + AM edge cases</strong></li>
+              <li><span>Relevance</span><strong>Filter false positives</strong></li>
+            </ol>
+          </figure>
+        </div></div>
     </section>
 
 
     <section id="rokt-dashboard" class="case-section " aria-labelledby="rokt-dashboard-title">
-      <div class="case-section-heading"><p class="eyebrow case-section-label">Final solution</p><h2 id="rokt-dashboard-title">Trace a risk pattern back to its source.</h2></div>
+      <div class="case-section-heading"><p class="eyebrow case-section-label">Final solution</p><h2 id="rokt-dashboard-title">One workspace for signals, review, and retention planning.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>The overview shows trends and priority accounts. Intelligence search and filters narrow the investigation by competitor, risk, manager, or review status; account details keep the excerpt and review history close. Stakeholders can inspect the context behind a signal instead of relying on an aggregate alone.</p></div>
-        <ol class="rokt-demo-path"><li><strong>Overview</strong><span>Spot a pattern</span></li><li><strong>Intelligence</strong><span>Find the record</span></li><li><strong>AM Review Queue</strong><span>Inspect its evidence</span></li></ol>
+        <div class="case-prose"><p>The platform brings AI-detected competitor and churn signals into one shared workspace, with account-manager review, real-time updates, and visible review status. Account managers validate prefilled records and add relationship context. Decision makers use the overview, searchable intelligence, and filters to prioritize at-risk accounts, compare competitor patterns, and investigate the evidence behind each signal before forming a retention plan.</p></div>
+        <ol class="rokt-demo-path"><li><strong>AM Review Queue</strong><span>Validate the signals</span></li><li><strong>At-Risk Accounts</strong><span>Prioritize a response</span></li><li><strong>Competitor Insights</strong><span>Understand the patterns</span></li></ol>
 
     <section id="rokt-demo" class="interactive-preview" aria-labelledby="rokt-demo-title" data-demo-src="https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/">
-      <div class="preview-heading"><div><h2 id="rokt-demo-title">Try the fictional-data dashboard</h2><p>Open a review to inspect its source context and validation prompts. All accounts, activity, and financial figures are fictional. The prototype runs independently of Gong, HubSpot, and n8n.</p></div></div>
+      <div class="preview-heading"><div><h2 id="rokt-demo-title">Try the demo here</h2></div></div>
       <div class="preview-static">
     <figure class="case-figure ">
       <a class="inspect-link" data-inspect href="/assets/rokt-final-review-queue.webp" target="_blank" rel="noopener" aria-label="Inspect image: Static fallback of the fictional-data AM queue with deadlines, remaining time, review status and three-day submission policy. (opens larger)">
