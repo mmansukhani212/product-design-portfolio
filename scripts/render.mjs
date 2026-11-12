@@ -10,7 +10,7 @@ import renderAbout from './pages/about.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const site = JSON.parse(await readFile(path.join(root, 'data/site.json'), 'utf8'));
 const e = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const storyScripts = {rokt: 'rokt-story', 'block-party': 'block-party-story', iheartmedia: 'iheart-story'};
+const storyScripts = {rokt: 'rokt-story', iheartmedia: 'iheart-story'};
 const arrow = '<span aria-hidden="true" class="arrow">↗</span>';
 const resume = (className = '') => `<a class="${className}" href="${e(site.resume)}" target="_blank" rel="noopener">Resume ${arrow}<span class="sr-only"> (PDF, opens in a new tab)</span></a>`;
 const header = current => `<a class="skip-link" href="#main">Skip to Content</a>
@@ -45,7 +45,7 @@ const home = `<section class="hero hero-compact" aria-labelledby="hero-title"><h
 async function page(route, title, description, body, current) {
   const dir = path.join(root, 'dist', route);
   await mkdir(dir, {recursive:true});
-  const detailAssets = current === 'home' ? '' : `<link rel="stylesheet" href="/details.css?v=2026-11-12-metadata-spacing"><link rel="stylesheet" href="/${e(current)}.css${current === 'about' ? '?v=2026-11-11-bio-crop' : current === 'rokt' ? '?v=2026-11-12-solution' : '?v=2026-11-12-layout'}"><script defer src="/details.js?v=2026-11-12-title-case"></script>`;
+  const detailAssets = current === 'home' ? '' : `<link rel="stylesheet" href="/details.css?v=2026-11-12-metadata-spacing"><link rel="stylesheet" href="/${e(current)}.css${current === 'about' ? '?v=2026-11-11-bio-crop' : current === 'rokt' ? '?v=2026-11-12-solution' : current === 'block-party' ? '?v=2026-11-12-live-app-only' : '?v=2026-11-12-layout'}"><script defer src="/details.js?v=2026-11-12-title-case"></script>`;
   await writeFile(path.join(dir, 'index.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="${e(description)}"><meta name="theme-color" content="#FFFFFF"><title>${e(title)} | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews">${detailAssets}${storyScripts[current] ? `<script defer src="/${storyScripts[current]}.js?v=${current === 'iheartmedia' ? '2026-11-12-title-case' : current === 'rokt' ? '2026-11-12-flow-tabs' : '2026-11-12-product-stories'}"></script>` : ''}<script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body>${header(current)}<main id="main" tabindex="-1">${body}</main>${current === 'home' ? '' : imageViewer}${footer}</body></html>`.replace(/[ \t]+$/gm, ''));
 }
 await page('', 'Product designer for SaaS & AI workflows', 'Monisha Mansukhani’s selected product design work across enterprise UX, AI workflows, civic participation, and consumer experiences.', home, 'home');

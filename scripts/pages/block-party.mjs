@@ -37,7 +37,6 @@ export default function render(ctx) {
     <div class="case-reading-layout">
       ${caseNav([
         'block-party-problem',
-        'block-party-research',
         'block-party-exploration',
         'block-party-testing',
         'block-party-solution',
@@ -54,14 +53,8 @@ export default function render(ctx) {
           <li><span>02 · Understand</span><strong>Picture the change</strong><p>Proposals were difficult to visualize in context.</p></li>
           <li><span>03 · Contribute</span><strong>Make an opinion useful</strong><p>Input could arrive too late or be misinterpreted.</p></li>
         </ol></figure>
-        <p class="bp-hmw"><span>How might we</span> help younger residents understand neighborhood changes and contribute ideas that planners can interpret?</p>`,
-    })}
-
-    ${section({
-      id: 'block-party-research', title: 'Connect a resident’s perspective to a planner’s decision.',
-      body: `<p class="bp-methods"><strong>4 planning interviews</strong><span>6 resident interviews</span><span>Secondary research + digital ethnography</span></p>
-        <div class="case-prose"><p>I combined resident and planning perspectives to define what useful participation needed. The findings connected barriers in the current process to specific interface decisions.</p></div>
-        <div class="bp-table-wrap" role="region" aria-label="Research evidence and design implications; scroll on small screens" tabindex="0"><table class="bp-evidence"><caption>From documented findings to design implications</caption><thead><tr><th scope="col">Evidence</th><th scope="col">Design implication</th></tr></thead><tbody>
+        <p class="bp-hmw"><span>How might we</span> help younger residents understand neighborhood changes and contribute ideas that planners can interpret?</p>
+        <div class="bp-table-wrap" role="region" aria-label="Research evidence and design implications; scroll on small screens" tabindex="0"><table class="bp-evidence"><caption><strong>Documented Findings → Design Implications</strong></caption><thead><tr><th scope="col">Evidence</th><th scope="col">Design implication</th></tr></thead><tbody>
           <tr><td>Low awareness and inconvenient participation.</td><td>Let residents explore projects beyond a meeting.</td></tr>
           <tr><td>Proposals shown without enough spatial context.</td><td>Locate a proposed change in its neighborhood.</td></tr>
           <tr><td>Feedback could be misinterpreted.</td><td>Pair comments with visual ideas and project context.</td></tr>
@@ -72,9 +65,9 @@ export default function render(ctx) {
       id: 'block-party-exploration', title: 'Keep the context of a place. Add the freedom to propose.',
       body: `<div class="case-prose"><p>A workshop with four participants explored three directions. After comparing paper concepts with two city planners and two users, I developed a visual planning sandbox: contextual feedback plus a way to arrange and share ideas.</p></div>
         <div class="bp-concepts">
-          <article><div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Collaborative blocks at City Hall offered shared discussion, tied to organized sessions.</p></div>${media({src:'/assets/block-party-story-concept-kiosk.webp',alt:'Block illustration from the documented kiosk concept in the 2025 deck.',caption:'2025 kiosk concept',width:380,height:325,className:'bp-concept-art bp-kiosk-art'})}</article>
-          <article><div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div>${media({src:'/assets/block-party-story-concept-ar.webp',alt:'2025 hand-drawn AR concept showing a phone viewing a proposal over a physical site.',caption:'2025 AR exploration',width:1365,height:340,className:'bp-concept-art'})}</article>
-          <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Visual planning sandbox</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div>${media({src:'/assets/block-party-story-concept-simulation.webp',alt:'2025 neighborhood planning sketches combining project exploration, proposal feedback, and a building-element library.',caption:'2025 selected direction',width:1740,height:305,className:'bp-concept-art'})}</article>
+          <article><div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Collaborative blocks at City Hall offered shared discussion, tied to organized sessions.</p></div></article>
+          <article><div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div></article>
+          <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Visual planning sandbox</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div></article>
         </div>`,
     })}
 
@@ -85,11 +78,7 @@ export default function render(ctx) {
           <div><dt>Choosing an element</dt><dd><span>2025 finding</span>Prefab elements needed clearer organization.</dd><dd><span>Later change</span>Buildings, Outdoors, and Mobility categories give the library structure.</dd></div>
           <div><dt>Recognizing a result</dt><dd><span>2025 finding</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Later change</span>Placement feedback and a submission preview show the result of an action.</dd></div>
         </dl>
-        <div class="bp-version-comparison" data-bp-comparison>
-          <div class="bp-version-controls" role="group" aria-label="Builder versions" hidden><button type="button" data-bp-version="capstone" aria-pressed="true" aria-controls="bp-version-capstone">2025 Capstone</button><button type="button" data-bp-version="current" aria-pressed="false" aria-controls="bp-version-current">Current Mobile App</button></div>
-          <div class="bp-version-panel" id="bp-version-capstone" data-bp-panel="capstone">${media({src:'/assets/block-party-builder.webp',alt:'Original 2025 landscape builder export with a single uncategorized row of ready-made elements.',caption:'2025 prototype · Original landscape export',width:852,height:393})}</div>
-          <div class="bp-version-panel" id="bp-version-current" data-bp-panel="current">${screen('builder','Current portrait mobile builder showing Buildings, Outdoors, and Mobility categories.','Later mobile prototype · Categorized library')}</div>
-        </div>
+        <div class="bp-current-builder">${screen('builder','Deployed Block Party mobile builder with Buildings, Outdoors, and Mobility categories.','Categorized elements in the deployed mobile app')}</div>
 `,
     })}
 
