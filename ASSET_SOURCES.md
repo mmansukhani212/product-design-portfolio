@@ -66,3 +66,11 @@ Public iHeartMedia copy credits the studio team and iHeartMedia research/product
 - `iheart-sketch-{episodes,chat,karaoke}.webp`: actual extracted sketch UI from the private source pack’s `17-sketch-podcast-list.png`, `19-sketch-live-chat.png`, and `22-sketch-karaoke-player.png`. Original proportions preserved; detailed source mapping remains in the local MANIFEST.json.
 - `iheart-demo-{onboarding,dedication,podcast}.mp4`: portrait crops of the existing supplied prototype recordings.398×802, H.264/MP4, network fast-start, original timing13.23/11.27/7.77s. Full originals unchanged in the local source pack; crop bounds and AVFoundation helper in USER_CONFIRMATIONS.md. Media loads only when requested and provides controls/external open links/text walkthroughs.
 - Experience journey and evidence matrix: original selectable HTML explanations reconstructed from documented issues and user-confirmed research, labeled appropriately. No fabricated research artifact, new UI, quote or metric.
+
+
+## Block Party and Rokt visual-story additions — November 12, 2026
+
+- `block-party-story-concept-{kiosk,ar,simulation}.webp`: actual concept illustrations cropped from supplied Project Deck slides9/17/18; original proportions preserved.
+- `block-party-story-wireframe-{map,builder}.webp`: actual hand-drawn wireframes from supplied deck slides11/22. Private source-pack STORY_ASSETS.md records exact paths, crop bounds and reproduction commands. Originals remain unchanged.
+- Current mobile screenshots and historical landscape builder remain separate versions/formats, not a retested matched-scale before/after.
+- Rokt reuses four existing final public-demo captures. Explanatory workflow diagrams and operational matrices are selectable HTML reconstructions of confirmed mechanics, not original research artifacts. No invented footage, generated UI or additional production evidence.

@@ -5,12 +5,6 @@ export default function render(ctx) {
     src: `/assets/block-party-mobile-${name}.webp`, alt, caption,
     width: 393, height: 852, className: 'bp-phone-screen', eager,
   });
-  const research = [
-    ['4', 'Planning interviews', 'Bloomington City Council planning members.'],
-    ['6', 'Resident interviews', 'Civic-oriented Bloomington residents.'],
-    ['4', 'Workshop participants', 'Plus my participation in the workshop.'],
-  ];
-
   return `<article class="case-study block-party-page">
     ${caseHeader({
       kicker: 'Block Party',
@@ -44,73 +38,96 @@ export default function render(ctx) {
     <div class="case-reading-layout">
       ${caseNav([
         ['block-party-problem', 'The problem'],
-        ['block-party-research', 'Research'],
-        ['block-party-journey', 'Place and context'],
-        ['block-party-participation', 'Designing an idea'],
-        ['block-party-progress', 'Staying involved'],
-        ['block-party-testing', 'Testing'],
-        ['block-party-prototype', 'Try the prototype'],
+        ['block-party-research', 'What research changed'],
+        ['block-party-exploration', 'Exploring directions'],
+        ['block-party-testing', 'Testing & iteration'],
+        ['block-party-solution', 'Experience the solution'],
+        ['block-party-impact', 'What changed'],
         ['block-party-reflection', 'Reflection'],
       ])}
-      <div class="case-reading-content">
+      <div class="case-reading-content bp-story">
 
     ${section({
-      id: 'block-party-problem', title: 'A public meeting only works if people can take part.',
-      body: '<div class="case-prose"><p>My research in Bloomington pointed to low awareness of planning meetings, inconvenient participation methods, and proposals that were difficult to picture in context. Younger residents were often missing from the conversation.</p><p>I narrowed an initially broad urban-design problem to Bloomington community projects and residents aged 18–35. That focus made the concept specific enough to test.</p></div>',
+      id: 'block-party-problem', title: 'A proposal cannot invite input if people cannot picture it.',
+      body: `<div class="case-prose"><p>Bloomington’s existing input channels included newsletters, surveys, council meetings, and design presentations. Research exposed gaps in awareness, convenience, and visual context. I narrowed a broad urban-design ambition to community projects and civic-oriented residents aged 18–35.</p></div>
+        <figure class="bp-friction-map"><ol>
+          <li><span>01 · Discover</span><strong>Hear about a project</strong><p>Low awareness kept residents out of the conversation.</p></li>
+          <li><span>02 · Understand</span><strong>Picture the change</strong><p>Proposals were difficult to visualize in context.</p></li>
+          <li><span>03 · Contribute</span><strong>Make an opinion useful</strong><p>Input could arrive too late or be misinterpreted.</p></li>
+        </ol><figcaption>Reconstructed from documented research themes; this is an explanatory map.</figcaption></figure>
+        <p class="bp-hmw"><span>How might we</span> help younger residents understand neighborhood changes and contribute ideas that planners can interpret?</p>`,
     })}
 
     ${section({
-      id: 'block-party-research', title: 'Listen to both sides of participation.',
-      body: `<div class="case-prose"><p>The capstone combined secondary research and digital ethnography with resident and planning interviews. A participatory workshop helped explore three directions: a collaborative kiosk, an AR app, and a simulated neighborhood.</p></div>
-        <dl class="bp-research">${research.map(([count, label, note]) => `<div><dt><strong>${count}</strong><span>${label}</span></dt><dd>${note}</dd></div>`).join('')}</dl>
-        <p class="bp-research-note">Paper concepts were also compared with <strong>2 city planners and 2 users</strong>. These are activity-specific counts; participant overlap is unconfirmed.</p>`,
+      id: 'block-party-research', title: 'Connect a resident’s perspective to a planner’s decision.',
+      body: `<p class="bp-methods"><strong>4 planning interviews</strong><span>6 resident interviews</span><span>Secondary research + digital ethnography</span></p>
+        <div class="case-prose"><p>I combined resident and planning perspectives to define what useful participation needed. The findings connected barriers in the current process to specific interface decisions.</p></div>
+        <div class="bp-table-wrap" role="region" aria-label="Research evidence and design implications; scroll on small screens" tabindex="0"><table class="bp-evidence"><caption>From documented findings to design implications</caption><thead><tr><th scope="col">Evidence</th><th scope="col">Design implication</th></tr></thead><tbody>
+          <tr><td>Low awareness and inconvenient participation.</td><td>Let residents explore projects beyond a meeting.</td></tr>
+          <tr><td>Proposals shown without enough spatial context.</td><td>Locate a proposed change in its neighborhood.</td></tr>
+          <tr><td>Feedback could be misinterpreted.</td><td>Pair comments with visual ideas and project context.</td></tr>
+        </tbody></table></div>
+        <details class="bp-support"><summary>Research scope and constraints</summary><p>Digital ethnography covered Reddit, public forums, and government websites. A workshop involved 4 participants plus me; paper-concept comparison involved 2 city planners and 2 users. Participant overlap across activities is unknown. Digital confidence, input overload, and trust in representation remain constraints.</p></details>`,
     })}
 
     ${section({
-      id: 'block-party-journey', title: 'See the place before judging the proposal.',
-      body: `<div class="bp-phone-story"><div class="case-prose"><p>I chose the simulation direction to connect exploration, feedback, and resident-made proposals. A map gives changes a spatial context; project details explain their purpose and constraints.</p><p>On mobile, a draggable bottom sheet snaps between collapsed, middle, and expanded states, balancing the map with project information. Bottom navigation keeps Explore, Proposals, My activity, and Notifications within reach.</p><p>Search, zoom, and a simulated street view support exploration. Project dates, contacts, and dimensions remain explicitly unconfirmed.</p></div>
-        ${screen('project', 'Block Party mobile Hopewell West sample-project details in an expandable bottom sheet.', 'Expand the project sheet to understand the proposal. City imagery and project records are illustrative.')}</div>`,
-    })}
-
-    ${section({
-      id: 'block-party-participation', title: 'Give people a starting point for their ideas.',
-      body: `<div class="bp-phone-story"><div class="case-prose"><p>Ready-made elements let residents suggest a use for a space without drawing a plan from scratch. A bounded library offers an approachable starting point, with less freedom than a full design tool.</p><p>Residents browse Buildings, Outdoors, and Mobility, then drag an element onto the plot—or select and tap to place it. They can adjust or remove elements, save a draft, and review their idea before a mock submission.</p></div>
-        ${screen('builder', 'Block Party mobile builder showing element categories and the neighborhood planning site.', 'Choose an element, place it in the site, then review the idea. Drafts remain in this browser.')}</div>`,
-    })}
-
-    ${section({
-      id: 'block-party-progress', title: 'Keep participation going after “submit.”',
-      body: `<div class="bp-phone-story"><div class="case-prose"><p>A resident needs to know what happens to an idea. Notifications brings together an acknowledgment, reference number, next step, and progress tracker for their proposal.</p><p>Residents can also follow proposals they voted on or commented on. Dedicated proposal views make room for feedback without competing with the map.</p><p>Committee messages, votes, and review stages are mock data. They demonstrate the flow, not community consensus or real planning decisions.</p></div>
-        ${screen('activity', 'Block Party mobile Notifications screen with sample proposal progress and next steps.', 'Track a sample proposal from Received through Decision. Nothing is sent to the council.')}</div>`,
-    })}
-
-    ${section({
-      id: 'block-party-testing', title: 'What testing revealed—and what still needs testing.',
-      body: `<div class="case-prose"><p>Six Bloomington residents tested the 2025 high-fidelity prototype. They saw it as a valuable, inclusive way to engage with community projects and identified two usability refinements.</p></div>
-        <div class="bp-findings">
-          <div><span class="bp-small-label">Finding 01</span><h3>Make elements easier to choose.</h3><p>Participants needed clearer categories in the builder. The current app now groups elements by function; its effect on usability still needs testing.</p></div>
-          <div><span class="bp-small-label">Finding 02</span><h3>Make the result easy to notice.</h3><p>A proposed design’s arrival in the plot needed more emphasis. The current app provides placement feedback and a submission preview; whether these resolve the original issue is untested.</p></div>
+      id: 'block-party-exploration', title: 'Keep the context of a place. Add the freedom to propose.',
+      body: `<div class="case-prose"><p>A workshop with four participants explored three directions. After comparing paper concepts with two city planners and two users, I developed the simulation approach: contextual feedback plus a way to build an idea.</p></div>
+        <div class="bp-concepts">
+          <article><div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Collaborative blocks at City Hall offered shared discussion, tied to organized sessions.</p></div>${media({src:'/assets/block-party-story-concept-kiosk.webp',alt:'Block illustration from the documented kiosk concept in the 2025 deck.',caption:'2025 kiosk concept',width:380,height:325,className:'bp-concept-art bp-kiosk-art'})}</article>
+          <article><div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div>${media({src:'/assets/block-party-story-concept-ar.webp',alt:'2025 hand-drawn AR concept showing a phone viewing a proposal over a physical site.',caption:'2025 AR exploration',width:1365,height:340,className:'bp-concept-art'})}</article>
+          <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Simulation</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div>${media({src:'/assets/block-party-story-concept-simulation.webp',alt:'2025 simulation sketches combining neighborhood exploration, proposal feedback, and a building-element library.',caption:'2025 selected direction',width:1740,height:305,className:'bp-concept-art'})}</article>
         </div>
-        <p class="bp-research-note">The original findings support the concept’s potential, not city-wide adoption or improved participation. The current interactive version is a later prototype, not the artifact tested in 2025.</p>`,
+        <details class="bp-support"><summary>Inspect the original wireframes</summary><div class="bp-wireframes">
+          ${media({src:'/assets/block-party-story-wireframe-map.webp',alt:'Original annotated map wireframe with location search, project site, Build and Projects controls.',caption:'2025 map wireframe',width:743,height:348})}
+          ${media({src:'/assets/block-party-story-wireframe-builder.webp',alt:'Original builder wireframe showing a designated plot, prefab library, submit and save-draft actions.',caption:'2025 builder wireframe',width:796,height:570})}
+        </div></details>`,
     })}
 
-    <div class="case-wrap bp-prototype">
-      ${preview({
-        id: 'block-party-prototype',
-        title: 'Try Block Party',
-        description: 'Try the mobile app in a phone-sized preview, or open it in a new tab. Activity stays in your browser; city views, committee messages, and review stages are simulated. Proposals are not sent to the council.',
-        src: 'https://mmansukhani212.github.io/block-party/',
-        externalUrl: '/demos/block-party/',
-        image: '/assets/block-party-mobile-explore.webp',
-        alt: 'Block Party mobile Explore screen, provided as a static fallback.',
-        width: 393, height: 852,
-        loadLabel: 'Load interactive prototype',
-      })}
-    </div>
+    ${section({
+      id: 'block-party-testing', title: 'Testing made choice and feedback the next priorities.',
+      body: `<div class="case-prose"><p>Six Bloomington residents tested the 2025 high-fidelity prototype. Their feedback identified two refinements. The later mobile app makes these ideas tangible, with further testing still needed.</p></div>
+        <dl class="bp-change-ledger">
+          <div><dt>Choosing an element</dt><dd><span>2025 finding</span>Prefab elements needed clearer organization.</dd><dd><span>Later change</span>Buildings, Outdoors, and Mobility categories give the library structure.</dd></div>
+          <div><dt>Recognizing a result</dt><dd><span>2025 finding</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Later change</span>Placement feedback and a submission preview show the result of an action.</dd></div>
+        </dl>
+        <div class="bp-version-comparison" data-bp-comparison>
+          <div class="bp-version-controls" role="group" aria-label="Builder versions" hidden><button type="button" data-bp-version="capstone" aria-pressed="true" aria-controls="bp-version-capstone">2025 capstone</button><button type="button" data-bp-version="current" aria-pressed="false" aria-controls="bp-version-current">Current mobile app</button></div>
+          <div class="bp-version-panel" id="bp-version-capstone" data-bp-panel="capstone">${media({src:'/assets/block-party-builder.webp',alt:'Original 2025 landscape builder export with a single uncategorized row of ready-made elements.',caption:'2025 prototype · Original landscape export',width:852,height:393})}</div>
+          <div class="bp-version-panel" id="bp-version-current" data-bp-panel="current">${screen('builder','Current portrait mobile builder showing Buildings, Outdoors, and Mobility categories.','Later mobile prototype · Categorized library')}</div>
+        </div>
+        <p class="bp-story-note">These are different prototype versions and screen formats. The current revision has no documented retest; the changes remain hypotheses to evaluate.</p>`,
+    })}
 
     ${section({
-      id: 'block-party-reflection', title: 'An inviting interface is only part of inclusion.',
-      body: '<div class="case-prose"><p>Architecture taught me to think about how a place affects everyday life. This project pushed me to ask whose experience reaches a planning decision—and whose is missing.</p><p>Next, I would test the revised builder and progress flow with residents of different digital confidence levels, then work with planners on interpreting conflicting input. A digital channel needs outreach and a credible review process before it can represent a community.</p></div>',
+      id: 'block-party-solution', title: 'Explore, propose, and follow what happens next.',
+      body: `<div class="case-prose"><p>The current app translates the concept into three connected mobile flows. Snapping sheets balance the map with project details; a bounded element library makes a proposal approachable.</p></div>
+        <div class="bp-flow-gallery" role="region" aria-label="Three mobile flows; scroll to inspect on small screens" tabindex="0">
+          <article><h3>01 · Understand a project</h3>${screen('project','Current Block Party expanded project sheet with location, status, and timeline.','Project details in an expandable sheet')}<p>Explore → Hopewell West → expand the sheet. Read context before contributing.</p></article>
+          <article><h3>02 · Put an idea in place</h3>${screen('builder','Current mobile builder with a Park placed inside the highlighted planning boundary.','A browser-local design draft')}<p>Design this space → choose or drag an element → Review idea. A limited library reduces the blank-page task.</p></article>
+          <article><h3>03 · Stay involved</h3>${screen('activity','Current mobile Notifications screen with a sample proposal in feasibility review.','Illustrative proposal progress')}<p>Notifications → My proposals. A reference, next step, and review stage explain what follows.</p></article>
+        </div>
+        ${preview({
+          id: 'block-party-prototype',
+          title: 'Try the mobile prototype',
+          description: 'Load the working app to explore these flows. Activity stays in this browser; street views, committee messages, and review progress are simulated. Proposals are not sent to the council.',
+          src: 'https://mmansukhani212.github.io/block-party/',
+          externalUrl: '/demos/block-party/',
+          image: '/assets/block-party-mobile-explore.webp',
+          alt: 'Static mobile Explore screen; load the working app or open the phone demo below.',
+          width: 393, height: 852,
+          loadLabel: 'Load interactive prototype',
+        })}`,
+    })}
+
+    ${section({
+      id: 'block-party-impact', title: 'Six residents saw potential. Participation impact remains unmeasured.',
+      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>6</strong><span>Bloomington residents tested the 2025 prototype</span></div><div><h3>Positive qualitative feedback.</h3><p>Participants saw value in a more inclusive way to engage and surfaced two actionable usability refinements.</p><p>The evidence supports a promising concept. It does not establish city adoption, participation growth, or validated improvements in the current app.</p></div></div>`,
+    })}
+
+    ${section({
+      id: 'block-party-reflection', title: 'A digital channel needs a representative conversation.',
+      body: '<div class="case-prose"><p>Architecture taught me that a proposal changes everyday life. This project taught me to narrow the question enough to test it—and to consider whose input reaches a decision.</p><p>Ready-made elements lower the barrier to proposing, while limiting what residents can express. Next, I would test the revised builder and feedback flow across different levels of digital confidence, then work with planners on interpreting conflicting input. Outreach and a credible review process need to grow alongside the interface.</p></div>',
     })}
 
       </div>
