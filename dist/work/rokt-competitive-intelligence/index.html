@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-research"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-product-stories"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-ux-flows"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-ux-flows"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
   <a class="wordmark" href="/" aria-label="Monisha Mansukhani, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Monisha<br class="mobile-break"> Mansukhani</span></a>
   <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
@@ -27,7 +27,7 @@
     <dl class="case-metadata"><div><dt>My role</dt><dd>Lead UX Engineer</dd></div><div><dt>Design scope</dt><dd>End-to-end UX/UI, user research, AI workflow automation, CRM integration</dd></div><div><dt>Target users</dt><dd>Account managers and stakeholders planning client-retention actions</dd></div><div><dt>Team</dt><dd>GTM sales representatives, developers, and the finance team</dd></div><div><dt>Duration</dt><dd>July–September 2026</dd></div></dl></section>
 
     <div class="case-reading-layout">
-      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Research insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>Interaction design</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
+      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Research insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>UX Design</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
       <div class="case-reading-content rokt-story">
 
 
@@ -61,42 +61,34 @@
     <section id="rokt-workflow" class="case-section " aria-labelledby="rokt-workflow-title">
       <div class="case-section-heading"><p class="eyebrow case-section-label">Workflow design</p><h2 id="rokt-workflow-title">Automate the handoff. Keep human review explicit.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving; it does not confirm that an account manager checked it.</p></div>
+        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving, helping decision makers form a retention plan in time.</p></div>
         <figure class="rokt-system-map" aria-label="Reconstructed detection, review and reporting workflow">
           <ol class="rokt-pipeline"><li><span>01</span><strong>AI trackers</strong><p>Flag competitor and churn mentions in Gong.</p></li><li><span>02</span><strong>n8n → HubSpot</strong><p>Send a prefilled questionnaire to the relevant manager.</p></li></ol>
           <div class="rokt-review-gate"><span>03 · Three-day review window</span><strong>Account manager reviews the prepared record</strong></div>
-          <div class="rokt-branches"><div><span>Manager responds</span><strong>Reviewed information proceeds</strong><p>Human context accompanies the detected signal.</p></div><div><span>No action by deadline</span><strong>Original details submit automatically</strong><p>The information remains unconfirmed by the manager.</p></div></div>
+          <div class="rokt-branches"><div><span>Manager responds</span><strong>Reviewed information proceeds</strong><p>Human context accompanies the detected signal.</p></div><div><span>No action by deadline</span><strong>Original details submit automatically</strong><p>Managers can update the information after submission.</p></div></div>
           <div class="rokt-converge"><span>04 · Daily sync</span><strong>Company-wide dashboard</strong><p>A shared starting point for retention planning.</p></div>
-          <figcaption>Explanatory reconstruction of the confirmed sequence. Daily sync is not a claim of real-time production reporting.</figcaption>
         </figure></div>
     </section>
 
 
     <section id="rokt-review" class="case-section " aria-labelledby="rokt-review-title">
-      <div class="case-section-heading"><p class="eyebrow case-section-label">Interaction design</p><h2 id="rokt-review-title">A submitted record is not always a verified record.</h2></div>
+      <div class="case-section-heading"><p class="eyebrow case-section-label">UX Design</p><h2 id="rokt-review-title">Two paths to a shared view of churn risk.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>In the revised prototype, the queue makes ownership and deadlines visible. The form separates the excerpt and AI-generated summary from manager validation: accuracy, switching intent, offer details, context, and a recommended next action.</p><p>Follow the same signal from queue to form to shared reporting. These are actual prototype screens, not a recording of the original production system.</p></div>
-        <div class="rokt-walkthrough" data-rokt-walkthrough>
-    <div class="rokt-walk-controls" role="group" aria-label="Explore the review journey" hidden><button type="button" data-rokt-view="queue" aria-pressed="true" aria-controls="rokt-view-queue">01 · Find the review</button><button type="button" data-rokt-view="form" aria-pressed="false" aria-controls="rokt-view-form">02 · Add human context</button><button type="button" data-rokt-view="shared" aria-pressed="false" aria-controls="rokt-view-shared">03 · Keep the status</button></div>
-    <div class="rokt-walk-panels"><div id="rokt-view-queue" data-rokt-panel="queue">
-    <figure class="case-figure ">
-      <a class="inspect-link" data-inspect href="/assets/rokt-final-review-queue.webp" target="_blank" rel="noopener" aria-label="Inspect image: Final fictional-data AM review queue with manager, deadline, remaining time and review status. (opens larger)">
-        <img src="/assets/rokt-final-review-queue.webp" alt="Final fictional-data AM review queue with manager, deadline, remaining time and review status." width="1470" height="919" loading="lazy" decoding="async" >
-      </a><figcaption>The queue puts ownership, timing, and review status in the same row.</figcaption>
-    </figure></div><div id="rokt-view-form" data-rokt-panel="form">
-    <figure class="case-figure ">
-      <a class="inspect-link" data-inspect href="/assets/rokt-final-review-form.webp" target="_blank" rel="noopener" aria-label="Inspect image: Final fictional-data review form separating source context and AI-detected information from account-manager validation. (opens larger)">
-        <img src="/assets/rokt-final-review-form.webp" alt="Final fictional-data review form separating source context and AI-detected information from account-manager validation." width="1470" height="919" loading="lazy" decoding="async" >
-      </a><figcaption>The form separates what AI detected from what the manager needs to verify.</figcaption>
-    </figure></div><div id="rokt-view-shared" data-rokt-panel="shared">
-    <figure class="case-figure ">
-      <a class="inspect-link" data-inspect href="/assets/rokt-final-intelligence.webp" target="_blank" rel="noopener" aria-label="Inspect image: Final fictional-data intelligence dashboard with review-status filter and status alongside each account record. (opens larger)">
-        <img src="/assets/rokt-final-intelligence.webp" alt="Final fictional-data intelligence dashboard with review-status filter and status alongside each account record." width="1470" height="919" loading="lazy" decoding="async" >
-      </a><figcaption>The shared table carries the review state alongside the signal.</figcaption>
-    </figure></div></div>
-    <p class="rokt-walk-status sr-only" role="status"></p>
-  </div>
-        <dl class="rokt-states"><div><dt><span class="rokt-state-dot" aria-hidden="true"></span>Approved</dt><dd>The manager reviewed and approved the record.</dd></div><div><dt><span class="rokt-state-dot rokt-state-auto" aria-hidden="true"></span>Auto-Submitted</dt><dd>The deadline passed. Original AI-detected details entered reporting without manager confirmation.</dd></div></dl></div>
+        <div class="case-prose"><p>I designed the final flow around two audiences: account managers who supply relationship context, and decision makers who need a timely view of client risk. Prefilled records keep manual input focused on validation and additional context, helping signals reach the people planning a retention response with less effort from account managers.</p><p>The queue makes reviews easy to find; the dashboard connects account-level detail with portfolio and competitor patterns. Managers can revisit submitted information to add context as the client relationship evolves.</p></div>
+        <div class="rokt-flow-comparison" aria-label="Two audience flows">
+    <section class="rokt-flow" aria-labelledby="rokt-flow-account-manager-title">
+      <h3 id="rokt-flow-account-manager-title">Account manager’s flow</h3>
+      <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-account-manager-poster.png" aria-labelledby="rokt-flow-account-manager-title" aria-describedby="rokt-flow-account-manager-steps"><source src="/assets/rokt-flow-account-manager.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
+      <a class="text-link rokt-flow-open" href="/assets/rokt-flow-account-manager.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (Account manager’s flow, opens in a new tab)</span></a>
+      <ol id="rokt-flow-account-manager-steps"><li><strong>Find the review</strong><p>Open the AM Review Queue and identify the forms that need attention.</p></li><li><strong>Review and submit</strong><p>Check the prefilled data, add relationship context, and approve the record.</p></li><li><strong>Track account health</strong><p>Return to Intelligence and filter to the manager’s accounts.</p></li></ol>
+    </section>
+    <section class="rokt-flow" aria-labelledby="rokt-flow-decision-maker-title">
+      <h3 id="rokt-flow-decision-maker-title">Decision makers’ flow</h3>
+      <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-decision-maker-poster.png" aria-labelledby="rokt-flow-decision-maker-title" aria-describedby="rokt-flow-decision-maker-steps"><source src="/assets/rokt-flow-decision-maker.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
+      <a class="text-link rokt-flow-open" href="/assets/rokt-flow-decision-maker.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (Decision makers’ flow, opens in a new tab)</span></a>
+      <ol id="rokt-flow-decision-maker-steps"><li><strong>Start with the overview</strong><p>Spot portfolio trends and accounts that need attention.</p></li><li><strong>Customize the view</strong><p>Open At-Risk Accounts and filter by competitor and risk level.</p></li><li><strong>Explore competitor insights</strong><p>Compare competitors, common threats, and patterns across accounts.</p></li></ol>
+    </section></div>
+        <p class="rokt-flow-note">Screen walkthroughs of the public prototype · all data is fictional.</p></div>
     </section>
 
 

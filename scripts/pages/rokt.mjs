@@ -2,16 +2,25 @@
 export default function render(ctx) {
   const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next, productLink} = ctx;
   const demoUrl = 'https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/';
-  const views = [
-    {id:'queue',label:'01 · Find the review',image:'review-queue',alt:'Final fictional-data AM review queue with manager, deadline, remaining time and review status.',caption:'The queue puts ownership, timing, and review status in the same row.'},
-    {id:'form',label:'02 · Add human context',image:'review-form',alt:'Final fictional-data review form separating source context and AI-detected information from account-manager validation.',caption:'The form separates what AI detected from what the manager needs to verify.'},
-    {id:'shared',label:'03 · Keep the status',image:'intelligence',alt:'Final fictional-data intelligence dashboard with review-status filter and status alongside each account record.',caption:'The shared table carries the review state alongside the signal.'}
+  const flows = [
+    {id:'account-manager', title:'Account manager’s flow', steps:[
+      ['Find the review', 'Open the AM Review Queue and identify the forms that need attention.'],
+      ['Review and submit', 'Check the prefilled data, add relationship context, and approve the record.'],
+      ['Track account health', 'Return to Intelligence and filter to the manager’s accounts.']
+    ]},
+    {id:'decision-maker', title:'Decision makers’ flow', steps:[
+      ['Start with the overview', 'Spot portfolio trends and accounts that need attention.'],
+      ['Customize the view', 'Open At-Risk Accounts and filter by competitor and risk level.'],
+      ['Explore competitor insights', 'Compare competitors, common threats, and patterns across accounts.']
+    ]}
   ];
-  const walkthrough = `<div class="rokt-walkthrough" data-rokt-walkthrough>
-    <div class="rokt-walk-controls" role="group" aria-label="Explore the review journey" hidden>${views.map((v,i)=>`<button type="button" data-rokt-view="${v.id}" aria-pressed="${i===0}" aria-controls="rokt-view-${v.id}">${e(v.label)}</button>`).join('')}</div>
-    <div class="rokt-walk-panels">${views.map(v=>`<div id="rokt-view-${v.id}" data-rokt-panel="${v.id}">${media({src:`/assets/rokt-final-${v.image}.webp`,alt:v.alt,caption:v.caption,width:1470,height:919})}</div>`).join('')}</div>
-    <p class="rokt-walk-status sr-only" role="status"></p>
-  </div>`;
+  const walkthrough = `<div class="rokt-flow-comparison" aria-label="Two audience flows">${flows.map(flow=>`
+    <section class="rokt-flow" aria-labelledby="rokt-flow-${flow.id}-title">
+      <h3 id="rokt-flow-${flow.id}-title">${e(flow.title)}</h3>
+      <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-${flow.id}-poster.png" aria-labelledby="rokt-flow-${flow.id}-title" aria-describedby="rokt-flow-${flow.id}-steps"><source src="/assets/rokt-flow-${flow.id}.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
+      <a class="text-link rokt-flow-open" href="/assets/rokt-flow-${flow.id}.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (${e(flow.title)}, opens in a new tab)</span></a>
+      <ol id="rokt-flow-${flow.id}-steps">${flow.steps.map(([title,body])=>`<li><strong>${e(title)}</strong><p>${e(body)}</p></li>`).join('')}</ol>
+    </section>`).join('')}</div>`;
 
   return `<article class="case-study rokt-case">
     ${caseHeader({
@@ -74,19 +83,18 @@ export default function render(ctx) {
         </tbody></table></div>`})}
 
       ${section({id:'rokt-workflow',title:'Automate the handoff. Keep human review explicit.',body:`
-        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving; it does not confirm that an account manager checked it.</p></div>
+        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving, helping decision makers form a retention plan in time.</p></div>
         <figure class="rokt-system-map" aria-label="Reconstructed detection, review and reporting workflow">
           <ol class="rokt-pipeline"><li><span>01</span><strong>AI trackers</strong><p>Flag competitor and churn mentions in Gong.</p></li><li><span>02</span><strong>n8n → HubSpot</strong><p>Send a prefilled questionnaire to the relevant manager.</p></li></ol>
           <div class="rokt-review-gate"><span>03 · Three-day review window</span><strong>Account manager reviews the prepared record</strong></div>
-          <div class="rokt-branches"><div><span>Manager responds</span><strong>Reviewed information proceeds</strong><p>Human context accompanies the detected signal.</p></div><div><span>No action by deadline</span><strong>Original details submit automatically</strong><p>The information remains unconfirmed by the manager.</p></div></div>
+          <div class="rokt-branches"><div><span>Manager responds</span><strong>Reviewed information proceeds</strong><p>Human context accompanies the detected signal.</p></div><div><span>No action by deadline</span><strong>Original details submit automatically</strong><p>Managers can update the information after submission.</p></div></div>
           <div class="rokt-converge"><span>04 · Daily sync</span><strong>Company-wide dashboard</strong><p>A shared starting point for retention planning.</p></div>
-          <figcaption>Explanatory reconstruction of the confirmed sequence. Daily sync is not a claim of real-time production reporting.</figcaption>
         </figure>`})}
 
-      ${section({id:'rokt-review',title:'A submitted record is not always a verified record.',body:`
-        <div class="case-prose"><p>In the revised prototype, the queue makes ownership and deadlines visible. The form separates the excerpt and AI-generated summary from manager validation: accuracy, switching intent, offer details, context, and a recommended next action.</p><p>Follow the same signal from queue to form to shared reporting. These are actual prototype screens, not a recording of the original production system.</p></div>
+      ${section({id:'rokt-review',title:'Two paths to a shared view of churn risk.',body:`
+        <div class="case-prose"><p>I designed the final flow around two audiences: account managers who supply relationship context, and decision makers who need a timely view of client risk. Prefilled records keep manual input focused on validation and additional context, helping signals reach the people planning a retention response with less effort from account managers.</p><p>The queue makes reviews easy to find; the dashboard connects account-level detail with portfolio and competitor patterns. Managers can revisit submitted information to add context as the client relationship evolves.</p></div>
         ${walkthrough}
-        <dl class="rokt-states"><div><dt><span class="rokt-state-dot" aria-hidden="true"></span>Approved</dt><dd>The manager reviewed and approved the record.</dd></div><div><dt><span class="rokt-state-dot rokt-state-auto" aria-hidden="true"></span>Auto-Submitted</dt><dd>The deadline passed. Original AI-detected details entered reporting without manager confirmation.</dd></div></dl>`})}
+        <p class="rokt-flow-note">Screen walkthroughs of the public prototype · all data is fictional.</p>`})}
 
       ${section({id:'rokt-dashboard',title:'Trace a risk pattern back to its source.',body:`
         <div class="case-prose"><p>The overview shows trends and priority accounts. Intelligence search and filters narrow the investigation by competitor, risk, manager, or review status; account details keep the excerpt and review history close. Stakeholders can inspect the context behind a signal instead of relying on an aggregate alone.</p></div>

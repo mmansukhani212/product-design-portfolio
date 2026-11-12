@@ -2,7 +2,7 @@ const sectionLabels = {
   'rokt-problem': 'The problem',
   'rokt-evidence': 'Research insights',
   'rokt-workflow': 'Workflow design',
-  'rokt-review': 'Interaction design',
+  'rokt-review': 'UX Design',
   'rokt-dashboard': 'Final solution',
   'rokt-impact': 'The impact',
   'rokt-reflection': 'Reflections',
