@@ -14,8 +14,9 @@ export default function render(ctx) {
       ['Explore competitor insights', 'Compare competitors, common threats, and patterns across accounts.']
     ]}
   ];
-  const walkthrough = `<div class="rokt-flow-comparison" aria-label="Two audience flows">${flows.map(flow=>`
-    <section class="rokt-flow" aria-labelledby="rokt-flow-${flow.id}-title">
+  const walkthrough = `<div class="rokt-flow-tabs">
+    <div class="rokt-flow-tablist" role="tablist" aria-label="Choose an audience flow" hidden>${flows.map((flow,index)=>`<button type="button" role="tab" id="rokt-tab-${flow.id}" aria-controls="rokt-flow-${flow.id}" aria-selected="${index===0}" tabindex="${index===0 ? '0' : '-1'}">${e(flow.title)}</button>`).join('')}</div>
+    ${flows.map(flow=>`<section class="rokt-flow" id="rokt-flow-${flow.id}" aria-labelledby="rokt-flow-${flow.id}-title">
       <h3 id="rokt-flow-${flow.id}-title">${e(flow.title)}</h3>
       <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-${flow.id}-poster.png" aria-labelledby="rokt-flow-${flow.id}-title" aria-describedby="rokt-flow-${flow.id}-steps"><source src="/assets/rokt-flow-${flow.id}.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
       <a class="text-link rokt-flow-open" href="/assets/rokt-flow-${flow.id}.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (${e(flow.title)}, opens in a new tab)</span></a>
@@ -93,8 +94,7 @@ export default function render(ctx) {
 
       ${section({id:'rokt-review',title:'Two paths to a shared view of churn risk.',body:`
         <div class="case-prose"><p>I designed the final flow around two audiences: account managers who supply relationship context, and decision makers who need a timely view of client risk. Prefilled records keep manual input focused on validation and additional context, helping signals reach the people planning a retention response with less effort from account managers.</p><p>The queue makes reviews easy to find; the dashboard connects account-level detail with portfolio and competitor patterns. Managers can revisit submitted information to add context as the client relationship evolves.</p></div>
-        ${walkthrough}
-        <p class="rokt-flow-note">Screen walkthroughs of the public prototype · all data is fictional.</p>`})}
+        ${walkthrough}`})}
 
       ${section({id:'rokt-dashboard',title:'Trace a risk pattern back to its source.',body:`
         <div class="case-prose"><p>The overview shows trends and priority accounts. Intelligence search and filters narrow the investigation by competitor, risk, manager, or review status; account details keep the excerpt and review history close. Stakeholders can inspect the context behind a signal instead of relying on an aggregate alone.</p></div>
@@ -106,8 +106,11 @@ export default function render(ctx) {
         <div class="case-prose"><p>The project reported an 83% increase in the existing churn-risk response rate. Broader collection and centralized access supported retention planning. This is a reported rate increase, not a claim of 83% less response time or independently validated lift.</p></div>
         <details class="rokt-support"><summary>What the evidence does—and does not—show</summary><p>Raw timings, denominator, and calculation are unavailable. The public prototype’s account counts, revenue exposure, and risk scores are fictional examples, not business outcomes. No retained-revenue figure is claimed.</p></details>`})}
 
-      ${section({id:'rokt-reflection',title:'More coverage still needs a confidence signal.',body:`
-        <div class="case-prose"><p>This work reinforced that automation changes the meaning of a completed task. A submitted form may represent a manager’s judgment or simply an expired deadline. That difference needs to travel with the record, from the queue to the detail view and shared dashboard. I would next test whether stakeholders recognize unreviewed signals, know when to follow up, and understand the three-day policy. The goal is to make confidence in the information as visible as the information itself.</p></div>`})}
+      ${section({id:'rokt-reflection',title:'Two lessons I’ll take forward.',body:`
+        <div class="rokt-reflections">
+          <div><h3>The best UX improvements aren't always new interfaces.</h3><p>This project challenged me to think beyond screens and interactions. The core problem wasn't a poorly designed interface, but a fragmented process across multiple tools. I learned that meaningful UX improvements sometimes come from redesigning the underlying workflow rather than introducing another standalone product.</p></div>
+          <div><h3>Automation should reduce effort, not eliminate human judgment.</h3><p>Automating competitive intelligence taught me the importance of balancing efficiency with trust. While AI helped identify and capture signals at scale, preserving human validation ensured that insights remained reliable and actionable. I learned to design systems that use automation without losing the contextual understanding people bring to decision-making.</p></div>
+        </div>`})}
 
       </div>
     </div>

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-ux-flows"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-ux-flows"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-flow-tabs"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-flow-tabs"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
   <a class="wordmark" href="/" aria-label="Monisha Mansukhani, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Monisha<br class="mobile-break"> Mansukhani</span></a>
   <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
@@ -75,20 +75,19 @@
       <div class="case-section-heading"><p class="eyebrow case-section-label">UX Design</p><h2 id="rokt-review-title">Two paths to a shared view of churn risk.</h2></div>
       <div class="case-section-content">
         <div class="case-prose"><p>I designed the final flow around two audiences: account managers who supply relationship context, and decision makers who need a timely view of client risk. Prefilled records keep manual input focused on validation and additional context, helping signals reach the people planning a retention response with less effort from account managers.</p><p>The queue makes reviews easy to find; the dashboard connects account-level detail with portfolio and competitor patterns. Managers can revisit submitted information to add context as the client relationship evolves.</p></div>
-        <div class="rokt-flow-comparison" aria-label="Two audience flows">
-    <section class="rokt-flow" aria-labelledby="rokt-flow-account-manager-title">
+        <div class="rokt-flow-tabs">
+    <div class="rokt-flow-tablist" role="tablist" aria-label="Choose an audience flow" hidden><button type="button" role="tab" id="rokt-tab-account-manager" aria-controls="rokt-flow-account-manager" aria-selected="true" tabindex="0">Account manager’s flow</button><button type="button" role="tab" id="rokt-tab-decision-maker" aria-controls="rokt-flow-decision-maker" aria-selected="false" tabindex="-1">Decision makers’ flow</button></div>
+    <section class="rokt-flow" id="rokt-flow-account-manager" aria-labelledby="rokt-flow-account-manager-title">
       <h3 id="rokt-flow-account-manager-title">Account manager’s flow</h3>
       <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-account-manager-poster.png" aria-labelledby="rokt-flow-account-manager-title" aria-describedby="rokt-flow-account-manager-steps"><source src="/assets/rokt-flow-account-manager.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
       <a class="text-link rokt-flow-open" href="/assets/rokt-flow-account-manager.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (Account manager’s flow, opens in a new tab)</span></a>
       <ol id="rokt-flow-account-manager-steps"><li><strong>Find the review</strong><p>Open the AM Review Queue and identify the forms that need attention.</p></li><li><strong>Review and submit</strong><p>Check the prefilled data, add relationship context, and approve the record.</p></li><li><strong>Track account health</strong><p>Return to Intelligence and filter to the manager’s accounts.</p></li></ol>
-    </section>
-    <section class="rokt-flow" aria-labelledby="rokt-flow-decision-maker-title">
+    </section><section class="rokt-flow" id="rokt-flow-decision-maker" aria-labelledby="rokt-flow-decision-maker-title">
       <h3 id="rokt-flow-decision-maker-title">Decision makers’ flow</h3>
       <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-decision-maker-poster.png" aria-labelledby="rokt-flow-decision-maker-title" aria-describedby="rokt-flow-decision-maker-steps"><source src="/assets/rokt-flow-decision-maker.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
       <a class="text-link rokt-flow-open" href="/assets/rokt-flow-decision-maker.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (Decision makers’ flow, opens in a new tab)</span></a>
       <ol id="rokt-flow-decision-maker-steps"><li><strong>Start with the overview</strong><p>Spot portfolio trends and accounts that need attention.</p></li><li><strong>Customize the view</strong><p>Open At-Risk Accounts and filter by competitor and risk level.</p></li><li><strong>Explore competitor insights</strong><p>Compare competitors, common threats, and patterns across accounts.</p></li></ol>
-    </section></div>
-        <p class="rokt-flow-note">Screen walkthroughs of the public prototype · all data is fictional.</p></div>
+    </section></div></div>
     </section>
 
 
@@ -124,9 +123,12 @@
 
 
     <section id="rokt-reflection" class="case-section " aria-labelledby="rokt-reflection-title">
-      <div class="case-section-heading"><p class="eyebrow case-section-label">Reflections</p><h2 id="rokt-reflection-title">More coverage still needs a confidence signal.</h2></div>
+      <div class="case-section-heading"><p class="eyebrow case-section-label">Reflections</p><h2 id="rokt-reflection-title">Two lessons I’ll take forward.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>This work reinforced that automation changes the meaning of a completed task. A submitted form may represent a manager’s judgment or simply an expired deadline. That difference needs to travel with the record, from the queue to the detail view and shared dashboard. I would next test whether stakeholders recognize unreviewed signals, know when to follow up, and understand the three-day policy. The goal is to make confidence in the information as visible as the information itself.</p></div></div>
+        <div class="rokt-reflections">
+          <div><h3>The best UX improvements aren't always new interfaces.</h3><p>This project challenged me to think beyond screens and interactions. The core problem wasn't a poorly designed interface, but a fragmented process across multiple tools. I learned that meaningful UX improvements sometimes come from redesigning the underlying workflow rather than introducing another standalone product.</p></div>
+          <div><h3>Automation should reduce effort, not eliminate human judgment.</h3><p>Automating competitive intelligence taught me the importance of balancing efficiency with trust. While AI helped identify and capture signals at scale, preserving human validation ensured that insights remained reliable and actionable. I learned to design systems that use automation without losing the contextual understanding people bring to decision-making.</p></div>
+        </div></div>
     </section>
 
       </div>
