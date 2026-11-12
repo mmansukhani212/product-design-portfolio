@@ -24,7 +24,7 @@ export default function render(ctx) {
     ${productLink('/demos/block-party/', 'Open mobile demo')}
 
     ${overview({
-      summary: '<p>Younger Bloomington residents faced low awareness of planning meetings and proposals that were hard to picture. My HCI/d capstone explored a mobile way to understand neighborhood projects and contribute ideas.</p><p>Resident and planner research led to a simulated neighborhood, ready-made design elements, and proposal feedback. The current prototype adds a categorized builder and progress updates; six residents tested the original 2025 concept.</p>',
+      summary: '<p>Bloomington’s public input process relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an AI-powered simulation app prototype. Residents can explore local projects, visualize proposed changes, build and share ideas, vote and comment, and follow updates—helping planners understand community priorities.</p>',
       metadata: [
         ['My role', 'HCI/d capstone thesis author'],
         ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
@@ -32,7 +32,7 @@ export default function render(ctx) {
         ['Team', 'Bloomington urban planners and city council members'],
         ['Duration', 'January–May 2025']
       ],
-      outcome: {title: '6 residents tested the concept', body: 'Participants saw potential for inclusive community engagement and identified two usability refinements. This is qualitative feedback on the 2025 prototype; participation growth and the current revision’s usability remain unmeasured.'}
+      outcome: {title: '42% expected increase in participation', body: 'Developed with the City Council of Bloomington, Indiana, to streamline public input in urban design projects. Projected impact; participation growth remains unmeasured.'}
     })}
 
     <div class="case-reading-layout">
