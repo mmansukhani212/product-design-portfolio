@@ -1,18 +1,20 @@
 const conceptScenes = {
   kiosk: `<svg viewBox="0 0 320 240" role="img" aria-labelledby="bp-kiosk-title bp-kiosk-desc">
-    <title id="bp-kiosk-title">Collaborative kiosk concept</title><desc id="bp-kiosk-desc">A digital illustration of the paper concept: residents arrange stackable blocks on a shared City Hall planning screen.</desc>
-    <rect x="54" y="24" width="212" height="146" rx="14" fill="#fff" stroke="currentColor" stroke-width="2"/>
-    <rect x="65" y="35" width="190" height="122" rx="7" fill="#f2edf5"/>
-    <path d="M145 170h30l8 27h-46z" fill="#d7cede"/><rect x="121" y="195" width="78" height="7" rx="3.5" fill="currentColor"/>
-    <path d="m83 116 77-40 77 40-77 40z" fill="#e2dbe7"/>
-    <g stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
-      <path d="m116 113 31-16 31 16-31 16z" fill="#fff"/><path d="m116 113 31 16v19l-31-16z" fill="#c9bcd4"/><path d="m147 129 31-16v19l-31 16z" fill="#ab96bc"/>
-      <g class="bp-animate bp-block-drop"><path d="m116 88 31-16 31 16-31 16z" fill="#fff"/><path d="m116 88 31 16v19l-31-16z" fill="#c9bcd4"/><path d="m147 104 31-16v19l-31 16z" fill="#ab96bc"/><ellipse cx="137" cy="85" rx="6" ry="3" fill="#e2dbe7"/><ellipse cx="155" cy="85" rx="6" ry="3" fill="#e2dbe7"/></g>
-      <path d="m181 124 22-12 22 12-22 12z" fill="#e3ebdd"/><path d="m181 124 22 12v11l-22-12z" fill="#b8c9ae"/><path d="m203 136 22-12v11l-22 12z" fill="#9fb192"/>
+    <title id="bp-kiosk-title">Physical building-block kiosk</title><desc id="bp-kiosk-desc">Residents at an on-site kiosk arrange small physical building blocks on a shared scale model of their neighborhood, rather than viewing a computer screen.</desc>
+    <ellipse cx="160" cy="217" rx="140" ry="12" fill="#eae4ef"/>
+    <path d="M102 193v-69m119 66v-68" stroke="#b6a3c4" stroke-width="12"/>
+    <path d="m58 117 104-53 104 53-104 56z" fill="#fff" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+    <path d="m58 117 104 56 104-56v12l-104 56-104-56z" fill="#b6a3c4" stroke="currentColor" stroke-width="1.5"/>
+    <path d="m79 117 83-43 83 43-83 45z" fill="#e2dbe7"/>
+    <path d="m108 137 83-43m-58 56 82-43m-81-10 82 44" stroke="#fff" stroke-width="4"/>
+    <g stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+      <path d="m120 108 22-12 23 12-23 13z" fill="#fff"/><path d="m120 108 22 13v16l-22-13zm22 13 23-13v16l-23 13z" fill="#b6a3c4"/>
+      <g class="bp-animate bp-block-drop"><path d="m120 89 22-12 23 12-23 13z" fill="#fff"/><path d="m120 89 22 13v15l-22-13z" fill="#c9bcd4"/><path d="m142 102 23-13v15l-23 13z" fill="#ab96bc"/><ellipse cx="135" cy="88" rx="4" ry="2.5" fill="#e2dbe7"/><ellipse cx="149" cy="88" rx="4" ry="2.5" fill="#e2dbe7"/></g>
+      <path d="m177 120 25-13 27 13-27 14z" fill="#c0d0b4" stroke="#97ae86"/><path d="M196 117v-12" stroke="#66825c"/><circle cx="196" cy="102" r="7" fill="#90ab7d" stroke="none"/>
     </g>
-    <g fill="currentColor"><circle cx="48" cy="182" r="12"/><path d="M29 219v-9a19 19 0 0 1 38 0v9z"/><circle cx="272" cy="182" r="12"/><path d="M253 219v-9a19 19 0 0 1 38 0v9z"/></g>
-    <path d="m63 191 26-18m168 18-26-18" stroke="#ab96bc" stroke-width="7" stroke-linecap="round"/>
-    <g class="bp-animate bp-confirm" fill="#574565"><rect x="224" y="54" width="20" height="20" rx="10"/><path d="m229 64 4 4 6-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></g>
+    <path d="M242 78V45" stroke="#ab96bc" stroke-width="3"/><rect x="204" y="20" width="76" height="34" rx="6" fill="#fff" stroke="#ab96bc"/><text x="242" y="34" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor">COMMUNITY KIOSK</text><text x="242" y="46" text-anchor="middle" font-size="7" fill="currentColor">SCALE MODEL</text>
+    <g fill="currentColor"><circle cx="28" cy="100" r="11"/><path d="M13 146v-22a15 15 0 0 1 30 0v22z"/><path d="M18 145v57m20-57v57" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="292" cy="100" r="11"/><path d="M277 146v-22a15 15 0 0 1 30 0v22z"/><path d="M282 145v57m20-57v57" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></g>
+    <path d="m41 122 30-11 29-4m179 15-26-9-22 5" fill="none" stroke="#ab96bc" stroke-width="7" stroke-linecap="round"/>
   </svg>`,
   ar: `<svg viewBox="0 0 320 240" role="img" aria-labelledby="bp-ar-title bp-ar-desc">
     <title id="bp-ar-title">Augmented reality concept</title><desc id="bp-ar-desc">A digital interpretation of the paper sketch: a phone overlays a proposed green space on an existing neighborhood street.</desc>
@@ -38,7 +40,7 @@ const conceptScenes = {
     <g class="bp-animate bp-confirm"><rect x="229" y="178" width="53" height="30" rx="15" fill="currentColor"/><path d="m245 193 7 7 13-14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
   </svg>`,
 };
-const conceptScene = kind => `<div class="bp-concept-scene" data-concept-scene>${conceptScenes[kind]}<button class="bp-concept-play" type="button" aria-pressed="false" aria-label="Play ${kind === 'ar' ? 'AR' : kind} concept animation" hidden>Play Animation</button></div>`;
+const conceptScene = kind => `<div class="bp-concept-scene" data-concept-scene tabindex="0" role="group" aria-label="${kind === 'kiosk' ? 'Physical kiosk' : kind === 'ar' ? 'AR' : 'Visual planning sandbox'} concept animation" aria-keyshortcuts="Space Enter" aria-describedby="bp-${kind}-motion-status">${conceptScenes[kind]}<span class="sr-only" id="bp-${kind}-motion-status" data-concept-status>Animation loops automatically. Press Space to pause or resume.</span></div>`;
 
 /** Block Party: 2025 capstone research, with a clearly separated current interactive prototype. */
 export default function render(ctx) {
@@ -47,6 +49,34 @@ export default function render(ctx) {
     src: `/assets/block-party-mobile-${name}.webp`, alt, caption,
     width: 393, height: 852, className: 'bp-phone-screen', eager,
   });
+  const featureScreen = (name, alt) => media({src: `/assets/block-party-feature-${name}.jpg`, alt, width: 393, height: 852, className: 'bp-phone-screen'});
+  const excerpt = (name, alt, width, height) => media({src: `/assets/block-party-feature-excerpt-${name}.jpg`, alt, width, height, className: 'bp-feedback-excerpt'});
+  const featurePairs = [
+    [
+      ['explore', 'Explore', 'Discover nearby projects on the neighborhood map.'],
+      ['project', 'Project Details', 'Read a project’s location, status, context, and planning timeline.'],
+    ],
+    [
+      ['street', 'Street View', 'Switch from the city map to an illustrated street-level view.'],
+      ['proposals', 'Community Proposals', 'Browse ideas and filter by support or your own submissions.'],
+    ],
+    [
+      ['feedback', 'Comments & Votes', 'Support or oppose a proposal, read comments, and contribute feedback.'],
+      ['builder', 'Visual Builder', 'Arrange features from Buildings, Outdoors, and Mobility categories.'],
+    ],
+    [
+      ['mobility', 'Categorized Elements', 'Find relevant building, outdoor, or mobility features in the element library.'],
+      ['review', 'Review & Submit', 'Preview your design, name the idea, and explain its community value.'],
+    ],
+    [
+      ['upload', 'Supporting References', 'Add visual inspiration or documents alongside a project idea.'],
+      ['my-activity', 'My Activity', 'Revisit drafts, continue designing, and find your submitted proposals.'],
+    ],
+    [
+      ['notifications', 'Notifications', 'Follow planner messages, community responses, and unread updates.'],
+      ['progress', 'Progress Tracker', 'See the submission’s review stage and what happens next.'],
+    ],
+  ];
   return `<article class="case-study block-party-page">
     ${caseHeader({
       kicker: 'Block Party | Civic Tech Mobile App',
@@ -107,7 +137,7 @@ export default function render(ctx) {
       id: 'block-party-exploration', title: 'Keep the context of a place. Add the freedom to propose.',
       body: `<div class="case-prose"><p>A co-design workshop with four participants explored three directions. After designing and evaluating paper concepts with two city planners and two users, I developed a visual planning sandbox: contextual feedback plus a way to arrange and share ideas.</p></div>
         <div class="bp-concepts">
-          <article>${conceptScene('kiosk')}<div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Collaborative blocks at City Hall offered shared discussion, tied to organized sessions.</p></div></article>
+          <article>${conceptScene('kiosk')}<div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Residents arrange physical building blocks on a shared neighborhood scale model at an on-site kiosk.</p></div></article>
           <article>${conceptScene('ar')}<div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div></article>
           <article class="bp-selected-concept">${conceptScene('sandbox')}<div><span class="bp-small-label">Selected · Visual planning sandbox</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div></article>
         </div>`,
@@ -115,23 +145,26 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-testing', title: 'Testing made choice and feedback the next priorities.',
-      body: `<div class="case-prose"><p>Six Bloomington residents tested the 2025 high-fidelity prototype. Their feedback identified two refinements. The later mobile app carries these refinements into the participation flow.</p></div>
+      body: `<div class="case-prose"><p>Six Bloomington residents tested the 2025 high-fidelity prototype. Their feedback shaped clearer building choices and placement feedback. Additional feedback highlighted the need to know whether submissions were being considered, leading to a visible progress tracker.</p></div>
         <dl class="bp-change-ledger">
-          <div><dt>Choosing an element</dt><dd><span>2025 finding</span>Prefab elements needed clearer organization.</dd><dd><span>Later change</span>Buildings, Outdoors, and Mobility categories give the library structure.</dd></div>
-          <div><dt>Recognizing a result</dt><dd><span>2025 finding</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Later change</span>Placement feedback and a submission preview show the result of an action.</dd></div>
+          <div><dt>Choosing an element</dt><dd><span>Feedback</span>Prefab elements needed clearer organization.</dd><dd><span>Change</span>Buildings, Outdoors, and Mobility categories organize the library.</dd><dd>${excerpt('categories','Deployed builder excerpt showing the Buildings, Outdoors, and Mobility categories above the element library.',369,160)}</dd></div>
+          <div><dt>Recognizing a result</dt><dd><span>Feedback</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Change</span>Placement feedback and a design preview make the result visible before submission.</dd><dd>${excerpt('result','Deployed proposal review excerpt showing the placed park and design summary.',307,72)}</dd></div>
+          <div><dt>Following a submission</dt><dd><span>Feedback</span>Residents wanted to feel acknowledged and know their ideas were being considered.</dd><dd><span>Change</span>A progress tracker shows review stages and the next step, so a submission does not feel lost.</dd><dd>${excerpt('progress','Deployed submission tracker showing Received, Initial review, Feasibility review, Decision, and the next step.',355,240)}</dd></div>
         </dl>
-        <div class="bp-current-builder">${screen('builder','Deployed Block Party mobile builder with Buildings, Outdoors, and Mobility categories.','Categorized elements in the deployed mobile app')}</div>
 `,
     })}
 
     ${section({
       id: 'block-party-solution', title: 'Explore, propose, and follow what happens next.',
-      body: `<div class="case-prose"><p>Block Party demonstrates three connected participation flows: understand a project, create a proposal in a visual planning sandbox, and follow updates. Residents arrange predefined assets and share ideas through a visual, game-like experience. Beta testing with 30 Bloomington residents showed a reported 42% increase in community engagement through proposal submissions.</p></div>
-        <div class="bp-flow-gallery" role="region" aria-label="Three mobile flows; scroll to inspect on small screens" tabindex="0">
-          <article><h3>01 · Understand a project</h3>${screen('project','Current Block Party expanded project sheet with location, status, and timeline.','Project details in an expandable sheet')}<p>Explore → Hopewell West → expand the sheet. Read context before contributing.</p></article>
-          <article><h3>02 · Put an idea in place</h3>${screen('builder','Current mobile builder with a Park placed inside the highlighted planning boundary.','A browser-local design draft')}<p>Design this space → choose or drag an element → Review idea. A limited library reduces the blank-page task.</p></article>
-          <article><h3>03 · Stay involved</h3>${screen('activity','Current mobile Notifications screen with a sample proposal in feasibility review.','Illustrative proposal progress')}<p>Notifications → My proposals. A reference, next step, and review stage explain what follows.</p></article>
-        </div>
+      body: `<div class="case-prose"><p>Block Party brings project discovery, visual proposal-making, and community feedback into one mobile experience. Residents explore neighborhood projects, switch to street view, compare proposals, and add their votes and comments.</p><p>The builder offers categorized features to arrange on a site, with a design preview, saved drafts, supporting references, and a submission form. My Activity brings drafts and proposals together; notifications and the progress tracker show responses, review stages, and next steps.</p></div>
+        <section class="bp-feature-carousel" data-bp-slideshow role="region" aria-roledescription="carousel" aria-label="Block Party app features">
+          <div class="bp-feature-stage">
+            <button class="bp-slide-arrow" type="button" data-bp-step="-1" aria-controls="bp-feature-panels" aria-label="Previous Screens" hidden><span aria-hidden="true">←</span></button>
+            <div class="bp-feature-panels" id="bp-feature-panels">${featurePairs.map((pair, index) => `<div class="bp-feature-pair" data-bp-slide role="group" aria-roledescription="slide" aria-label="${index + 1} of ${featurePairs.length}: ${pair.map(([,title])=>title).join(' and ')}">${pair.map(([name,title,description])=>`<article><h3>${title}</h3>${featureScreen(name, `${title}: ${description}`)}<p>${description}</p></article>`).join('')}</div>`).join('')}</div>
+            <button class="bp-slide-arrow" type="button" data-bp-step="1" aria-controls="bp-feature-panels" aria-label="Next Screens" hidden><span aria-hidden="true">→</span></button>
+          </div>
+          <p class="bp-slide-status" role="status" aria-live="polite" data-bp-slide-status></p>
+        </section>
         ${preview({
           id: 'block-party-prototype',
           title: 'Try the mobile prototype',
