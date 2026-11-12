@@ -24,7 +24,7 @@ async function adapt(directory) {
     if (!/\.(html|css)$/.test(entry.name)) continue;
     let contents = await readFile(file, 'utf8');
     if (base) {
-      if (entry.name.endsWith('.html')) contents = contents.replace(/\b(href|src)=(['"])\/(?!\/)/g, `$1=$2${base}/`);
+      if (entry.name.endsWith('.html')) contents = contents.replace(/\b(href|src|poster)=(['"])\/(?!\/)/g, `$1=$2${base}/`);
       else contents = contents.replace(/url\((['"]?)\/(?!\/)/g, `url($1${base}/`);
     }
     await writeFile(file, contents);

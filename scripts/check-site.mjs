@@ -38,7 +38,7 @@ export async function checkSite(root, base = '') {
       if ((html.match(/<h1(?:\s|>)/g) || []).length !== 1) throw Error(`Expected one h1: ${file}`);
       if (/<iframe(?:\s|>)/.test(html)) throw Error(`Unexpected eager iframe: ${file}`);
       if (/Internal notes|mmansukh@iu\.edu/.test(html)) throw Error(`Internal or obsolete content: ${file}`);
-      for (const match of html.matchAll(/\b(?:href|src)=["']([^"']+)["']/g)) await resolveLocal(match[1], file);
+      for (const match of html.matchAll(/\b(?:href|src|poster)=["']([^"']+)["']/g)) await resolveLocal(match[1], file);
     } else if (file.endsWith('.css')) {
       const css = await readFile(file, 'utf8');
       for (const match of css.matchAll(/url\(["']?([^"')]+)["']?\)/g)) await resolveLocal(match[1], file);
