@@ -42,7 +42,7 @@ body:has(.block-party-page) .viewer-canvas{background:#f2edf5}
 .block-party-page .bp-evidence th{font-size:11px;color:var(--accent);font-weight:700;background:var(--wash)}
 .block-party-page .bp-evidence th,.block-party-page .bp-evidence td{width:50%;vertical-align:top;padding:17px 20px;border-bottom:1px solid var(--border)}
 .block-party-page .bp-evidence tr:last-child td{border-bottom:0}
-.block-party-page .bp-support{border-bottom:1px solid var(--border);margin-top:22px;padding-bottom:16px}
+.block-party-page .bp-support{margin-top:22px;padding-bottom:16px}
 .block-party-page .bp-support summary{cursor:pointer;min-height:44px;align-content:center;font-size:12px;font-weight:700;color:var(--accent)}
 .block-party-page .bp-support summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .block-party-page .bp-support>p{font-size:13px;line-height:1.85;max-width:760px;margin-top:10px}

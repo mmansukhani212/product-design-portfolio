@@ -18,7 +18,7 @@ export function pageTools(site, e) {
       <ul class="tags case-tags" aria-label="Project categories">${tags.map(t => `<li>${e(t)}</li>`).join('')}</ul>
     </header>`;
   const overview = ({summary, metadata, outcome}) => `
-    <section class="case-overview case-wrap" aria-label="Project overview"><div class="case-prose"><h2 class="overview-title">Overview</h2>${summary}
+    <section class="case-overview case-wrap" aria-label="Project overview"><h2 class="overview-title">Overview</h2><div class="case-prose">${summary}
     ${outcome ? `<aside class="case-callout" aria-label="Key Impact"><h3>Key Impact</h3><strong>${e(outcome.title)}</strong><p>${e(outcome.body)}</p></aside>` : ''}</div>
     <dl class="case-metadata">${metadata.map(([label,value]) => `<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl></section>`;
   const productLink = (href, label) => `<div class="case-product-link"><a class="button" href="${e(href)}" target="_blank" rel="noopener">${e(label)} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>`;

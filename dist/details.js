@@ -15,7 +15,7 @@ for (const nav of document.querySelectorAll('.case-section-nav')) {
   let scheduled = false;
   const updateCurrent = () => {
     scheduled = false;
-    const threshold = document.querySelector('.site-header').getBoundingClientRect().bottom + 48;
+    const threshold = 136;
     let index = -1;
     targets.forEach((target, i) => { if (target.getBoundingClientRect().top <= threshold) index = i; });
     markCurrent(index);
