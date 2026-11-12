@@ -62,10 +62,10 @@ export default function render(ctx) {
     ],
     [
       ['feedback', 'Comments & Votes', 'Support or oppose a proposal, read comments, and contribute feedback.'],
-      ['builder', 'Visual Builder', 'Arrange features from Buildings, Outdoors, and Mobility categories.'],
+      ['builder', 'Visual Builder', 'Look through prefab elements in Buildings, Outdoors, and Mobility categories to propose.'],
     ],
     [
-      ['mobility', 'Categorized Elements', 'Find relevant building, outdoor, or mobility features in the element library.'],
+      ['mobility', 'Categorized Elements', 'Drag and drop selected elements into active project plots to propose your ideas.'],
       ['review', 'Review & Submit', 'Preview your design, name the idea, and explain its community value.'],
     ],
     [
@@ -165,7 +165,7 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-testing', title: 'Testing made choice and feedback the next priorities.',
-      body: `<div class="case-prose"><p>Six Bloomington residents tested the 2025 high-fidelity prototype. Their feedback shaped clearer building choices and placement feedback. Additional feedback highlighted the need to know whether submissions were being considered, leading to a visible progress tracker.</p></div>
+      body: `<div class="case-prose"><p>Six Bloomington residents tested the initial MVP. Their feedback shaped clearer building choices and placement feedback. Additional feedback highlighted the need to know whether submissions were being considered, leading to a visible progress tracker.</p></div>
         <dl class="bp-change-ledger">
           <div><dt>Choosing an element</dt><dd><span>Feedback</span>Prefab elements needed clearer organization.</dd><dd><span>Change</span>Buildings, Outdoors, and Mobility categories organize the library.</dd><dd>${excerpt('categories','Deployed builder excerpt showing the Buildings, Outdoors, and Mobility categories above the element library.',369,160)}</dd></div>
           <div><dt>Recognizing a result</dt><dd><span>Feedback</span>A new design’s arrival in the plot needed emphasis.</dd><dd><span>Change</span>Placement feedback and a design preview make the result visible before submission.</dd><dd>${excerpt('result','Deployed proposal review excerpt showing the placed park and design summary.',307,72)}</dd></div>
@@ -198,8 +198,8 @@ export default function render(ctx) {
     })}
 
     ${section({
-      id: 'block-party-impact', title: '42% increase in community engagement.',
-      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>42%</strong><span>Increase in community engagement · Beta testing</span></div><div><h3>Streamlining public input.</h3><p>In beta testing with 30 Bloomington residents, proposal submissions reflected a reported 42% increase in community engagement compared with previous participation patterns. The visual planning sandbox gave residents a more approachable way to contribute ideas.</p><p>Six Bloomington residents tested the 2025 prototype, saw potential for inclusive engagement, and identified two usability refinements. The beta findings are distinct from this earlier usability study.</p></div></div>`,
+      id: 'block-party-impact', title: 'Making participation more accessible.',
+      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>42%</strong><span>Increase in community engagement · Beta testing</span></div><div><p>In beta testing with 30 Bloomington residents, proposal submissions reflected a reported 42% increase in community engagement compared with previous participation patterns. The visual planning sandbox gave residents a more accessible way to contribute ideas.</p></div></div>`,
     })}
 
     ${section({
