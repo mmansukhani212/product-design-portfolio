@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-layout"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-product-stories"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-research"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-product-stories"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
   <a class="wordmark" href="/" aria-label="Monisha Mansukhani, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Monisha<br class="mobile-break"> Mansukhani</span></a>
   <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
@@ -27,36 +27,34 @@
     <dl class="case-metadata"><div><dt>My role</dt><dd>Lead UX Engineer</dd></div><div><dt>Design scope</dt><dd>End-to-end UX/UI, user research, AI workflow automation, CRM integration</dd></div><div><dt>Target users</dt><dd>Account managers and stakeholders planning client-retention actions</dd></div><div><dt>Team</dt><dd>GTM sales representatives, developers, and the finance team</dd></div><div><dt>Duration</dt><dd>July–September 2026</dd></div></dl></section>
 
     <div class="case-reading-layout">
-      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Key insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>Interaction design</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
+      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Research insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>Interaction design</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
       <div class="case-reading-content rokt-story">
 
 
     <section id="rokt-problem" class="case-section " aria-labelledby="rokt-problem-title">
       <div class="case-section-heading"><p class="eyebrow case-section-label">The problem</p><h2 id="rokt-problem-title">A signal could be recorded—and still disappear.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>Gong held the conversation. Getting a competitor mention to the people planning a retention response still depended on an account manager passing it along. Google Chat and personal spreadsheets left no common view of what had been heard or what needed attention.</p></div>
+        <div class="case-prose"><p>Gong recorded client calls, but competitor and churn mentions reached retention decision-makers only when an account manager passed them on. Updates arrived through Google Chat and personal spreadsheets, leaving stakeholders without a shared view of what had been heard or needed attention. Important signals could slip through the cracks or reach the right people too late to act.</p></div>
         <figure class="rokt-before-map">
           <ol>
             <li><span>01 · Recorded</span><strong>Client conversation in Gong</strong><p>The signal exists inside a call.</p></li>
             <li class="rokt-friction"><span>02 · Relayed manually</span><strong>Google Chat or a personal spreadsheet</strong><p>Someone must notice, interpret, and report it.</p></li>
             <li><span>03 · Reassembled</span><strong>Retention stakeholders piece it together</strong><p>Scattered records can leave signals unseen.</p></li>
           </ol>
-          <figcaption>Before-state reconstruction from the confirmed workflow; not an original research artifact.</figcaption>
         </figure>
-        <p class="rokt-hmw"><span>How might we</span> turn conversation signals into shared, actionable intelligence without losing the account manager’s judgment?</p></div>
+        <p class="rokt-hmw"><span>How might we</span> capture important churn signals and make them accessible to the right stakeholders in time for informed retention decisions?</p></div>
     </section>
 
 
     <section id="rokt-evidence" class="case-section " aria-labelledby="rokt-evidence-title">
-      <div class="case-section-heading"><p class="eyebrow case-section-label">Key insights</p><h2 id="rokt-evidence-title">The gap was between the tools.</h2></div>
+      <div class="case-section-heading"><p class="eyebrow case-section-label">Research insights</p><h2 id="rokt-evidence-title">Manual reporting was the bottleneck.</h2></div>
       <div class="case-section-content">
-        <div class="case-prose"><p>I worked across UX/UI, research, automation, and CRM integration. The problem called for a connected reporting experience: preserve the signal, give its owner a review task, and make the result visible to the wider team.</p></div>
-        <div class="rokt-table-wrap" role="region" aria-label="Operational evidence and design implications; scroll on small screens" tabindex="0"><table class="rokt-evidence"><caption>Operational evidence → design direction</caption><thead><tr><th scope="col">What was happening</th><th scope="col">What the design needed to do</th></tr></thead><tbody>
-          <tr><td>Mentions depended on manual reporting.</td><td>Carry detected information into a prepared questionnaire.</td></tr>
-          <tr><td>Records lived in separate channels.</td><td>Give retention stakeholders one shared dashboard.</td></tr>
-          <tr><td>A form can submit without a manager response.</td><td>Keep review state visible after the three-day fallback.</td></tr>
-        </tbody></table></div>
-        <details class="rokt-support"><summary>Evidence and research scope</summary><p>This synthesis reconstructs the supplied operational account. My research contribution is confirmed; methods, participant counts, and original study artifacts are not documented here. The final screens below are a revised public prototype.</p></details></div>
+        <div class="case-prose"><p>I interviewed 6+ team leads to understand where the competitive-intelligence process broke down. Account managers had limited time for manual reporting, and flagging potential churn was not consistently prioritized. Team leads received scattered updates across disconnected channels, sometimes too late to plan a response.</p><p>Across UX/UI, research, automation, and CRM integration, I focused on reducing that reporting burden: capture signals early, sync them automatically to a shared dashboard, and give account managers an easy way to review the information and add context.</p></div>
+        <div class="rokt-table-wrap" role="region" aria-label="Research insights and design responses; scroll on small screens" tabindex="0"><table class="rokt-evidence"><caption>Research insights → design direction</caption><thead><tr><th scope="col">What was happening</th><th scope="col">What the design needed to do</th></tr></thead><tbody>
+          <tr><td>Manual reporting competed with account managers’ other priorities.</td><td>Prepare the record automatically, so managers can review and enrich it instead of starting from scratch.</td></tr>
+          <tr><td>Signals arrived across Google Chat and personal spreadsheets.</td><td>Sync signals daily to one dashboard accessible to all relevant stakeholders.</td></tr>
+          <tr><td>In the manual process, a form cannot submit without account-manager input.</td><td>Give managers three days to validate and add context. Then automatically submit unactioned records, keeping review status visible so stakeholders can distinguish them from reviewed information.</td></tr>
+        </tbody></table></div></div>
     </section>
 
 

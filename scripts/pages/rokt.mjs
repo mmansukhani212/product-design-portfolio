@@ -55,25 +55,23 @@ export default function render(ctx) {
       <div class="case-reading-content rokt-story">
 
       ${section({id:'rokt-problem',title:'A signal could be recorded—and still disappear.',body:`
-        <div class="case-prose"><p>Gong held the conversation. Getting a competitor mention to the people planning a retention response still depended on an account manager passing it along. Google Chat and personal spreadsheets left no common view of what had been heard or what needed attention.</p></div>
+        <div class="case-prose"><p>Gong recorded client calls, but competitor and churn mentions reached retention decision-makers only when an account manager passed them on. Updates arrived through Google Chat and personal spreadsheets, leaving stakeholders without a shared view of what had been heard or needed attention. Important signals could slip through the cracks or reach the right people too late to act.</p></div>
         <figure class="rokt-before-map">
           <ol>
             <li><span>01 · Recorded</span><strong>Client conversation in Gong</strong><p>The signal exists inside a call.</p></li>
             <li class="rokt-friction"><span>02 · Relayed manually</span><strong>Google Chat or a personal spreadsheet</strong><p>Someone must notice, interpret, and report it.</p></li>
             <li><span>03 · Reassembled</span><strong>Retention stakeholders piece it together</strong><p>Scattered records can leave signals unseen.</p></li>
           </ol>
-          <figcaption>Before-state reconstruction from the confirmed workflow; not an original research artifact.</figcaption>
         </figure>
-        <p class="rokt-hmw"><span>How might we</span> turn conversation signals into shared, actionable intelligence without losing the account manager’s judgment?</p>`})}
+        <p class="rokt-hmw"><span>How might we</span> capture important churn signals and make them accessible to the right stakeholders in time for informed retention decisions?</p>`})}
 
-      ${section({id:'rokt-evidence',title:'The gap was between the tools.',body:`
-        <div class="case-prose"><p>I worked across UX/UI, research, automation, and CRM integration. The problem called for a connected reporting experience: preserve the signal, give its owner a review task, and make the result visible to the wider team.</p></div>
-        <div class="rokt-table-wrap" role="region" aria-label="Operational evidence and design implications; scroll on small screens" tabindex="0"><table class="rokt-evidence"><caption>Operational evidence → design direction</caption><thead><tr><th scope="col">What was happening</th><th scope="col">What the design needed to do</th></tr></thead><tbody>
-          <tr><td>Mentions depended on manual reporting.</td><td>Carry detected information into a prepared questionnaire.</td></tr>
-          <tr><td>Records lived in separate channels.</td><td>Give retention stakeholders one shared dashboard.</td></tr>
-          <tr><td>A form can submit without a manager response.</td><td>Keep review state visible after the three-day fallback.</td></tr>
-        </tbody></table></div>
-        <details class="rokt-support"><summary>Evidence and research scope</summary><p>This synthesis reconstructs the supplied operational account. My research contribution is confirmed; methods, participant counts, and original study artifacts are not documented here. The final screens below are a revised public prototype.</p></details>`})}
+      ${section({id:'rokt-evidence',title:'Manual reporting was the bottleneck.',body:`
+        <div class="case-prose"><p>I interviewed 6+ team leads to understand where the competitive-intelligence process broke down. Account managers had limited time for manual reporting, and flagging potential churn was not consistently prioritized. Team leads received scattered updates across disconnected channels, sometimes too late to plan a response.</p><p>Across UX/UI, research, automation, and CRM integration, I focused on reducing that reporting burden: capture signals early, sync them automatically to a shared dashboard, and give account managers an easy way to review the information and add context.</p></div>
+        <div class="rokt-table-wrap" role="region" aria-label="Research insights and design responses; scroll on small screens" tabindex="0"><table class="rokt-evidence"><caption>Research insights → design direction</caption><thead><tr><th scope="col">What was happening</th><th scope="col">What the design needed to do</th></tr></thead><tbody>
+          <tr><td>Manual reporting competed with account managers’ other priorities.</td><td>Prepare the record automatically, so managers can review and enrich it instead of starting from scratch.</td></tr>
+          <tr><td>Signals arrived across Google Chat and personal spreadsheets.</td><td>Sync signals daily to one dashboard accessible to all relevant stakeholders.</td></tr>
+          <tr><td>In the manual process, a form cannot submit without account-manager input.</td><td>Give managers three days to validate and add context. Then automatically submit unactioned records, keeping review status visible so stakeholders can distinguish them from reviewed information.</td></tr>
+        </tbody></table></div>`})}
 
       ${section({id:'rokt-workflow',title:'Automate the handoff. Keep human review explicit.',body:`
         <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving; it does not confirm that an account manager checked it.</p></div>
