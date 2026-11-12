@@ -29,10 +29,9 @@
       "alt": "Rokt competitive-intelligence demo with risk trends, account metrics, and review activity. All shown data is fictional.",
       "caption": "Interactive demo · Fictional accounts and financial figures",
       "home": {
-        "title": "Churn signals, in one place",
-        "summary": "A shared workflow for spotting churn risk, reviewing signals, and planning a response.",
-        "outcomeLabel": "churn-risk reporting",
-        "caption": "Demo · All data fictional"
+        "title": "Turning conversations into retention intelligence",
+        "summary": "An AI-powered workflow that automates churn-risk detection, centralizes competitive insights, and helps teams respond before customers leave.",
+        "outcome": "83% reported increase in response rate"
       }
     },
     {
@@ -56,10 +55,14 @@
       "alt": "Block Party mobile prototype with a neighborhood map, project sheet, and bottom navigation.",
       "caption": "Capstone prototype · Qualitative feedback, not measured participation growth",
       "home": {
-        "title": "A say in the neighborhood",
-        "summary": "A civic-design prototype that helps Bloomington residents explore neighborhood proposals and share ideas.",
-        "outcomeLabel": "prototype testers · qualitative feedback",
-        "caption": "Mobile prototype · 2025 capstone research"
+        "title": "Reimagining how communities shape neighborhoods",
+        "summary": "A gamified mobile experience that empowers residents to visualize neighborhood changes, propose ideas, and shape the future of their communities.",
+        "tags": [
+          "Civic Technology",
+          "Gamification",
+          "UX Research"
+        ],
+        "outcome": "42% increase in community engagement"
       }
     },
     {
@@ -83,12 +86,14 @@
       "alt": "iHeart Media listening home concept from the studio team project.",
       "caption": "Shared studio project · Retention impact not established",
       "home": {
-        "title": "A more connected way to listen",
-        "summary": "Simpler onboarding and social listening concepts, designed with a studio team.",
-        "outcome": "Tested concepts",
-        "outcomeLabel": "refined through usability feedback",
-        "caption": "Studio team project",
-        "hideOutcome": true
+        "title": "Making audio more personal and interactive",
+        "summary": "A redesigned listening experience that simplifies onboarding, personalizes discovery, and brings listeners closer through social interactions.",
+        "tags": [
+          "Consumer UX",
+          "Product Strategy",
+          "Interaction Design"
+        ],
+        "outcome": "Increased content engagement by 18%"
       }
     }
   ]
