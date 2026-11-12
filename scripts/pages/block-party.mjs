@@ -2,8 +2,8 @@
 export default function render(ctx) {
   const {caseNav, caseHeader, overview, media, section, preview, nextProject, next} = ctx;
   const screen = (name, alt, caption, eager = false) => media({
-    src: `/assets/block-party-final-${name}.webp`, alt, caption,
-    width: 1470, height: 863, eager,
+    src: `/assets/block-party-mobile-${name}.webp`, alt, caption,
+    width: 393, height: 852, className: 'bp-phone-screen', eager,
   });
   const research = [
     ['4', 'Planning interviews', 'Bloomington City Council planning members.'],
@@ -15,16 +15,20 @@ export default function render(ctx) {
     ${caseHeader({
       kicker: 'Block Party',
       title: 'Give residents a way to shape their neighborhood',
-      summary: 'Explore a place, propose a change, and stay part of the conversation.',
-      tags: ['Civic design', 'Participatory research', 'Spatial interaction'],
+      summary: 'A mobile civic-design prototype: explore a place, propose a change, and stay involved.',
+      tags: ['Mobile product design', 'Participatory research', 'Civic technology'],
     })}
 
     <div class="case-wrap bp-hero">
-      ${screen('explore', 'Block Party showing the Explore Bloomington project list beside an illustrated neighborhood and a highlighted planning site.', 'The current interactive prototype connects neighborhood projects with a shared visual context. Project records and city imagery are illustrative.', true)}
+      <div class="bp-hero-phones" aria-label="Block Party mobile app screens">
+        ${screen('explore', 'Block Party mobile Explore screen with an illustrated neighborhood, project bottom sheet, and bottom navigation.', 'Explore a neighborhood.', true)}
+        ${screen('builder', 'Block Party mobile proposal builder with ready-made elements and a highlighted planning site.', 'Put an idea on the map.', true)}
+      </div>
+      <p class="bp-hero-note">Current mobile prototype · Illustrative city, sample projects, and browser-local activity.</p>
     </div>
 
     ${overview({
-      summary: '<p>Block Party began as my HCI/d capstone at Indiana University Bloomington. I explored how civic-oriented residents aged 18–35 could understand urban proposals and contribute ideas before decisions were made.</p><p>The current browser prototype extends that concept with a categorized builder, proposal feedback, and progress updates.</p>',
+      summary: '<p>Block Party began as my HCI/d capstone at Indiana University Bloomington. I explored how civic-oriented residents aged 18–35 could understand urban proposals and contribute ideas before decisions were made.</p><p>The current mobile prototype brings that concept into a touch-friendly map, a categorized builder, and proposal updates.</p>',
       metadata: [
         ['Role', 'HCI/d capstone thesis author'],
         ['Capstone timeline', 'January–May 2025'],
@@ -65,20 +69,20 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-journey', title: 'See the place before judging the proposal.',
-      body: `<div class="case-prose"><p>I chose the simulation direction to bring exploration, feedback, and resident-made proposals into one experience. A map gives changes a spatial context; project details explain their purpose and constraints.</p><p>The current prototype pairs a project list with an illustrated, pannable city. Search, zoom, recenter, and a simulated street view support exploration. Sample project details leave unconfirmed dates, contacts, and dimensions explicit.</p></div>
-        ${screen('project', 'Hopewell West sample-project details beside the illustrated Block Party planning site.', 'Understand the project before contributing. The illustrated map is a prototype setting, not a surveyed model of Bloomington.')}`,
+      body: `<div class="bp-phone-story"><div class="case-prose"><p>I chose the simulation direction to connect exploration, feedback, and resident-made proposals. A map gives changes a spatial context; project details explain their purpose and constraints.</p><p>On mobile, a draggable bottom sheet snaps between collapsed, middle, and expanded states, balancing the map with project information. Bottom navigation keeps Explore, Proposals, My activity, and Notifications within reach.</p><p>Search, zoom, and a simulated street view support exploration. Project dates, contacts, and dimensions remain explicitly unconfirmed.</p></div>
+        ${screen('project', 'Block Party mobile Hopewell West sample-project details in an expandable bottom sheet.', 'Expand the project sheet to understand the proposal. City imagery and project records are illustrative.')}</div>`,
     })}
 
     ${section({
       id: 'block-party-participation', title: 'Give people a starting point for their ideas.',
-      body: `<div class="case-prose"><p>Prefabricated elements make it possible to suggest a use for a space without drawing a plan from scratch. The trade-off is a bounded set of choices, rather than a full design tool.</p><p>In the current app, residents browse Buildings, Outdoors, and Mobility, then drag an element onto the highlighted plot—or select and tap to place it. They can adjust or remove elements, save a draft, and review a name and description before a mock submission.</p></div>
-        ${screen('builder', 'Block Party proposal builder with categorized prefabricated elements and a design placed inside the planning boundary.', 'A bounded site and categorized elements turn an open-ended task into a concrete proposal. Drafts and mock submissions stay in the visitor’s browser.')}`,
+      body: `<div class="bp-phone-story"><div class="case-prose"><p>Ready-made elements let residents suggest a use for a space without drawing a plan from scratch. A bounded library offers an approachable starting point, with less freedom than a full design tool.</p><p>Residents browse Buildings, Outdoors, and Mobility, then drag an element onto the plot—or select and tap to place it. They can adjust or remove elements, save a draft, and review their idea before a mock submission.</p></div>
+        ${screen('builder', 'Block Party mobile builder showing element categories and the neighborhood planning site.', 'Choose an element, place it in the site, then review the idea. Drafts remain in this browser.')}</div>`,
     })}
 
     ${section({
       id: 'block-party-progress', title: 'Keep participation going after “submit.”',
-      body: `<div class="case-prose"><p>A resident needs to know what happens to an idea. The revised prototype adds an acknowledgment, a reference number, a next step, and a progress tracker in Notifications. Updates are grouped around proposals the resident submitted, voted on, or commented on.</p><p>Separate proposal views support votes and discussion. Their sample counts show how the interface behaves; they do not establish community consensus or real planning decisions.</p></div>
-        ${screen('activity', 'Block Party Notifications showing a sample resident proposal, review progress, and next steps.', 'Illustrative progress from Received through Decision keeps the next step visible. Committee messages and status changes are mocked; nothing is sent to the council.')}`,
+      body: `<div class="bp-phone-story"><div class="case-prose"><p>A resident needs to know what happens to an idea. Notifications brings together an acknowledgment, reference number, next step, and progress tracker for their proposal.</p><p>Residents can also follow proposals they voted on or commented on. Dedicated proposal views make room for feedback without competing with the map.</p><p>Committee messages, votes, and review stages are mock data. They demonstrate the flow, not community consensus or real planning decisions.</p></div>
+        ${screen('activity', 'Block Party mobile Notifications screen with sample proposal progress and next steps.', 'Track a sample proposal from Received through Decision. Nothing is sent to the council.')}</div>`,
     })}
 
     ${section({
@@ -95,12 +99,12 @@ export default function render(ctx) {
       ${preview({
         id: 'block-party-prototype',
         title: 'Try Block Party',
-        description: 'Explore the illustrated neighborhood, build an idea, and inspect the sample progress flow. This browser-local prototype uses mock data and simulated street views; proposals are not sent to the council.',
+        description: 'Try the mobile app in a phone-sized preview, or open it in a new tab. Activity stays in your browser; city views, committee messages, and review stages are simulated. Proposals are not sent to the council.',
         src: 'https://mmansukhani212.github.io/block-party/',
-        externalUrl: 'https://mmansukhani212.github.io/block-party/',
-        image: '/assets/block-party-final-explore.webp',
-        alt: 'Static overview of the current Block Party interactive prototype.',
-        width: 1470, height: 863,
+        externalUrl: '/demos/block-party/',
+        image: '/assets/block-party-mobile-explore.webp',
+        alt: 'Block Party mobile Explore screen, provided as a static fallback.',
+        width: 393, height: 852,
         loadLabel: 'Load interactive prototype',
       })}
     </div>

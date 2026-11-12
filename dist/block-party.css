@@ -1,22 +1,52 @@
+.block-party-page{--ink:#342f3b;--body:#625a69;--muted:#6e6376;--accent:#574565;--deep:#42344e;--wash:#f2edf5;--border:#e2dbe7;color:var(--ink)}
+.block-party-page ::selection{background:#e2d8eb;color:var(--ink)}
+.block-party-page .tags li{border-color:var(--border);background:var(--wash)}
+.block-party-page .inspect-link{background:var(--wash)}
+.block-party-page .button:hover{background:#34283e}
 .block-party-page .bp-hero{margin-top:10px}
-
-
-
-.block-party-page .bp-research{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:28px 0 20px}
-.block-party-page .bp-research>div{background:#edf2fa;border:1px solid #d8e2f1;border-radius:18px;padding:23px 20px}
+.block-party-page .bp-hero-phones{display:grid;grid-template-columns:repeat(2,minmax(0,260px));justify-content:center;align-items:start;gap:36px;padding:32px;background:var(--wash);border:1px solid var(--border);border-radius:26px}
+.block-party-page .bp-hero-phones .case-figure{margin:0}
+.block-party-page .bp-hero-phones figcaption{text-align:center;font-size:12px;color:var(--deep)}
+.block-party-page .bp-hero-note{font-size:11px;line-height:1.8;color:var(--muted);text-align:center;margin:14px auto 0;max-width:650px}
+.block-party-page .bp-phone-screen{width:100%;max-width:300px;margin-left:auto;margin-right:auto}
+.block-party-page .bp-phone-screen .inspect-link{border-radius:22px;box-shadow:0 12px 32px -23px rgba(52,47,59,.4)}
+.block-party-page .bp-phone-screen img{width:100%;height:auto;aspect-ratio:393/852;object-fit:contain}
+.block-party-page .bp-phone-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:40px;align-items:center}
+.block-party-page .bp-phone-story .case-figure{margin-top:0;margin-bottom:0}
+.block-party-page .bp-research{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 20px}
+.block-party-page .bp-research>div{background:var(--wash);border:1px solid var(--border);border-radius:18px;padding:23px 20px}
 .block-party-page .bp-research dt strong{display:block;font-size:36px;font-weight:650;letter-spacing:-.045em;line-height:1.1;color:var(--deep)}
 .block-party-page .bp-research dt span{display:block;font-size:12px;font-weight:700;line-height:1.5;margin-top:10px}
 .block-party-page .bp-research dd{font-size:12px;color:var(--body);line-height:1.7;margin-top:7px}
 .block-party-page .bp-research-note{font-size:12px;color:var(--muted);line-height:1.8;max-width:780px;margin:18px 0 0}
-.block-party-page .bp-screen-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
 .block-party-page .bp-findings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:26px}
-.block-party-page .bp-findings>div{border-top:2px solid #c9d7ec;padding:22px 22px 24px;background:#f0f4fb;border-radius:0 0 16px 16px}
+.block-party-page .bp-findings>div{border-top:2px solid #cfc1da;padding:22px 22px 24px;background:var(--wash);border-radius:0 0 16px 16px}
 .block-party-page .bp-small-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1.7;color:var(--deep)}
 .block-party-page .bp-findings h3{font-size:21px;line-height:1.3;margin-top:9px;letter-spacing:-.025em}
 .block-party-page .bp-findings p{font-size:14px;line-height:1.8;color:var(--body);margin-top:12px}
 .block-party-page .bp-prototype{margin-top:44px;margin-bottom:44px}
-@media(max-width:959px){.block-party-page .bp-research{grid-template-columns:repeat(2,minmax(0,1fr))}.block-party-page .bp-screen-pair{gap:18px}}
-@media(max-width:767px){.block-party-page .bp-research{gap:12px;margin-top:23px}.block-party-page .bp-research>div{padding:19px 16px}.block-party-page .bp-research dt strong{font-size:31px}.block-party-page .bp-research dt span{font-size:11px}.block-party-page .bp-research dd{font-size:11px}.block-party-page .bp-screen-pair,.block-party-page .bp-findings{grid-template-columns:1fr;gap:22px}.block-party-page .bp-findings>div{padding:20px}.block-party-page .bp-findings h3{font-size:20px}.block-party-page .bp-findings p{font-size:13px}.block-party-page .bp-prototype{margin-top:32px;margin-bottom:32px}}
-
-.block-party-page .bp-research{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media(max-width:767px){.block-party-page .bp-research{grid-template-columns:1fr}}
+.block-party-page .interactive-preview{background:var(--wash)}
+.block-party-page .bp-prototype .preview-static .case-figure{max-width:260px;margin-left:auto;margin-right:auto}
+.block-party-page .bp-prototype .preview-static .inspect-link{border-radius:22px}
+.block-party-page .bp-prototype .embed-host{width:100%;max-width:393px;margin-left:auto;margin-right:auto;background:#f8f7f3}
+.block-party-page .bp-prototype .embed-host iframe{width:100%;max-width:393px;height:auto;aspect-ratio:393/852}
+@media(max-width:1100px){.block-party-page .bp-phone-story{grid-template-columns:minmax(0,1fr) minmax(0,260px);gap:28px}}
+@media(max-width:767px){
+  .block-party-page .bp-hero-phones{gap:16px;padding:20px 16px;border-radius:19px}
+  .block-party-page .bp-hero-phones figcaption{font-size:10px}
+  .block-party-page .bp-hero-note{font-size:10px}
+  .block-party-page .bp-hero-phones .inspect-link{border-radius:14px}
+  .block-party-page .bp-phone-story{grid-template-columns:1fr;gap:26px}
+  .block-party-page .bp-phone-story .case-figure{max-width:300px}
+  .block-party-page .bp-research{grid-template-columns:1fr;gap:12px;margin-top:23px}
+  .block-party-page .bp-research>div{padding:19px 16px}
+  .block-party-page .bp-research dt strong{font-size:31px}
+  .block-party-page .bp-research dt span,.block-party-page .bp-research dd{font-size:11px}
+  .block-party-page .bp-findings{grid-template-columns:1fr;gap:22px}
+  .block-party-page .bp-findings>div{padding:20px}
+  .block-party-page .bp-findings h3{font-size:20px}
+  .block-party-page .bp-findings p{font-size:13px}
+  .block-party-page .bp-prototype{margin-top:32px;margin-bottom:32px}
+}
+body:has(.block-party-page) .image-viewer{--deep:#42344e;--border:#e2dbe7;--ink:#342f3b;--muted:#6e6376}
+body:has(.block-party-page) .viewer-canvas{background:#f2edf5}

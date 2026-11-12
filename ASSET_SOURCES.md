@@ -7,7 +7,7 @@ All derivatives live in the new project; source materials are preserved.
 | rokt-dashboard.webp | Browser capture of https://roktcidash.netlify.app/ on November 10, 2026; raw capture in qa/rokt-source.png | Actual demo view. All accounts, activity, and financial figures are fictional. Not production proof or impact evidence. |
 | block-party-map.webp | ../Block Party/Figma Screens/Home Page.png | Actual prototype export, full proportions preserved. |
 | block-party-builder.webp | ../Block Party/Figma Screens/Build Page.png | Prepared for later case-study work; not currently used on Home. |
-| iheart-listening.webp | https://framerusercontent.com/images/zvLh8MHadCmwtnZIxF5hU1aCxk.png via https://www.manasighutukade.work/iheartmedia | User-approved shared project composition; source credited in visible caption. Original source retained in qa/iheart-source.png. |
+| iheart-listening.webp | https://framerusercontent.com/images/zvLh8MHadCmwtnZIxF5hU1aCxk.png from the approved shared-project source | Historical shared-project composition, replaced by UI-only screens in the current Home/case study. Original source retained in qa/iheart-source.png. |
 | manrope-variable.ttf and manrope-OFL.txt | Google Fonts github.com/google/fonts, ofl/manrope | Self-hosted Manrope variable font under SIL Open Font License. |
 | monisha-mansukhani-resume.pdf | ../Resume/Monisha Mansukhani_Resume.pdf, approved November 11, 2026 (original preserved) | Website copy preserves all visible content; email URI uses the confirmed Gmail address and portfolio URI uses HTTPS. |
 | favicon.svg / header mark | Original code-native geometric detail | Architectural brackets and a center point; no reference monogram used. |
@@ -24,7 +24,7 @@ No generated project UI, stock project imagery, or reference-portfolio media is 
 | block-party-details.webp | ../Block Party/Figma Screens/Project Details.png, 852 × 393, uncropped. |
 | block-party-feedback.webp | ../Block Party/Figma Screens/Feedback Page.png, 852 × 393, uncropped. |
 | block-party-submit.webp | ../Block Party/Figma Screens/Build Page Submit.png, 852 × 393, uncropped. |
-| iheart-iteration.webp | https://framerusercontent.com/images/nQge63Wbg8QBb6KmyICqSsJgHag.png via the approved shared case study. Full original composition resized to 2400 × 1560; credit is visible on the case-study page. Shows shared location-setting and playback-label iterations. Raw source in qa/iheart-iteration-source.png. |
+| iheart-iteration.webp | https://framerusercontent.com/images/nQge63Wbg8QBb6KmyICqSsJgHag.png from the approved shared-project source. Historical composition resized to 2400 × 1560; replaced by UI-only crops in the current case study. Shows shared location-setting and playback-label iterations. Raw source in qa/iheart-iteration-source.png. |
 | monisha-bio-portrait.webp | User-selected replacement: /Users/monishamansukhani/Desktop/Screenshot 2026-11-11 at 4.27.34 PM.png. Original preserved at ../assets/personal/monisha-bio-crop-original.png. Full 1120 × 1182 supplied crop converted to WebP; displayed without additional zoom in the existing rounded frame. No appearance retouching. |
 
 The before/after Rokt workflow uses selectable HTML and the confirmed project sequence. It is labeled as a reconstructed explainer, not a captured production artifact. Block Party’s Figma access failure was rechecked in-browser; no native frames are claimed as inspected.
@@ -52,3 +52,11 @@ Supplied image 2 is a layout reference only; none of its photos or copy is reuse
 | block-party-final-{explore,project,builder,activity}.webp | Rendered final public app at https://mmansukhani212.github.io/block-party/. Four uncropped 1470 × 863 captures; browser-local prototype, illustrative city map, mocked committee/progress flow. One Park was placed locally for the builder capture, with no submission. These are later revisions, not the artifact tested in 2025. |
 
 New raw PNGs and review notes are preserved outside the published repository in ../CASE_STUDY_SOURCE_DATA_2026-11-11/. Prior Netlify and Figma-export screenshots remain historical source assets; the current Home/case studies use the final app captures above. The current Block Party map includes an AI-generated expansion documented in the user-owned build chat.
+
+## Mobile Block Party and iHeartMedia rebuild — November 11, 2026
+
+- `block-party-mobile-{explore,project,builder,activity}.webp`: actual final app captured at 393 × 852, uncropped. Raw files in ../CASE_STUDY_SOURCE_DATA_2026-11-11/block-party/mobile-screenshots/. The Park shown was an existing browser-local draft; no council submission occurred.
+- `iheart-ui-{home,player,genres}.webp` and `iheart-flow-*.webp`: lossless derivatives of UI-only PNG crops in ../CASE_STUDY_SOURCE_DATA_2026-11-11/iheartmedia/ui-png/. Asset-to-source mapping, crop bounds and partial-screen flags remain in that pack’s MANIFEST.json. Original dimensions preserved; no interfaces redrawn. Some iteration phones contain source callout overlays; clean magnified controls are shown alongside them.
+- `iheart-flow-{onboarding,song-dedication,podcast-polls}.mp4`: original prototype recordings from the source pack, mapped by actual visible flow. Linked locally and fetched only when visitors open them; no eager video embeds.
+
+Public iHeartMedia copy credits the studio team and iHeartMedia research/product partners, without named portfolio references, as requested. Full internal provenance is retained in the local source pack. Home uses original HTML composition of the three extracted UI screens on a new light rose surface. Product palettes are presentation treatments based on the final UIs; shared portfolio branding stays #1C4587.

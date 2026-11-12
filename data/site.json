@@ -50,16 +50,16 @@
       "timeline": "Jan–May 2025",
       "outcome": "6 residents",
       "outcomeLabel": "tested the prototype and saw potential for inclusive participation",
-      "image": "block-party-final-explore.webp",
-      "width": 1470,
-      "height": 863,
-      "alt": "Current Block Party browser prototype showing a project list and an illustrated neighborhood map.",
+      "image": "block-party-mobile-explore.webp",
+      "width": 393,
+      "height": 852,
+      "alt": "Block Party mobile prototype with a neighborhood map, project sheet, and bottom navigation.",
       "caption": "Capstone prototype · Qualitative feedback, not measured participation growth",
       "home": {
         "title": "A say in the neighborhood",
         "summary": "A civic-design prototype that helps Bloomington residents explore neighborhood proposals and share ideas.",
         "outcomeLabel": "prototype testers · qualitative feedback",
-        "caption": "Current browser prototype · 2025 capstone research"
+        "caption": "Mobile prototype · 2025 capstone research"
       }
     },
     {
@@ -77,20 +77,17 @@
       "timeline": "Sep–Dec 2024",
       "outcome": "Research → iteration",
       "outcomeLabel": "design concepts informed by usability findings",
-      "image": "iheart-listening.webp",
-      "width": 1600,
-      "height": 900,
-      "alt": "Shared iHeartMedia studio concepts showing the listening home, music player, and favorite-genre selection.",
+      "image": "iheart-ui-home.webp",
+      "width": 626,
+      "height": 1353,
+      "alt": "iHeartMedia listening home concept from the studio team project.",
       "caption": "Shared studio project · Retention impact not established",
-      "credit": "Project visual: shared case study by Manasi Ghutukade",
-      "creditUrl": "https://www.manasighutukade.work/iheartmedia",
       "home": {
         "title": "A more connected way to listen",
         "summary": "Simpler onboarding and social listening concepts, designed with a studio team.",
         "outcome": "Tested concepts",
         "outcomeLabel": "refined through usability feedback",
-        "caption": "Studio project",
-        "credit": "Shared project visual · Manasi Ghutukade",
+        "caption": "Studio team project",
         "hideOutcome": true
       }
     }
