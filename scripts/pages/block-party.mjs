@@ -9,7 +9,7 @@ export default function render(ctx) {
     ${caseHeader({
       kicker: 'Block Party',
       title: 'Give residents a way to shape their neighborhood',
-      summary: 'A mobile civic-design prototype: explore a place, propose a change, and stay involved.',
+      summary: 'An interactive community planning prototype: explore projects, create proposals, and share feedback.',
       tags: ['Mobile product design', 'Participatory research', 'Civic technology'],
     })}
 
@@ -24,7 +24,7 @@ export default function render(ctx) {
     ${productLink('/demos/block-party/', 'Open mobile demo')}
 
     ${overview({
-      summary: '<p>Bloomington’s public input process relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an AI-powered simulation app prototype. Residents can explore local projects, visualize proposed changes, build and share ideas, vote and comment, and follow updates—helping planners understand community priorities.</p>',
+      summary: '<p>Bloomington’s public input process relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an interactive community planning prototype. Its visual planning sandbox lets residents arrange predefined features such as parks and bike lanes, create proposals, vote, and share feedback—making neighborhood planning more approachable.</p>',
       metadata: [
         ['My role', 'HCI/d capstone thesis author'],
         ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
@@ -72,11 +72,11 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-exploration', title: 'Keep the context of a place. Add the freedom to propose.',
-      body: `<div class="case-prose"><p>A workshop with four participants explored three directions. After comparing paper concepts with two city planners and two users, I developed the simulation approach: contextual feedback plus a way to build an idea.</p></div>
+      body: `<div class="case-prose"><p>A workshop with four participants explored three directions. After comparing paper concepts with two city planners and two users, I developed a visual planning sandbox: contextual feedback plus a way to arrange and share ideas.</p></div>
         <div class="bp-concepts">
           <article><div><span class="bp-small-label">Explored · Kiosk</span><h3>Build together, in person.</h3><p>Collaborative blocks at City Hall offered shared discussion, tied to organized sessions.</p></div>${media({src:'/assets/block-party-story-concept-kiosk.webp',alt:'Block illustration from the documented kiosk concept in the 2025 deck.',caption:'2025 kiosk concept',width:380,height:325,className:'bp-concept-art bp-kiosk-art'})}</article>
           <article><div><span class="bp-small-label">Explored · AR</span><h3>Overlay a proposal on a place.</h3><p>An AR concept connected feedback to a resident’s view of the physical site.</p></div>${media({src:'/assets/block-party-story-concept-ar.webp',alt:'2025 hand-drawn AR concept showing a phone viewing a proposal over a physical site.',caption:'2025 AR exploration',width:1365,height:340,className:'bp-concept-art'})}</article>
-          <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Simulation</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div>${media({src:'/assets/block-party-story-concept-simulation.webp',alt:'2025 simulation sketches combining neighborhood exploration, proposal feedback, and a building-element library.',caption:'2025 selected direction',width:1740,height:305,className:'bp-concept-art'})}</article>
+          <article class="bp-selected-concept"><div><span class="bp-small-label">Selected · Visual planning sandbox</span><h3>Explore, respond, and create.</h3><p>A virtual neighborhood combined proposal feedback with resident-built ideas in one experience.</p></div>${media({src:'/assets/block-party-story-concept-simulation.webp',alt:'2025 neighborhood planning sketches combining project exploration, proposal feedback, and a building-element library.',caption:'2025 selected direction',width:1740,height:305,className:'bp-concept-art'})}</article>
         </div>
         <details class="bp-support"><summary>Inspect the original wireframes</summary><div class="bp-wireframes">
           ${media({src:'/assets/block-party-story-wireframe-map.webp',alt:'Original annotated map wireframe with location search, project site, Build and Projects controls.',caption:'2025 map wireframe',width:743,height:348})}
@@ -101,7 +101,7 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-solution', title: 'Explore, propose, and follow what happens next.',
-      body: `<div class="case-prose"><p>Developed with the City Council of Bloomington, Block Party connects project discovery, visual proposals, and feedback across three mobile flows. The app is projected to increase participation by 42%; that outcome remains unmeasured.</p></div>
+      body: `<div class="case-prose"><p>Block Party demonstrates three connected participation flows: understand a project, create a proposal in a visual planning sandbox, and follow updates. Residents arrange predefined assets and share ideas through a visual, game-like experience. The project’s expected 42% participation increase remains unmeasured.</p></div>
         <div class="bp-flow-gallery" role="region" aria-label="Three mobile flows; scroll to inspect on small screens" tabindex="0">
           <article><h3>01 · Understand a project</h3>${screen('project','Current Block Party expanded project sheet with location, status, and timeline.','Project details in an expandable sheet')}<p>Explore → Hopewell West → expand the sheet. Read context before contributing.</p></article>
           <article><h3>02 · Put an idea in place</h3>${screen('builder','Current mobile builder with a Park placed inside the highlighted planning boundary.','A browser-local design draft')}<p>Design this space → choose or drag an element → Review idea. A limited library reduces the blank-page task.</p></article>
@@ -110,7 +110,7 @@ export default function render(ctx) {
         ${preview({
           id: 'block-party-prototype',
           title: 'Try the mobile prototype',
-          description: 'Load the working app to explore these flows. Activity stays in this browser; street views, committee messages, and review progress are simulated. Proposals are not sent to the council.',
+          description: 'Explore the participation flow using predefined assets and mock data saved in this browser. Proposal submissions, votes, comments, and planner updates are demonstrations; proposals are not sent to the council.',
           src: 'https://mmansukhani212.github.io/block-party/',
           externalUrl: '/demos/block-party/',
           image: '/assets/block-party-mobile-explore.webp',
