@@ -58,6 +58,7 @@ export default function render(ctx) {
         'rokt-evidence',
         'rokt-workflow',
         'rokt-review',
+        'rokt-testing',
         'rokt-dashboard',
         'rokt-impact',
         'rokt-reflection'
@@ -95,6 +96,24 @@ export default function render(ctx) {
       ${section({id:'rokt-review',title:'Two paths to a shared view of churn risk.',body:`
         <div class="case-prose"><p>I designed the final flow around two audiences: account managers who supply relationship context, and decision makers who need a timely view of client risk. Prefilled records keep manual input focused on validation and additional context, helping signals reach the people planning a retention response with less effort from account managers.</p><p>The queue makes reviews easy to find; the dashboard connects account-level detail with portfolio and competitor patterns. Managers can revisit submitted information to add context as the client relationship evolves.</p></div>
         ${walkthrough}`})}
+
+      ${section({id:'rokt-testing',title:'Testing made context the next priority.',body:`
+        <div class="case-prose"><p>I gathered feedback on the dashboard and data quality from 7 account managers and 3 team leads through live usability testing sessions. Participants found the dashboard intuitive and informative, but their feedback highlighted two needs: clearer evidence behind each signal and a better distinction between a competitor mention and active switching intent.</p></div>
+        <div class="rokt-reflections rokt-feedback">
+          <div><h3>Show why a signal was flagged.</h3><p>Reviewers needed more source context to judge relevance and check the AI summary against the original conversation.</p></div>
+          <div><h3>Separate a mention from switching intent.</h3><p>Neutral and historical mentions needed to be distinguished from signals of active churn risk.</p></div>
+        </div>
+        <div class="rokt-iteration-copy"><h3>Refining what counts as a churn signal.</h3><p>I refined the Gong AI tracker prompts through multiple working sessions, defining the <strong>last 180 days</strong> as the window for active churn risk. Account managers contributed edge cases from client calls to help capture nuanced competitor mentions and scope the prompts to weed out false positives.</p></div>
+        <figure class="rokt-scope" aria-labelledby="rokt-scope-caption">
+          <figcaption id="rokt-scope-caption">Narrowing the tracker’s scope</figcaption>
+          <ol>
+            <li><span>Starting scope</span><strong>Competitor mentions in client calls</strong><p>A mention alone does not establish switching intent.</p></li>
+            <li><span>Time window</span><strong>Last 180 days</strong><p>Define the timeframe for active churn risk.</p></li>
+            <li><span>Context</span><strong>Nuance + account-manager edge cases</strong><p>Refine the criteria around what clients actually mean.</p></li>
+            <li><span>Relevance</span><strong>Prompts scoped to filter false positives</strong><p>Distinguish relevant churn signals from neutral or historical references.</p></li>
+          </ol>
+        </figure>
+        <div class="rokt-source-context"><h3>A direct route back to the source.</h3><p>I added a button in the review form linking to the Gong call recording that triggered it. Reviewers can access the original call excerpts when they want to check the AI summary’s reliability.</p><ol aria-label="Source verification path"><li>Review form</li><li>Source Gong recording</li><li>Original call context</li></ol></div>`})}
 
       ${section({id:'rokt-dashboard',title:'Trace a risk pattern back to its source.',body:`
         <div class="case-prose"><p>The overview shows trends and priority accounts. Intelligence search and filters narrow the investigation by competitor, risk, manager, or review status; account details keep the excerpt and review history close. Stakeholders can inspect the context behind a signal instead of relying on an aggregate alone.</p></div>

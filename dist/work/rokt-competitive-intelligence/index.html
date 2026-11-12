@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-hero-caption"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-flow-tabs"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="I replaced fragmented reporting with automated signal capture, an account-manager review step, and a centralized dashboard—helping stakeholders prepare retention action plans faster."><meta name="theme-color" content="#FFFFFF"><title>Rokt | Monisha Mansukhani</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/manrope-variable.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="/styles.css?v=2026-11-12-project-previews"><link rel="stylesheet" href="/details.css?v=2026-11-12-section-labels"><link rel="stylesheet" href="/rokt.css?v=2026-11-12-testing"><script defer src="/details.js?v=2026-11-12-layout"></script><script defer src="/rokt-story.js?v=2026-11-12-flow-tabs"></script><script defer src="/navigation.js?v=2026-11-12-scroll-header"></script></head><body><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header"><div class="header-inner">
   <a class="wordmark" href="/" aria-label="Monisha Mansukhani, home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>Monisha<br class="mobile-break"> Mansukhani</span></a>
   <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
@@ -27,7 +27,7 @@
     <dl class="case-metadata"><div><dt>My role</dt><dd>Lead UX Engineer</dd></div><div><dt>Design scope</dt><dd>End-to-end UX/UI, user research, AI workflow automation, CRM integration</dd></div><div><dt>Target users</dt><dd>Account managers and stakeholders planning client-retention actions</dd></div><div><dt>Team</dt><dd>GTM sales representatives, developers, and the finance team</dd></div><div><dt>Duration</dt><dd>July–September 2026</dd></div></dl></section>
 
     <div class="case-reading-layout">
-      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Research insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>UX Design</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
+      <nav class="case-section-nav" aria-label="On this page"><details open><summary>On this page</summary><div class="case-section-links"><a href="#rokt-problem"><span>The problem</span></a><a href="#rokt-evidence"><span>Research insights</span></a><a href="#rokt-workflow"><span>Workflow design</span></a><a href="#rokt-review"><span>UX Design</span></a><a href="#rokt-testing"><span>Testing &amp; iteration</span></a><a href="#rokt-dashboard"><span>Final solution</span></a><a href="#rokt-impact"><span>The impact</span></a><a href="#rokt-reflection"><span>Reflections</span></a></div></details></nav>
       <div class="case-reading-content rokt-story">
 
 
@@ -88,6 +88,28 @@
       <a class="text-link rokt-flow-open" href="/assets/rokt-flow-decision-maker.mp4" target="_blank" rel="noopener">Open flow video <span aria-hidden="true">↗</span><span class="sr-only"> (Decision makers’ flow, opens in a new tab)</span></a>
       <ol id="rokt-flow-decision-maker-steps"><li><strong>Start with the overview</strong><p>Spot portfolio trends and accounts that need attention.</p></li><li><strong>Customize the view</strong><p>Open At-Risk Accounts and filter by competitor and risk level.</p></li><li><strong>Explore competitor insights</strong><p>Compare competitors, common threats, and patterns across accounts.</p></li></ol>
     </section></div></div>
+    </section>
+
+
+    <section id="rokt-testing" class="case-section " aria-labelledby="rokt-testing-title">
+      <div class="case-section-heading"><p class="eyebrow case-section-label">Testing &amp; iteration</p><h2 id="rokt-testing-title">Testing made context the next priority.</h2></div>
+      <div class="case-section-content">
+        <div class="case-prose"><p>I gathered feedback on the dashboard and data quality from 7 account managers and 3 team leads through live usability testing sessions. Participants found the dashboard intuitive and informative, but their feedback highlighted two needs: clearer evidence behind each signal and a better distinction between a competitor mention and active switching intent.</p></div>
+        <div class="rokt-reflections rokt-feedback">
+          <div><h3>Show why a signal was flagged.</h3><p>Reviewers needed more source context to judge relevance and check the AI summary against the original conversation.</p></div>
+          <div><h3>Separate a mention from switching intent.</h3><p>Neutral and historical mentions needed to be distinguished from signals of active churn risk.</p></div>
+        </div>
+        <div class="rokt-iteration-copy"><h3>Refining what counts as a churn signal.</h3><p>I refined the Gong AI tracker prompts through multiple working sessions, defining the <strong>last 180 days</strong> as the window for active churn risk. Account managers contributed edge cases from client calls to help capture nuanced competitor mentions and scope the prompts to weed out false positives.</p></div>
+        <figure class="rokt-scope" aria-labelledby="rokt-scope-caption">
+          <figcaption id="rokt-scope-caption">Narrowing the tracker’s scope</figcaption>
+          <ol>
+            <li><span>Starting scope</span><strong>Competitor mentions in client calls</strong><p>A mention alone does not establish switching intent.</p></li>
+            <li><span>Time window</span><strong>Last 180 days</strong><p>Define the timeframe for active churn risk.</p></li>
+            <li><span>Context</span><strong>Nuance + account-manager edge cases</strong><p>Refine the criteria around what clients actually mean.</p></li>
+            <li><span>Relevance</span><strong>Prompts scoped to filter false positives</strong><p>Distinguish relevant churn signals from neutral or historical references.</p></li>
+          </ol>
+        </figure>
+        <div class="rokt-source-context"><h3>A direct route back to the source.</h3><p>I added a button in the review form linking to the Gong call recording that triggered it. Reviewers can access the original call excerpts when they want to check the AI summary’s reliability.</p><ol aria-label="Source verification path"><li>Review form</li><li>Source Gong recording</li><li>Original call context</li></ol></div></div>
     </section>
 
 
