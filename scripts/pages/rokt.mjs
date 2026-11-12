@@ -25,9 +25,9 @@ export default function render(ctx) {
 
   return `<article class="case-study rokt-case">
     ${caseHeader({
-      kicker: 'Rokt',
-      title: 'From scattered churn signals to a shared retention workflow',
-      summary: 'Connecting AI-detected signals, account-manager context, and a shared view of churn risk.',
+      kicker: 'Rokt | AI Powered Competitive Intelligence Dashboard',
+      title: 'Turning customer conversations into actionable retention intelligence with AI',
+      summary: 'An AI-powered workflow that automates churn-risk detection, centralizes competitive insights, and helps teams respond before customers leave.',
       tags: project.tags
     })}
 
