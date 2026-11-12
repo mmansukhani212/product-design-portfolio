@@ -60,3 +60,9 @@ New raw PNGs and review notes are preserved outside the published repository in 
 - `iheart-flow-{onboarding,song-dedication,podcast-polls}.mp4`: original prototype recordings from the source pack, mapped by actual visible flow. Linked locally and fetched only when visitors open them; no eager video embeds.
 
 Public iHeartMedia copy credits the studio team and iHeartMedia research/product partners, without named portfolio references, as requested. Full internal provenance is retained in the local source pack. Home uses original HTML composition of the three extracted UI screens on a new light rose surface. Product palettes are presentation treatments based on the final UIs; shared portfolio branding stays #1C4587.
+
+## iHeartMedia visual story additions — November 11, 2026
+
+- `iheart-sketch-{episodes,chat,karaoke}.webp`: actual extracted sketch UI from the private source pack’s `17-sketch-podcast-list.png`, `19-sketch-live-chat.png`, and `22-sketch-karaoke-player.png`. Original proportions preserved; detailed source mapping remains in the local MANIFEST.json.
+- `iheart-demo-{onboarding,dedication,podcast}.mp4`: portrait crops of the existing supplied prototype recordings.398×802, H.264/MP4, network fast-start, original timing13.23/11.27/7.77s. Full originals unchanged in the local source pack; crop bounds and AVFoundation helper in USER_CONFIRMATIONS.md. Media loads only when requested and provides controls/external open links/text walkthroughs.
+- Experience journey and evidence matrix: original selectable HTML explanations reconstructed from documented issues and user-confirmed research, labeled appropriately. No fabricated research artifact, new UI, quote or metric.
