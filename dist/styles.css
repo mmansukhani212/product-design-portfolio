@@ -38,6 +38,8 @@
 .project-copy .project-name{color:var(--deep)}
 .project-copy .tags li{background:var(--pill-surface,var(--wash));border-color:var(--border);color:var(--deep)}
 .project-panel .project-button:hover{background:var(--button-hover)}
+.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}.project-actions .project-button{margin-top:0;border:1px solid transparent}.project-actions .project-live{color:var(--deep);background:transparent;border-color:var(--deep)}.project-panel .project-live:hover{background:transparent;border-color:var(--accent)}
+@media(max-width:767px){.project-actions .project-button{padding:12px 14px;gap:12px}}
 .project-panel .project-media{display:grid;place-items:center;min-height:540px;padding:48px 32px;background:var(--preview-surface);overflow:hidden;isolation:isolate}
 .project-media:before{content:'';position:absolute;inset:34px;border:1px solid var(--border);border-radius:50%;pointer-events:none}
 .thumbnail-art{position:relative;width:100%;z-index:1;transition:transform 200ms cubic-bezier(.23,1,.32,1)}
