@@ -12,7 +12,7 @@
 .iheart-study .case-overview{color:var(--body)}
 .iheart-study .iheart-hero-art{background:var(--wash);border:1px solid var(--border);border-radius:28px;padding:34px 44px 25px}
 .iheart-study .iheart-phone-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start;max-width:100%;min-width:0;margin-top:30px}
-.iheart-study .iheart-hero-art .iheart-phone-row{max-width:780px;margin:0 auto;gap:38px}
+.iheart-study .iheart-hero-art .iheart-phone-row{max-width:520px;margin:0 auto;gap:38px}
 .iheart-study .iheart-screen{margin:0;min-width:0}
 .iheart-study .iheart-screen img{width:100%;height:auto;max-height:none;filter:drop-shadow(0 12px 12px rgba(76,19,34,.08))}
 .iheart-study .iheart-screen figcaption{font-size:11px;line-height:1.7;color:var(--muted);margin-top:12px}

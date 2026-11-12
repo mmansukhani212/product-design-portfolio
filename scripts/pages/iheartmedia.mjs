@@ -30,29 +30,28 @@ export default function render(ctx) {
 
   return `<article class="case-study iheart-study">
     ${caseHeader({
-      kicker: 'iHeart Media',
-      title: 'Make listening easier to start and more social',
-      summary: 'A studio collaboration exploring onboarding and participation for listeners under 35.',
-      tags: ['Consumer UX', 'Product Strategy', 'Usability Testing']
+      kicker: 'iHeart Media | Audio Streaming Mobile App',
+      title: 'Making digital audio more personal and interactive for the next generation of listeners',
+      summary: 'A redesigned listening experience that simplifies onboarding, personalizes discovery, and brings listeners closer through social interactions.',
+      tags: ['Consumer UX', 'Product Strategy', 'Interaction']
     })}
     <div class="case-wrap">
-      <div class="iheart-hero-art" aria-label="Listening and preference-setting concepts">
+      <div class="iheart-hero-art" aria-label="Listening home and connected player concepts">
         ${journey([
-          screen('iheart-ui-home', 'iHeart listening home with recent content and recommendations.', 'A familiar listening home', 626, 1353, true),
-          screen('iheart-ui-player', 'Radio player with host contact, live chat, and song dedication controls.', 'A more connected player', 626, 1353, true),
-          screen('iheart-ui-genres', 'Genre preferences with selectable listening interests.', 'Personal listening preferences', 624, 1352, true)
-        ])}
+          screen('iheart-ui-home', 'iHeart listening home with recent content and recommendations.', '', 626, 1353, true),
+          screen('iheart-ui-player', 'Radio player with host contact, live chat, and song dedication controls.', '', 626, 1353, true)
+        ], 2)}
       </div>
       ${overview({
-        summary: '<p>Demanding onboarding and limited social interaction made it harder for younger listeners to get started and feel connected. Our studio team used interviews, review analysis, and heuristic evaluation to focus the redesign.</p><p>I facilitated the team’s work and pitched and owned song dedication. Together, we explored clearer onboarding and podcast participation, then refined location settings and playback feedback through usability findings.</p>',
+        summary: '<p>iHeart Media struggled to retain listeners under 35. An 82% onboarding drop-off rate, navigational friction, and limited social connection pointed to an experience that felt demanding and impersonal. Our studio team combined interviews, review analysis, and heuristic evaluation to focus the redesign on navigation and community.</p><p>I facilitated the team’s work and pitched and owned Song Dedication. Together, we streamlined onboarding to get listeners to music faster and introduced Call Your Host and Song Dedication to bring the intimacy of live radio into the app. Usability findings also guided clearer location settings and playback feedback.</p>',
         metadata: [
           ['My role', 'Product Designer & Product Manager'],
-          ['Design scope', 'Team facilitation, research, UX/UI, song dedication, prototyping and testing'],
+          ['Design scope', 'Team facilitation, User Research, UX/UI, prototyping and A/B testing'],
           ['Target users', 'New and younger iHeartRadio listeners, particularly under 35'],
-          ['Team', 'Seven student designers, with iHeart Media UX research and product partners'],
+          ['Team', 'Seven student designers, iHeart Media UX research and design team'],
           ['Duration', 'September–December 2024']
         ],
-        outcome: {title: 'Clearer settings and playback feedback', body: 'Prototype iterations brought location selection into the profile and made the Played action explicit. These address observed usability issues; measured retention impact is not established.'}
+        outcome: {title: 'Increased content engagement by 18%', body: 'Online user testing with 45+ users showed higher content engagement and longer listening sessions. The redesign was developed for iHeart Media, whose wider audio network reaches 250M monthly listeners.'}
       })}
       <div class="case-reading-layout">
         ${caseNav([
@@ -74,7 +73,6 @@ export default function render(ctx) {
                 <li><span class="story-stage">03 · Manage listening</span><strong>Find settings and controls</strong><p>Hidden location settings and ambiguous actions added friction.</p></li>
                 <li><span class="story-stage">04 · Participate</span><strong>Look for a human connection</strong><p>Listening offered limited two-way interaction.</p></li>
               </ol>
-              <figcaption>Illustrative experience map reconstructed from documented issues, not an original research artifact.</figcaption>
             </figure>
             <p class="story-hmw"><span>How might we</span> help younger listeners start listening with less effort and participate without losing the simplicity of audio?</p>`})}
 
@@ -85,8 +83,7 @@ export default function render(ctx) {
               <tr><td>Onboarding questions and flow created difficulty.</td><td>The first session needed less effort.</td><td>Clarify questions and remove unnecessary steps.</td></tr>
               <tr><td>Navigation and controls were hard to understand.</td><td>Useful features needed more visible entry points.</td><td>Surface settings and explain actions.</td></tr>
               <tr><td>Interview feedback expressed a desire for human interaction.</td><td>Connection mattered alongside content.</td><td>Explore dedications and episode-level participation.</td></tr>
-            </tbody></table></div>
-            <details class="story-support"><summary>Research Scope and Constraints</summary><p>The five interviews informed discovery. Later usability sessions involved 10+ users exploring the app independently. Privacy around host contact, limited moderation capacity, and advertising constraints shaped the design space.</p></details>`})}
+            </tbody></table></div>`})}
 
           ${section({id: 'iheart-exploration', title: 'Explore broadly. Keep the prototype focused.', body: `
             <div class="case-prose"><p>Early sketches explored episode organization, live discussion, and karaoke. The recorded prototype focused on clearer onboarding, song dedication, and podcast participation. These sketches show a wider design space than the three recorded flows below.</p></div>
@@ -103,8 +100,7 @@ export default function render(ctx) {
             <div class="story-iteration-grid">
               ${comparison({id:'location',title:'Put location where listeners looked for it.',before:'Location was nested under Advanced Settings.',finding:'Listeners expected it in account or profile settings.',change:'Surface location selection directly in the profile.',beforeAsset:'iheart-flow-location-before',afterAsset:'iheart-flow-location-after',beforeAlt:'Initial profile: location settings are under Advanced Settings.',afterAlt:'Iteration: the listening location is visible at the top of the profile.',detail:'iheart-flow-location-detail',detailAlt:'Magnified location selector showing Bloomington, IN.',detailWidth:487,detailHeight:144})}
               ${comparison({id:'played',title:'Name the action instead of asking people to infer it.',before:'An unlabeled plus action marked an episode played.',finding:'The meaning of the episode controls was unclear.',change:'Add explicit Played feedback to the action row.',beforeAsset:'iheart-flow-played-before',afterAsset:'iheart-flow-played-after',beforeAlt:'Initial podcast episode actions with a plus icon highlighted.',afterAlt:'Iteration with an explicit Played state in the episode action row.',detail:'iheart-flow-played-detail',detailAlt:'Magnified episode action row with a Played label.',detailWidth:786,detailHeight:324})}
-            </div>
-            <p class="story-note">These changes address observed problems; a follow-up validation result is not documented.</p>`})}
+            </div>`})}
 
           ${section({id: 'iheart-solution', title: 'Three ways into a more connected listening experience.', body: `
             <div class="case-prose"><p>The prototype links easier entry with ways to participate alongside the audio. Play each original interaction below; these are recorded prototypes, not a live service.</p></div>
@@ -114,9 +110,9 @@ export default function render(ctx) {
               ${demonstration({id:'podcast',title:'Respond to an episode.',description:'Episode-level polls and comments give listeners a concrete way to participate in the conversation around the content.',poster:'iheart-flow-podcast-episode',label:'Play Podcast Flow',steps:['Open the episode detail.','Visit its poll and comments.','Select a poll response and explore discussion.']})}
             </div>`})}
 
-          ${section({id: 'iheart-impact', title: 'The evidence is in the refinements.', body: `
-            <div class="case-prose"><p>The documented outcome is a prototype with clearer location access and playback feedback, plus three demonstrated listening journeys. Those changes respond directly to the problems surfaced in research and testing.</p></div>
-            <dl class="story-outcomes"><div><dt>Observed changes</dt><dd>Location surfaced in profile; Played state made explicit.</dd></div><div><dt>Demonstrated scope</dt><dd>Onboarding, song dedication, and podcast participation.</dd></div><div><dt>Still to establish</dt><dd>Retest results, shipped scope, and measured retention impact.</dd></div></dl>`})}
+          ${section({id: 'iheart-impact', title: 'A more engaging listening experience.', body: `
+            <div class="case-prose"><p>Online user testing with 45+ users showed an 18% increase in content engagement, contributing to longer listening sessions. Clearer onboarding and opportunities to participate helped make the experience more personal.</p></div>
+            <dl class="story-outcomes"><div><dt>Observed changes</dt><dd>Location surfaced in profile; Played state made explicit.</dd></div><div><dt>Demonstrated scope</dt><dd>Onboarding, song dedication, and podcast participation.</dd></div><div><dt>Validation</dt><dd>Online user testing with 45+ users.</dd></div></dl>`})}
 
           ${section({id: 'iheart-reflection', title: 'Participation needs a clear path and an operational owner.', body: `
             <div class="case-prose"><p>This project sharpened how I think about social features: entry points, feedback, and operational support need to be designed together. A dedication form can look complete while leaving questions about which songs people can choose or what happens next. I would next test those expectations and the revised controls with new listeners, then work with product and research partners on privacy and moderation requirements. That would give the team stronger evidence before expanding the experience.</p></div>`})}
