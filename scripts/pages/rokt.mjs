@@ -34,7 +34,7 @@ export default function render(ctx) {
     <div class="case-wrap">${media({
       src: '/assets/rokt-final-overview.webp',
       alt: 'Revised Rokt demo overview with portfolio metrics, competitor mention trends, risk distribution, and competitor comparisons.',
-      caption: 'Revised public prototype · all accounts, activity, and financial figures are fictional.',
+      caption: 'Demo environment with fictional accounts, activity, and financial figures, created to comply with the company’s NDA.',
       width: 1470, height: 919, className: 'case-hero-media', eager: true
     })}</div>
 
