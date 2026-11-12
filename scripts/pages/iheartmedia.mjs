@@ -85,15 +85,18 @@ export default function render(ctx) {
               <tr><td>Interview feedback expressed a desire for human interaction.</td><td>Connection mattered alongside content.</td><td>Explore dedications and episode-level participation.</td></tr>
             </tbody></table></div>`})}
 
-          ${section({id: 'iheart-exploration', title: 'Explore broadly. Keep the prototype focused.', body: `
-            <div class="case-prose"><p>Early sketches explored episode organization, live discussion, and karaoke. The recorded prototype focused on clearer onboarding, song dedication, and podcast participation. These sketches show a wider design space than the three recorded flows below.</p></div>
-            <div class="story-sketches">
-              ${media({src:'/assets/iheart-sketch-episodes.webp',alt:'Original hand-drawn concept for a podcast episode list and playback entry.',caption:'Episode organization',width:669,height:1229,className:'story-sketch'})}
-              ${media({src:'/assets/iheart-sketch-chat.webp',alt:'Original hand-drawn live-chat concept with listener comments and responses.',caption:'Live discussion',width:702,height:1229,className:'story-sketch'})}
-              ${media({src:'/assets/iheart-sketch-karaoke.webp',alt:'Original hand-drawn player exploration from the karaoke concept sketches.',caption:'Karaoke player exploration',width:702,height:1234,className:'story-sketch'})}
-            </div>
-            <div class="story-scope"><span>Prototype focus</span><p>Start listening → Personalize a dedication → Respond to an episode</p></div>
-            <p class="story-note">Live interaction raised privacy and moderation questions. A convincing interface would also need a workable support model.</p>`})}
+          ${section({id: 'iheart-exploration', title: 'Explore widely. Focus on a more personal listening experience.', body: `
+            <div class="case-prose"><p>We explored six ways to help younger listeners get started, discover relevant content, and connect: onboarding and feature introductions, podcast live chat, curated radio playlists, Melody Match, hands-free mode, and live event participation.</p></div>
+            ${media({src:'/assets/iheart-concept-board.jpg',alt:'Digitized brainstorming board with six annotated sketch clusters: onboarding and feature introductions, podcast live chat, curated radio playlists, Melody Match song identification, hands-free voice controls, and live event participation.',caption:'Digitized reconstruction of the team’s concept sketches.',width:1536,height:1024,className:'story-concept-board'})}
+            <div class="story-prototype-focus"><h3>Prototype Focus</h3><div class="case-prose"><p>We reviewed the concepts with our sponsors, weighing feasibility, potential impact, and fit with user and business needs. We narrowed the prototype to simpler onboarding, more personal discovery, and social features that bring listeners closer.</p></div>
+              <dl class="story-outcomes">
+                <div><dt>Onboarding</dt><dd>Remove unnecessary screens and make setup questions more relevant, so listeners can get to music faster.</dd></div>
+                <div><dt>Personalization</dt><dd>Bring liked and downloaded content into My Library, with access to genre and artist preferences.</dd></div>
+                <div><dt>Call Your Host</dt><dd>Give listeners a direct way to join an on-air discussion with the show’s host.</dd></div>
+                <div><dt>Live Chat</dt><dd>Connect listeners through conversations around the current radio program.</dd></div>
+                <div><dt>Song Dedication</dt><dd>Let listeners dedicate a song and send a personal message to someone special.</dd></div>
+              </dl>
+            </div>`})}
 
           ${section({id: 'iheart-iteration', title: 'Testing changed where controls lived—and what they said.', body: `
             <div class="case-prose"><p>In usability sessions with 10+ users, we observed independent app exploration, including onboarding. We looked for confusion, frustration, and unmet expectations. Two findings led to more visible settings and clearer playback feedback.</p></div>

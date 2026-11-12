@@ -15,9 +15,9 @@ const sectionLabels = {
   'block-party-impact': 'The Impact',
   'block-party-reflection': 'Reflections',
   'iheart-problem': 'The Problem',
-  'iheart-discovery': 'Research',
-  'iheart-exploration': 'Concept Exploration',
-  'iheart-iteration': 'Testing and Iterations',
+  'iheart-discovery': 'Research Insights',
+  'iheart-exploration': 'Concept Evaluation',
+  'iheart-iteration': 'Testing & Iterations',
   'iheart-solution': 'Final Solution',
   'iheart-impact': 'The Impact',
   'iheart-reflection': 'Reflections'
