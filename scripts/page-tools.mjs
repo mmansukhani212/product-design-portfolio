@@ -4,7 +4,6 @@ export function pageTools(site, e) {
     <figure class="case-figure ${e(className)}">
       <a class="inspect-link" data-inspect href="${e(src)}" target="_blank" rel="noopener" aria-label="Inspect image: ${e(alt)} (opens larger)">
         <img src="${e(src)}" alt="${e(alt)}" width="${width}" height="${height}" loading="${eager ? 'eager' : 'lazy'}" decoding="async" ${eager ? 'fetchpriority="high"' : ''}>
-        <span class="inspect-label" aria-hidden="true">Inspect ↗</span>
       </a>${caption ? `<figcaption>${e(caption)}</figcaption>` : ''}
     </figure>`;
   const section = ({id, kicker, title, body, className = ''}) => `
