@@ -34,8 +34,8 @@ export default function render(ctx) {
 
     ${section({
       id:'strengths',
-      kicker:'What I bring to a team',
-      title:'What I bring to a team',
+      kicker:'What I bring to the team',
+      title:'What I bring to the team',
       body:`<div class="about-strengths">${strengths.map(([title,copy]) => `<div><h3>${e(title)}</h3><p>${e(copy)}</p></div>`).join('')}</div>`
     })}
 

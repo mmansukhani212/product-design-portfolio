@@ -30,7 +30,7 @@ export default function render(ctx) {
 
   return `<article class="case-study iheart-study">
     ${caseHeader({
-      kicker: 'iHeartMedia',
+      kicker: 'iHeart Media',
       title: 'Make listening easier to start and more social',
       summary: 'A studio collaboration exploring onboarding and participation for listeners under 35.',
       tags: ['Consumer UX', 'Product strategy', 'Usability testing']
@@ -49,7 +49,7 @@ export default function render(ctx) {
           ['My role', 'Product Designer & Product Manager'],
           ['Design scope', 'Team facilitation, research, UX/UI, song dedication, prototyping and testing'],
           ['Target users', 'New and younger iHeartRadio listeners, particularly under 35'],
-          ['Team', 'Seven student designers, with iHeartMedia UX research and product partners'],
+          ['Team', 'Seven student designers, with iHeart Media UX research and product partners'],
           ['Duration', 'September–December 2024']
         ],
         outcome: {title: 'Clearer settings and playback feedback', body: 'Prototype iterations brought location selection into the profile and made the Played action explicit. These address observed usability issues; measured retention impact is not established.'}

@@ -74,3 +74,10 @@ Public iHeartMedia copy credits the studio team and iHeartMedia research/product
 - `block-party-story-wireframe-{map,builder}.webp`: actual hand-drawn wireframes from supplied deck slides11/22. Private source-pack STORY_ASSETS.md records exact paths, crop bounds and reproduction commands. Originals remain unchanged.
 - Current mobile screenshots and historical landscape builder remain separate versions/formats, not a retested matched-scale before/after.
 - Rokt reuses four existing final public-demo captures. Explanatory workflow diagrams and operational matrices are selectable HTML reconstructions of confirmed mechanics, not original research artifacts. No invented footage, generated UI or additional production evidence.
+
+
+## Home compositions and replacement resume — November 12, 2026
+
+The supplied replacement resume is copied byte-for-byte from ../Resume/Monisha Mansukhani_Resume.pdf; SHA256959435f020361195f81ba5a6a4fe972ffae6375ff91f189cd84abaf37679c47a. Unlike the preceding public derivative, this replacement has no annotation/URI edits. Source remains unchanged.
+
+Home compositions reuse existing actual UI assets: Rokt final overview; Block Party mobile Explore/Builder; iHeart Media listening Home/live Player. No source backgrounds, new project UI, generated assets, crops or distorted proportions. CSS supplies the tilted arrangement, faint framing and limited hover scale. Thumbnail captions/arrows removed from public HTML; original source qualifications remain in asset records, alt text and case studies.

@@ -2,10 +2,10 @@
   "name": "Monisha Mansukhani",
   "email": "mmansukh2610@gmail.com",
   "linkedin": "https://www.linkedin.com/in/monisha-mansukhani-8632b6199/",
-  "resume": "/assets/monisha-mansukhani-resume.pdf?v=2026-11-11",
+  "resume": "/assets/monisha-mansukhani-resume.pdf?v=2026-11-12-959435f020",
   "hero": {
     "headline": "Hi, I'm Monisha! A Product Designer making complex things feel simple",
-    "intro": "I'm a NYC-based designer working at the intersection of product strategy, UX, and technology. With experience across enterprise SaaS, AI-powered tools, and consumer products, I turn complex workflows and data-rich systems into intuitive, human-centered experiences that drive measurable impact."
+    "intro": "I'm a NYC-based designer working at the intersection of product strategy, UX, and technology. With 4+ years of experience across enterprise SaaS, AI-powered tools, and consumer products, I turn complex workflows and data-rich systems into intuitive, human-centered experiences that drive measurable impact."
   },
   "projects": [
     {
@@ -64,7 +64,7 @@
     },
     {
       "id": "iheartmedia",
-      "name": "iHeartMedia",
+      "name": "iHeart Media",
       "slug": "iheartmedia",
       "title": "Make listening easier to start and more social",
       "summary": "As a product designer and product manager, I contributed to a studio team exploring simpler onboarding and more social listening experiences.",
@@ -80,7 +80,7 @@
       "image": "iheart-ui-home.webp",
       "width": 626,
       "height": 1353,
-      "alt": "iHeartMedia listening home concept from the studio team project.",
+      "alt": "iHeart Media listening home concept from the studio team project.",
       "caption": "Shared studio project · Retention impact not established",
       "home": {
         "title": "A more connected way to listen",
