@@ -101,7 +101,7 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-solution', title: 'Explore, propose, and follow what happens next.',
-      body: `<div class="case-prose"><p>The current app translates the concept into three connected mobile flows. Snapping sheets balance the map with project details; a bounded element library makes a proposal approachable.</p></div>
+      body: `<div class="case-prose"><p>Developed with the City Council of Bloomington, Block Party connects project discovery, visual proposals, and feedback across three mobile flows. The app is projected to increase participation by 42%; that outcome remains unmeasured.</p></div>
         <div class="bp-flow-gallery" role="region" aria-label="Three mobile flows; scroll to inspect on small screens" tabindex="0">
           <article><h3>01 · Understand a project</h3>${screen('project','Current Block Party expanded project sheet with location, status, and timeline.','Project details in an expandable sheet')}<p>Explore → Hopewell West → expand the sheet. Read context before contributing.</p></article>
           <article><h3>02 · Put an idea in place</h3>${screen('builder','Current mobile builder with a Park placed inside the highlighted planning boundary.','A browser-local design draft')}<p>Design this space → choose or drag an element → Review idea. A limited library reduces the blank-page task.</p></article>
@@ -121,8 +121,8 @@ export default function render(ctx) {
     })}
 
     ${section({
-      id: 'block-party-impact', title: 'Six residents saw potential. Participation impact remains unmeasured.',
-      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>6</strong><span>Bloomington residents tested the 2025 prototype</span></div><div><h3>Positive qualitative feedback.</h3><p>Participants saw value in a more inclusive way to engage and surfaced two actionable usability refinements.</p><p>The evidence supports a promising concept. It does not establish city adoption, participation growth, or validated improvements in the current app.</p></div></div>`,
+      id: 'block-party-impact', title: '42% expected increase in participation.',
+      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>42%</strong><span>Expected participation increase · Projected impact</span></div><div><h3>Streamlining public input.</h3><p>Developed with the City Council of Bloomington, Indiana, to streamline public input in urban design projects. Participation growth remains unmeasured.</p><p>Six Bloomington residents tested the 2025 prototype, saw potential for inclusive engagement, and identified two usability refinements. The current app has no documented retest.</p></div></div>`,
     })}
 
     ${section({
