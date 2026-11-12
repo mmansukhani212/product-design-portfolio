@@ -41,7 +41,7 @@ export default function render(ctx) {
     ${productLink('https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'Open dashboard demo')}
 
     ${overview({
-      summary: '<p>Competitor and churn signals from client calls were scattered across Google Chat and personal spreadsheets, leaving gaps in the information available for retention planning.</p><p>I designed a connected workflow: AI flags mentions, n8n prepares a HubSpot questionnaire, and account managers have three days to review it before submission. A daily dashboard sync gives stakeholders a shared view while distinguishing reviewed records from automatic submissions.</p>',
+      summary: '<p>Competitor and churn signals from client calls were scattered across Google Chat and personal spreadsheets, leaving gaps in the information available for retention planning.</p><p>I designed a connected workflow: AI flags mentions, n8n prepares a HubSpot questionnaire, and account managers have three days to review it before submission. Real-time dashboard syncing gives stakeholders a shared view while distinguishing reviewed records from automatic submissions.</p>',
       metadata: [
         ['My role', 'Lead UX Engineer'],
         ['Design scope', 'End-to-end UX/UI, user research, AI workflow automation, CRM integration'],
@@ -49,7 +49,7 @@ export default function render(ctx) {
         ['Team', 'GTM sales representatives, developers, and the finance team'],
         ['Duration', 'July–September 2026']
       ],
-      outcome: {title: '83% reported increase in response rate', body: 'An increase in the existing churn-risk response rate, reported from the project. Automated collection and daily shared reporting gave retention stakeholders a centralized basis for action.'}
+      outcome: {title: '83% reported increase in response rate', body: 'An increase in the existing churn-risk response rate, reported from the project. Automated collection and real-time shared reporting gave retention stakeholders a centralized basis for action.'}
     })}
 
     <div class="case-reading-layout">
@@ -80,17 +80,17 @@ export default function render(ctx) {
         <div class="case-prose"><p>I interviewed 6+ team leads to understand where the competitive-intelligence process broke down. Account managers had limited time for manual reporting, and flagging potential churn was not consistently prioritized. Team leads received scattered updates across disconnected channels, sometimes too late to plan a response.</p><p>Across UX/UI, research, automation, and CRM integration, I focused on reducing that reporting burden: capture signals early, sync them automatically to a shared dashboard, and give account managers an easy way to review the information and add context.</p></div>
         <div class="rokt-table-wrap" role="region" aria-label="Research insights and design responses; scroll on small screens" tabindex="0"><table class="rokt-evidence"><caption>Research insights → design direction</caption><thead><tr><th scope="col">What was happening</th><th scope="col">What the design needed to do</th></tr></thead><tbody>
           <tr><td>Manual reporting competed with account managers’ other priorities.</td><td>Prepare the record automatically, so managers can review and enrich it instead of starting from scratch.</td></tr>
-          <tr><td>Signals arrived across Google Chat and personal spreadsheets.</td><td>Sync signals daily to one dashboard accessible to all relevant stakeholders.</td></tr>
+          <tr><td>Signals arrived across Google Chat and personal spreadsheets.</td><td>Sync signals in real time to one dashboard accessible to all relevant stakeholders.</td></tr>
           <tr><td>In the manual process, a form cannot submit without account-manager input.</td><td>Give managers three days to validate and add context. Then automatically submit unactioned records, keeping review status visible so stakeholders can distinguish them from reviewed information.</td></tr>
         </tbody></table></div>`})}
 
       ${section({id:'rokt-workflow',title:'Automate the handoff. Keep human review explicit.',body:`
-        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information daily. Automatic submission keeps information moving, helping decision makers form a retention plan in time.</p></div>
+        <div class="case-prose"><p>The workflow links detection to a prepared questionnaire, gives the relevant account manager three days to review, and syncs the collected information in real time. Automatic submission keeps information moving, helping decision makers form a retention plan in time.</p></div>
         <figure class="rokt-system-map" aria-label="Reconstructed detection, review and reporting workflow">
           <ol class="rokt-pipeline"><li><span>01</span><strong>AI trackers</strong><p>Flag competitor and churn mentions in Gong.</p></li><li><span>02</span><strong>n8n → HubSpot</strong><p>Send a prefilled questionnaire to the relevant manager.</p></li></ol>
           <div class="rokt-review-gate"><span>03 · Three-day review window</span><strong>Account manager reviews the prepared record</strong></div>
           <div class="rokt-branches"><div><span>Manager responds</span><strong>Reviewed information proceeds</strong><p>Human context accompanies the detected signal.</p></div><div><span>No action by deadline</span><strong>Original details submit automatically</strong><p>Managers can update the information after submission.</p></div></div>
-          <div class="rokt-converge"><span>04 · Daily sync</span><strong>Company-wide dashboard</strong><p>A shared starting point for retention planning.</p></div>
+          <div class="rokt-converge"><span>04 · Real-time sync</span><strong>Company-wide dashboard</strong><p>A shared starting point for retention planning.</p></div>
         </figure>`})}
 
       ${section({id:'rokt-review',title:'Two paths to a shared view of churn risk.',body:`
@@ -120,10 +120,9 @@ export default function render(ctx) {
         <ol class="rokt-demo-path"><li><strong>Overview</strong><span>Spot a pattern</span></li><li><strong>Intelligence</strong><span>Find the record</span></li><li><strong>AM Review Queue</strong><span>Inspect its evidence</span></li></ol>
         ${preview({id:'rokt-demo',title:'Try the fictional-data dashboard',description:'Open a review to inspect its source context and validation prompts. All accounts, activity, and financial figures are fictional. The prototype runs independently of Gong, HubSpot, and n8n.',src:demoUrl,externalUrl:demoUrl,image:'/assets/rokt-final-review-queue.webp',alt:'Static fallback of the fictional-data AM queue with deadlines, remaining time, review status and three-day submission policy.',width:1470,height:919,loadLabel:'Load dashboard demo'})}`})}
 
-      ${section({id:'rokt-impact',title:'More signals reached a shared starting point.',body:`
-        <div class="rokt-impact-ledger"><div><span>Before</span><strong>Manual reporting across separate channels</strong></div><span class="rokt-impact-arrow" aria-hidden="true">→</span><div><span>After</span><strong>Automated collection with daily shared visibility</strong></div></div>
-        <div class="case-prose"><p>The project reported an 83% increase in the existing churn-risk response rate. Broader collection and centralized access supported retention planning. This is a reported rate increase, not a claim of 83% less response time or independently validated lift.</p></div>
-        <details class="rokt-support"><summary>What the evidence does—and does not—show</summary><p>Raw timings, denominator, and calculation are unavailable. The public prototype’s account counts, revenue exposure, and risk scores are fictional examples, not business outcomes. No retained-revenue figure is claimed.</p></details>`})}
+      ${section({id:'rokt-impact',title:'Less reporting effort. Faster retention planning.',body:`
+        <div class="rokt-impact-ledger"><div><span>Before</span><strong>Manual reporting across separate channels</strong></div><span class="rokt-impact-arrow" aria-hidden="true">→</span><div><span>After</span><strong>Automated reporting with real-time shared visibility</strong></div></div>
+        <div class="case-prose"><p>Automating competitor-mention reporting reduced the manual effort required from account managers. Signals synced in real time to one centralized dashboard, reaching decision makers sooner and giving them the information they needed to form retention plans and respond to churn risk faster.</p><p>The project reported an <strong>83% increase in the existing churn-risk response rate.</strong></p></div>`})}
 
       ${section({id:'rokt-reflection',title:'Two lessons I’ll take forward.',body:`
         <div class="rokt-reflections">
