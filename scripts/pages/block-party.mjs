@@ -1,6 +1,6 @@
 /** Block Party: 2025 capstone research, with a clearly separated current interactive prototype. */
 export default function render(ctx) {
-  const {caseNav, caseHeader, overview, media, section, preview, nextProject, next} = ctx;
+  const {caseNav, caseHeader, overview, media, section, preview, nextProject, next, productLink} = ctx;
   const screen = (name, alt, caption, eager = false) => media({
     src: `/assets/block-party-mobile-${name}.webp`, alt, caption,
     width: 393, height: 852, className: 'bp-phone-screen', eager,
@@ -27,19 +27,18 @@ export default function render(ctx) {
       <p class="bp-hero-note">Current mobile prototype · Illustrative city, sample projects, and browser-local activity.</p>
     </div>
 
+    ${productLink('/demos/block-party/', 'Open mobile demo')}
+
     ${overview({
-      summary: '<p>Block Party began as my HCI/d capstone at Indiana University Bloomington. I explored how civic-oriented residents aged 18–35 could understand urban proposals and contribute ideas before decisions were made.</p><p>The current mobile prototype brings that concept into a touch-friendly map, a categorized builder, and proposal updates.</p>',
+      summary: '<p>Younger Bloomington residents faced low awareness of planning meetings and proposals that were hard to picture. My HCI/d capstone explored a mobile way to understand neighborhood projects and contribute ideas.</p><p>Resident and planner research led to a simulated neighborhood, ready-made design elements, and proposal feedback. The current prototype adds a categorized builder and progress updates; six residents tested the original 2025 concept.</p>',
       metadata: [
-        ['Role', 'HCI/d capstone thesis author'],
-        ['Capstone timeline', 'January–May 2025'],
-        ['Context', 'INFO I695 · Indiana University Bloomington'],
-        ['Audience', 'Civic-oriented Bloomington residents, ages 18–35'],
-        ['Core constraint', 'Make spatial proposals understandable without requiring design expertise.'],
+        ['My role', 'HCI/d capstone thesis author'],
+        ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
+        ['Target users', 'Civic-oriented Bloomington residents, ages 18–35'],
+        ['Team', 'Indiana University Bloomington · HCI/d capstone'],
+        ['Duration', 'January–May 2025']
       ],
-      outcome: {
-        title: '6 residents tested the capstone prototype',
-        body: 'They saw value in its potential for inclusive community engagement. This qualitative feedback applies to the 2025 prototype; the current app has no documented retest or measured participation increase.',
-      },
+      outcome: {title: '6 residents tested the concept', body: 'Participants saw potential for inclusive community engagement and identified two usability refinements. This is qualitative feedback on the 2025 prototype; participation growth and the current revision’s usability remain unmeasured.'}
     })}
 
     <div class="case-reading-layout">

@@ -1,6 +1,6 @@
 /** Confirmed project narrative; the revised public prototype uses fictional data. */
 export default function render(ctx) {
-  const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next} = ctx;
+  const {caseNav, e, project, media, section, caseHeader, overview, preview, nextProject, next, productLink} = ctx;
   const step = (title, detail) => `<li><strong>${e(title)}</strong><span>${e(detail)}</span></li>`;
 
   const workflow = `<div class="rokt-workflows" aria-label="Before and after reporting workflows">
@@ -41,15 +41,18 @@ export default function render(ctx) {
       width: 1470, height: 919, className: 'case-hero-media', eager: true
     })}</div>
 
+    ${productLink('https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'Open dashboard demo')}
+
     ${overview({
-      summary: '<p>I led UX research and end-to-end UX/UI design, alongside AI workflow automation and CRM integration. The workflow brought scattered competitor and churn mentions into account-manager review and daily shared reporting.</p><p>The screens below illustrate the workflow through a revised public prototype with fictional data.</p>',
+      summary: '<p>Competitor and churn signals from client calls were scattered across Google Chat and personal spreadsheets, leaving gaps in the information available for retention planning.</p><p>I designed a connected workflow: AI flags mentions, n8n prepares a HubSpot questionnaire, and account managers have three days to review it before submission. A daily dashboard sync gives stakeholders a shared view while distinguishing reviewed records from automatic submissions.</p>',
       metadata: [
-        ['Role', 'Lead UX Engineer'],
-        ['Timeline', 'July–September 2026'],
-        ['Scope', 'UX/UI, user research, AI automation, CRM integration'],
-        ['Core constraint', 'Keep information moving while preserving the difference between reviewed and unreviewed signals.']
+        ['My role', 'Lead UX Engineer'],
+        ['Design scope', 'End-to-end UX/UI, user research, AI workflow automation, CRM integration'],
+        ['Target users', 'Account managers and stakeholders planning client-retention actions'],
+        ['Team', 'Rokt · UX engineering'],
+        ['Duration', 'July–September 2026']
       ],
-      outcome: {title: 'Daily shared visibility', body: 'Broader access to churn-risk information, with faster preparation of retention action plans reported from the project.'}
+      outcome: {title: 'Daily company-wide visibility', body: 'Centralized churn-risk reporting broadened access to information and helped stakeholders prepare retention action plans faster.'}
     })}
 
     <div class="case-reading-layout">

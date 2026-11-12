@@ -29,15 +29,15 @@ export default function render(ctx) {
         ])}
       </div>
       ${overview({
-        summary: '<p>As Product Designer and Product Manager, I contributed to research, concept design, and iteration.</p>',
+        summary: '<p>Demanding onboarding and limited social interaction made it harder for younger listeners to get started and feel connected. Our studio team used interviews, review analysis, and heuristic evaluation to focus the redesign.</p><p>We explored clearer onboarding, song dedications, and podcast polls and comments. Usability findings then shaped more visible location settings and explicit playback feedback, within privacy and moderation constraints.</p>',
         metadata: [
-          ['Role', 'Product Designer & Product Manager'],
-          ['Timeline', 'September–December 2024'],
-          ['Context', 'I590 Studio Project · Indiana University Bloomington'],
+          ['My role', 'Product Designer & Product Manager'],
+          ['Design scope', 'Research, product strategy, UX/UI design, prototyping, testing and iteration'],
+          ['Target users', 'New and younger iHeartRadio listeners, particularly under 35'],
           ['Team', 'Seven student designers, with iHeartMedia UX research and product partners'],
-          ['Core constraint', 'Privacy, moderation capacity, and business constraints']
+          ['Duration', 'September–December 2024']
         ],
-        outcome: null
+        outcome: {title: 'Clearer settings and playback feedback', body: 'Prototype iterations brought location selection into the profile and made the Played action explicit. These address observed usability issues; measured retention impact is not established.'}
       })}
       <div class="case-reading-layout">
         ${caseNav([
