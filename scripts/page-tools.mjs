@@ -8,6 +8,7 @@ const sectionLabels = {
   'rokt-impact': 'The Impact',
   'rokt-reflection': 'Reflections',
   'block-party-problem': 'The Problem',
+  'block-party-research': 'Research Insights',
   'block-party-exploration': 'Concept Evaluation',
   'block-party-testing': 'Testing & Iterations',
   'block-party-solution': 'Final Solution',

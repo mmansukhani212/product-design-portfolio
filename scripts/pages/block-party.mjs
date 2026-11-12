@@ -109,6 +109,7 @@ export default function render(ctx) {
     <div class="case-reading-layout">
       ${caseNav([
         'block-party-problem',
+        'block-party-research',
         'block-party-exploration',
         'block-party-testing',
         'block-party-solution',
@@ -131,6 +132,25 @@ export default function render(ctx) {
           <tr><td>Proposals shown without enough spatial context.</td><td>Locate a proposed change in its neighborhood.</td></tr>
           <tr><td>Feedback could be misinterpreted.</td><td>Pair comments with visual ideas and project context.</td></tr>
         </tbody></table></div>`,
+    })}
+
+    ${section({
+      id: 'block-party-research', title: 'A narrower problem made meaningful participation possible.',
+      body: `<div class="case-prose"><p>My architecture work in India and experiences as a pedestrian in Bloomington raised the same question: how can residents help shape the places they use? I studied participation approaches, then investigated how Bloomington gathered public input.</p></div>
+        <dl class="bp-research-methods">
+          <div><dt>Secondary research</dt><dd>Research papers, articles, and case studies helped me compare outreach methods, design approaches, and reported participation outcomes.</dd></div>
+          <div><dt>Digital ethnography</dt><dd>I reviewed Reddit threads, public forums, and government websites to understand how people encountered and discussed community projects.</dd></div>
+          <div><dt>Stakeholder interviews</dt><dd><strong>4 planning interviews</strong> and <strong>6 resident interviews</strong> brought together the perspectives of Bloomington planners and civic-oriented community members.</dd></div>
+          <div><dt>Contextual observation</dt><dd>I attended City Council meetings and mapped the existing public-input process with planners and other stakeholders.</dd></div>
+        </dl>
+        <div class="case-prose bp-current-system"><h3>Understanding the current system</h3><p>Input came through newsletters and online surveys, public council meetings, and design presentations for larger projects. Interviews revealed that residents often did not know meetings were happening. Attendance represented only a small part of the community, while the effort involved discouraged participation.</p></div>
+        <div class="bp-research-insights"><h3>What kept people out</h3><ul>
+          <li><strong>Awareness comes before access.</strong> Poor outreach and inconvenient participation methods left younger and marginalized residents out of the conversation.</li>
+          <li><strong>Feeling heard affects willingness to engage.</strong> The literature connected unheard community voices with distrust and disengagement; participation needed a clearer sense of purpose.</li>
+          <li><strong>One approach cannot fit every community.</strong> Different places and project types called for context-specific methods. Participatory workshops and interactive platforms offered promising directions.</li>
+          <li><strong>Resources shape whose input is considered.</strong> Tight timelines and limited capacity could leave public involvement overlooked, despite its importance to long-term project sustainability.</li>
+        </ul></div>
+        <aside class="bp-research-pivot"><h3>Scope was the turning point.</h3><p>I initially wanted to standardize meaningful public input across urban design projects. Differences between communities, regions, and project types made that ambition too broad. I narrowed the brief to community projects overseen by Bloomington’s City Council, focusing on civic-oriented residents aged 18–35 who were underrepresented in existing participation methods. Defining one place, audience, and planning context made the problem feasible to investigate and the proposed experience specific enough to design and test.</p></aside>`,
     })}
 
     ${section({
@@ -183,8 +203,11 @@ export default function render(ctx) {
     })}
 
     ${section({
-      id: 'block-party-reflection', title: 'A digital channel needs a representative conversation.',
-      body: '<div class="case-prose"><p>Architecture taught me that a proposal changes everyday life. This project taught me to narrow the question enough to test it—and to consider whose input reaches a decision.</p><p>Ready-made elements lower the barrier to proposing, while limiting what residents can express. Next, I would test the revised builder and feedback flow across different levels of digital confidence, then work with planners on interpreting conflicting input. Outreach and a credible review process need to grow alongside the interface.</p></div>',
+      id: 'block-party-reflection', title: 'Two lessons I’ll take forward.',
+      body: `<div class="bp-reflections">
+        <div><h3>Understanding why users disengage is as important as understanding what they need.</h3><p>This project taught me to look beyond surface-level usability challenges and understand the motivations behind user behavior. Through research, I realized that limited civic participation wasn't simply an accessibility problem, but also one of awareness, trust, and perceived impact. This reinforced the importance of uncovering the root causes of disengagement before designing solutions.</p></div>
+        <div><h3>Giving users creative freedom requires thoughtful constraints.</h3><p>Designing the visual planning sandbox challenged me to balance creative freedom with usability. By introducing predefined design elements, I explored how thoughtful constraints could make complex urban planning concepts approachable to people without technical expertise. I learned that empowering users isn't always about offering more options, but making meaningful participation easier.</p></div>
+      </div>`,
     })}
 
       </div>
