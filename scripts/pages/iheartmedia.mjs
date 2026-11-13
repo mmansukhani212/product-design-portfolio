@@ -21,9 +21,7 @@ export default function render(ctx) {
     <div class="story-detail">${screen(d.detail,d.detailAlt,'Control detail',d.detailWidth,d.detailHeight)}</div>
   </article>`;
   const demonstration = d => `<article class="story-demo"><h3 id="demo-${d.id}-title">${e(d.title)}</h3><p>${e(d.description)}</p>
-    <div class="story-video-shell"><img class="story-video-poster" src="/assets/${d.poster}.webp" width="796" height="1604" alt="Static preview of the ${e(d.id)} recorded prototype." loading="lazy" decoding="async"><video id="demo-${d.id}" controls playsinline preload="none" width="398" height="802" tabindex="0" aria-labelledby="demo-${d.id}-title" hidden></video></div>
-    <div class="story-play-slot"><button type="button" class="button story-play" data-video-src="/assets/iheart-demo-${d.id}.mp4" aria-controls="demo-${d.id}" hidden>${e(d.label)} <span aria-hidden="true">▷</span></button></div>
-    <p class="story-video-status" role="status"></p>
+    <div class="story-video-shell"><video id="demo-${d.id}" controls playsinline preload="none" width="398" height="802" poster="/assets/${d.poster}.webp" aria-labelledby="demo-${d.id}-title"><source src="/assets/iheart-demo-${d.id}.mp4" type="video/mp4">Use the link below to open this recording.</video></div>
     <a class="text-link iheart-recording" href="/assets/iheart-demo-${d.id}.mp4" target="_blank" rel="noopener">Open Recording ↗<span class="sr-only"> (video, opens in a new tab)</span></a>
     <details class="story-transcript"><summary>Text Walkthrough</summary><ol>${d.steps.map(step=>`<li>${e(step)}</li>`).join('')}</ol></details>
   </article>`;
@@ -74,12 +72,12 @@ export default function render(ctx) {
                 <li><span class="story-stage">04 · Participate</span><strong>Look for a human connection</strong><p>Listening offered limited two-way interaction.</p></li>
               </ol>
             </figure>
-            <p class="story-hmw"><span>How might we</span> help younger listeners start listening with less effort and participate without losing the simplicity of audio?</p>`})}
+            <p class="story-hmw"><span>How might we</span> help younger listeners find relevant audio and connect with hosts and one another without friction?</p>`})}
 
           ${section({id: 'iheart-discovery', title: 'Research pointed to clarity and connection.', body: `
             <p class="story-research-line"><strong>5 interviews</strong><span>500+ reviews</span><span>Heuristic evaluation</span></p>
             <div class="case-prose"><p>We combined listener interviews with Reddit and App Store reviews and an evaluation of the existing experience. The synthesis brought three design implications into focus.</p></div>
-            <div class="story-table-wrap" role="region" aria-label="Evidence to design implications; scroll horizontally on small screens" tabindex="0"><table class="story-evidence"><caption>From documented evidence to design implications</caption><thead><tr><th scope="col">Evidence</th><th scope="col">Insight</th><th scope="col">Design implication</th></tr></thead><tbody>
+            <div class="story-table-wrap" role="region" aria-label="Evidence to design implications; scroll horizontally on small screens" tabindex="0"><table class="story-evidence"><caption>Documented evidence → Design Implications</caption><thead><tr><th scope="col">Evidence</th><th scope="col">Insight</th><th scope="col">Design implication</th></tr></thead><tbody>
               <tr><td>Onboarding questions and flow created difficulty.</td><td>The first session needed less effort.</td><td>Clarify questions and remove unnecessary steps.</td></tr>
               <tr><td>Navigation and controls were hard to understand.</td><td>Useful features needed more visible entry points.</td><td>Surface settings and explain actions.</td></tr>
               <tr><td>Interview feedback expressed a desire for human interaction.</td><td>Connection mattered alongside content.</td><td>Explore dedications and episode-level participation.</td></tr>
@@ -109,13 +107,12 @@ export default function render(ctx) {
             <div class="case-prose"><p>The prototype links easier entry with ways to participate alongside the audio. Play each original interaction below; these are recorded prototypes, not a live service.</p></div>
             <div class="story-demos" role="region" aria-label="Three prototype recordings; scroll horizontally on small screens" tabindex="0">
               ${demonstration({id:'onboarding',title:'Start with relevant preferences.',description:'Clearer questions guide location and genre choices, helping listeners shape their experience before the first session.',poster:'iheart-flow-onboarding-start',label:'Play Onboarding',steps:['Start from account confirmation.','Enter listening location and choose genres.','Finish setup and start listening.']})}
-              ${demonstration({id:'dedication',title:'Make a song personal.',description:'I pitched and owned song dedication: a personal song-and-message flow, with confirmation that the request was sent.',poster:'iheart-flow-dedication-player',label:'Play Dedication',steps:['Open Shoutout a Song from the player.','Add sender, recipient, song and message.','Submit and see request-sent feedback.']})}
+              ${demonstration({id:'dedication',title:'Make a song personal.',description:'Listeners can also interact live on air with a personal song-and-message flow, with confirmation that the request was sent.',poster:'iheart-flow-dedication-player',label:'Play Dedication',steps:['Open Shoutout a Song from the player.','Add sender, recipient, song and message.','Submit and see request-sent feedback.']})}
               ${demonstration({id:'podcast',title:'Respond to an episode.',description:'Episode-level polls and comments give listeners a concrete way to participate in the conversation around the content.',poster:'iheart-flow-podcast-episode',label:'Play Podcast Flow',steps:['Open the episode detail.','Visit its poll and comments.','Select a poll response and explore discussion.']})}
             </div>`})}
 
           ${section({id: 'iheart-impact', title: 'A more engaging listening experience.', body: `
-            <div class="case-prose"><p>Online user testing with 45+ users showed an 18% increase in content engagement, contributing to longer listening sessions. Clearer onboarding and opportunities to participate helped make the experience more personal.</p></div>
-            <dl class="story-outcomes"><div><dt>Observed changes</dt><dd>Location surfaced in profile; Played state made explicit.</dd></div><div><dt>Demonstrated scope</dt><dd>Onboarding, song dedication, and podcast participation.</dd></div><div><dt>Validation</dt><dd>Online user testing with 45+ users.</dd></div></dl>`})}
+            <div class="iheart-impact"><div class="iheart-impact-number"><strong>18%</strong><span>Increase in content engagement</span></div><div class="case-prose"><p>Online user testing with 45+ users found that clearer onboarding and opportunities to participate contributed to longer listening sessions and stronger content engagement.</p></div></div>`})}
 
           ${section({id: 'iheart-reflection', title: 'Two lessons I’ll take forward.', body: `
             <div class="iheart-reflections">
