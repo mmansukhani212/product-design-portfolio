@@ -33,7 +33,7 @@ export default function render(ctx) {
       kicker: 'iHeart Media | Audio Streaming Mobile App',
       title: 'Making digital audio more personal and interactive for the next generation of listeners',
       summary: 'A redesigned listening experience that simplifies onboarding, personalizes discovery, and brings listeners closer through social interactions.',
-      tags: ['Consumer UX', 'Product Strategy', 'Interaction']
+      tags: ['Consumer UX', 'Product Strategy', 'Interaction Design']
     })}
     <div class="case-wrap">
       <div class="iheart-hero-art" aria-label="Listening home and connected player concepts">
@@ -117,7 +117,7 @@ export default function render(ctx) {
             <div class="case-prose"><p>Online user testing with 45+ users showed an 18% increase in content engagement, contributing to longer listening sessions. Clearer onboarding and opportunities to participate helped make the experience more personal.</p></div>
             <dl class="story-outcomes"><div><dt>Observed changes</dt><dd>Location surfaced in profile; Played state made explicit.</dd></div><div><dt>Demonstrated scope</dt><dd>Onboarding, song dedication, and podcast participation.</dd></div><div><dt>Validation</dt><dd>Online user testing with 45+ users.</dd></div></dl>`})}
 
-          ${section({id: 'iheart-reflection', title: 'What I’ll carry forward.', body: `
+          ${section({id: 'iheart-reflection', title: 'Two lessons I’ll take forward.', body: `
             <div class="iheart-reflections">
               <article><h3>Leading a design team means creating alignment, not controlling every decision.</h3><p>Working with a seven-person team taught me that effective product leadership is about creating alignment rather than directing every decision. Balancing different perspectives while maintaining a shared vision strengthened my ability to facilitate collaboration, communicate design rationale, and guide a team toward actionable outcomes.</p></article>
               <article><h3>Prioritization is about choosing what not to build.</h3><p>Exploring concepts ranging from karaoke to live discussions and song dedication reinforced the importance of strategic prioritization. I learned to evaluate ideas against user needs, feasibility, and product goals rather than pursuing every interesting opportunity. This experience strengthened my ability to turn broad creative exploration into a focused product direction.</p></article>

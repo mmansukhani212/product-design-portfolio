@@ -199,7 +199,7 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-impact', title: 'Making participation more accessible.',
-      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>42%</strong><span>Increase in community engagement · Beta testing</span></div><div><p>In beta testing with 30 Bloomington residents, proposal submissions reflected a reported 42% increase in community engagement compared with previous participation patterns. The visual planning sandbox gave residents a more accessible way to contribute ideas.</p></div></div>`,
+      body: `<div class="bp-impact"><div class="bp-impact-number"><strong>42%</strong><span>Increase in community engagement</span></div><div><p>In beta testing with 30 Bloomington residents, proposal submissions reflected a reported 42% increase in community engagement compared with previous participation patterns. The visual planning sandbox gave residents a more accessible way to contribute ideas.</p></div></div>`,
     })}
 
     ${section({

@@ -48,9 +48,9 @@ body:has(.block-party-page) .viewer-canvas{background:#f2edf5}
 .block-party-page .bp-story .preview-static .inspect-link{border-radius:18px}
 .block-party-page .bp-story .embed-host{width:100%;max-width:393px;margin-left:auto;margin-right:auto;background:#f8f7f3}
 .block-party-page .bp-story .embed-host iframe{width:100%;max-width:393px;height:auto;aspect-ratio:393/852}
-.block-party-page .bp-impact{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:start;padding:28px 0;border-top:1px solid var(--border)}
+.block-party-page .bp-impact{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:start;padding:28px 0;border-top:0}
 .block-party-page .bp-impact-number strong{display:block;font-size:100px;font-weight:600;line-height:1;letter-spacing:-.07em;color:var(--accent)}
-.block-party-page .bp-impact-number span{display:block;font-size:12px;line-height:1.8;max-width:180px;margin-top:14px;color:var(--muted)}
+.block-party-page .bp-impact-number span{display:block;font-size:14px;line-height:1.8;max-width:220px;margin-top:14px;color:var(--muted)}
 .block-party-page .bp-impact h3{font-size:23px;margin-bottom:14px}
 .block-party-page .bp-impact p{font-size:14px}
 @media(max-width:767px){
