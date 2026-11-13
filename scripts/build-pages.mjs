@@ -15,7 +15,7 @@ execFileSync(process.execPath, [path.join(root, 'scripts/render.mjs')], {cwd: ro
 const output = path.join(root, '_site');
 await rm(output, {recursive: true, force: true});
 await mkdir(output, {recursive: true});
-await cp(path.join(root, 'dist'), output, {recursive: true});
+await cp(path.join(root, 'dist'), output, {recursive: true, filter: source => path.relative(path.join(root, 'dist'), source).split(path.sep)[0] !== 'preview'});
 
 async function adapt(directory) {
   for (const entry of await readdir(directory, {withFileTypes: true})) {

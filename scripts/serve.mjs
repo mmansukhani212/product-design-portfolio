@@ -4,7 +4,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const root = path.resolve(fileURLToPath(new URL('../dist/', import.meta.url)));
 const port = Number(process.env.PORT || 4173);
-const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.ttf':'font/ttf','.pdf':'application/pdf','.mp4':'video/mp4','.txt':'text/plain; charset=utf-8'};
+const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.ttf':'font/ttf','.woff2':'font/woff2','.pdf':'application/pdf','.mp4':'video/mp4','.txt':'text/plain; charset=utf-8'};
 http.createServer(async (req,res) => {
   try {
     if (!['GET','HEAD'].includes(req.method)) {res.writeHead(405);res.end();return;}

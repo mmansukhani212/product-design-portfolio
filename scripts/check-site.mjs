@@ -35,6 +35,14 @@ export async function checkSite(root, base = '') {
   for (const file of files) {
     if (file.endsWith('.html')) {
       const html = await readFile(file, 'utf8');
+      const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(match => match[1]);
+      if (new Set(ids).size !== ids.length) throw Error(`Duplicate HTML id: ${file}`);
+      for (const match of html.matchAll(/<img\b[^>]*>/g)) {
+        if (!/\salt=["']/.test(match[0])) throw Error(`Image missing alt attribute: ${file}`);
+      }
+      for (const match of html.matchAll(/\baria-(?:controls|labelledby|describedby)=["']([^"']+)["']/g)) {
+        for (const id of match[1].split(/\s+/)) if (!ids.includes(id)) throw Error(`Missing ARIA target ${id}: ${file}`);
+      }
       if ((html.match(/<h1(?:\s|>)/g) || []).length !== 1) throw Error(`Expected one h1: ${file}`);
       if (/<iframe(?:\s|>)/.test(html)) throw Error(`Unexpected eager iframe: ${file}`);
       if (/Internal notes|mmansukh@iu\.edu/.test(html)) throw Error(`Internal or obsolete content: ${file}`);
