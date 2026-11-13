@@ -16,7 +16,7 @@ export default function render(ctx) {
     <dl class="story-change-reason"><div><dt>Initial approach</dt><dd>${e(d.before)}</dd></div><div><dt>Testing finding</dt><dd>${e(d.finding)}</dd></div><div><dt>Design change</dt><dd>${e(d.change)}</dd></div></dl>
     <div class="story-comparison" data-comparison>
       <div class="story-compare-controls" role="group" aria-label="${e(d.title)} versions" hidden><button type="button" data-compare-view="before" aria-pressed="true" aria-controls="${d.id}-before">Before</button><button type="button" data-compare-view="iteration" aria-pressed="false" aria-controls="${d.id}-iteration">Iteration</button></div>
-      <div class="story-compare-frames"><div id="${d.id}-before" data-compare-panel="before">${screen(d.beforeAsset,d.beforeAlt,'Before',742,1510)}</div><div id="${d.id}-iteration" data-compare-panel="iteration">${screen(d.afterAsset,d.afterAlt,'Iteration',742,1510)}</div></div>
+      <div class="story-compare-frames"><div id="${d.id}-before" data-compare-panel="before">${screen(d.beforeAsset,d.beforeAlt,'',742,1510)}</div><div id="${d.id}-iteration" data-compare-panel="iteration">${screen(d.afterAsset,d.afterAlt,'',742,1510)}</div></div>
     </div>
     <div class="story-detail">${screen(d.detail,d.detailAlt,'Control detail',d.detailWidth,d.detailHeight)}</div>
   </article>`;
