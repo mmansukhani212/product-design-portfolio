@@ -54,7 +54,6 @@ export function pageTools(site, e) {
       <div class="embed-host" id="${e(id)}-frame" hidden></div>
       <div class="preview-actions">${src ? `<button type="button" class="button load-demo" aria-controls="${e(id)}-frame">${e(loadLabel)} <span aria-hidden="true">↗</span></button><button type="button" class="text-link unload-demo" hidden>Return to Static Preview</button>` : ''}
       <a class="text-link" href="${e(externalUrl)}" target="_blank" rel="noopener">${src ? 'Open Demo in a New Tab' : externalUrl.includes('figma.com') ? 'Open Figma Prototype' : 'Open Original Source'} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div>
-      <p class="preview-status" role="status"></p>
     </section>`;
   const nextProject = project => `<nav class="next-project" aria-label="Next project"><div><p class="eyebrow">Next project</p><a href="/work/${e(project.slug)}"><h2>${e(project.name)} <span aria-hidden="true">↗</span></h2><p>${e(project.title)}</p></a></div></nav>`;
   return {site, e, media, section, caseHeader, overview, preview, nextProject, caseNav, productLink};

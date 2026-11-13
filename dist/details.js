@@ -78,7 +78,6 @@ for (const preview of document.querySelectorAll('[data-demo-src]')) {
   const unload = preview.querySelector('.unload-demo');
   const host = preview.querySelector('.embed-host');
   const poster = preview.querySelector('.preview-static');
-  const status = preview.querySelector('.preview-status');
   load.addEventListener('click', () => {
     const url = new URL(preview.dataset.demoSrc);
     if (!['https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'https://mmansukhani212.github.io/block-party/'].includes(url.href)) return;
@@ -87,15 +86,13 @@ for (const preview of document.querySelectorAll('[data-demo-src]')) {
     frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups');
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
     frame.src = url.href;
-    frame.addEventListener('load', () => {
-      status.textContent = 'Prototype requested. If it is blank or unavailable, use the external open link or return to the static preview.';
-    });
+    host.setAttribute('aria-busy', 'true');
+    frame.addEventListener('load', () => host.removeAttribute('aria-busy'));
     host.replaceChildren(frame);
     host.hidden = false;
     poster.hidden = true;
     load.hidden = true;
     unload.hidden = false;
-    status.textContent = 'Loading the external prototype…';
     unload.focus();
   });
   unload.addEventListener('click', () => {
@@ -104,7 +101,7 @@ for (const preview of document.querySelectorAll('[data-demo-src]')) {
     poster.hidden = false;
     load.hidden = false;
     unload.hidden = true;
-    status.textContent = 'Static preview restored. The demo has been unloaded.';
+    host.removeAttribute('aria-busy');
     load.focus();
   });
 }
