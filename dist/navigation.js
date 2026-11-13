@@ -25,8 +25,27 @@ document.querySelector('.site-header').addEventListener('focusout', event => {
 matchMedia('(min-width: 768px)').addEventListener('change', () => closeMenu());
 
 // Like the reference, reveal navigation in the opening area, not on every upward scroll.
+const scrollJump = document.querySelector('.scroll-jump');
+function updateScrollJump() {
+  const maxScroll = document.documentElement.scrollHeight - innerHeight;
+  const toTop = scrollY >= maxScroll / 2;
+  scrollJump.hidden = maxScroll <= 1;
+  scrollJump.dataset.direction = toTop ? 'top' : 'bottom';
+  const label = toTop ? 'Scroll to Top' : 'Scroll to Bottom';
+  scrollJump.setAttribute('aria-label', label);
+  scrollJump.title = label;
+}
+scrollJump.addEventListener('click', () => {
+  window.scrollTo({
+    top: scrollJump.dataset.direction === 'top' ? 0 : document.documentElement.scrollHeight,
+    behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+  });
+});
+window.addEventListener('resize', () => requestAnimationFrame(updateHeader));
+window.addEventListener('load', updateScrollJump);
 const header = document.querySelector('.site-header');
 const updateHeader = () => {
+  updateScrollJump();
   header.classList.toggle('is-away', scrollY > 1000 && !header.contains(document.activeElement));
 };
 let headerScheduled = false;

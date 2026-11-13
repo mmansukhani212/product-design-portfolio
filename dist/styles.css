@@ -56,3 +56,8 @@
 @media(max-width:959px){.project-panel .project-media{min-height:500px}.project-panel .project-media.rokt{min-height:400px}}
 @media(max-width:767px){.project-panel .project-media{padding:44px 28px;min-height:380px}.project-panel .project-media.rokt{min-height:300px}.project-media:before{inset:24px}.phone-duo{gap:14px}.project-panel .phone-duo img{border-radius:13px}}
 @media(prefers-reduced-motion:reduce){.project-media .thumbnail-art{transition:none;transform:none!important}}
+
+.scroll-jump{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:30;display:grid;place-items:center;width:48px;height:48px;padding:0;border:1px solid #1c4587;border-radius:50%;background:#fff;color:#1c4587;box-shadow:0 3px 12px #1c458714;cursor:pointer}
+.scroll-jump[hidden]{display:none}.scroll-jump[data-direction="top"] svg{transform:rotate(180deg)}.scroll-jump:focus-visible{outline:3px solid #1c4587;outline-offset:4px}
+@media(hover:hover){.scroll-jump:hover{background:#edf3fc}}
+@media(max-width:767px){.scroll-jump{right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));width:44px;height:44px}}
