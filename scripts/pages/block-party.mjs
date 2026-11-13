@@ -95,7 +95,7 @@ export default function render(ctx) {
     ${productLink('/demos/block-party/', 'Open Mobile Demo')}
 
     ${overview({
-      summary: '<p>Bloomington’s public input process for urban planning projects relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an interactive community planning mobile app. Its visual planning sandbox lets residents arrange predefined features such as parks and bike lanes, create proposals, vote, and share feedback—making neighborhood planning more accessible.</p>',
+      summary: '<p>Bloomington’s public input process for urban planning projects relied on newsletters, surveys, and council meetings, yet many younger residents were unaware of opportunities to participate. Research with residents and city planners led me to focus on civic-oriented residents aged 18–35 and make urban proposals easier to understand and respond to.</p><p>Working with the City Council of Bloomington, Indiana, I developed Block Party, an interactive community planning mobile app. Its visual planning sandbox lets residents arrange predefined features such as parks and bike lanes, create proposals, vote, and share feedback, making neighborhood planning more accessible.</p>',
       metadata: [
         ['My role', 'UX Designer'],
         ['Design scope', 'User research, participatory design, interaction design, prototyping, usability testing'],
@@ -145,7 +145,7 @@ export default function render(ctx) {
           <li><strong>One approach cannot fit every community.</strong> Different places and project types called for context-specific methods. Participatory workshops and interactive platforms offered promising directions.</li>
           <li><strong>Resources shape whose input is considered.</strong> Tight timelines and limited capacity could leave public involvement overlooked, despite its importance to long-term project sustainability.</li>
         </ul></div>
-        <aside class="bp-research-pivot"><h3>Narrowing the project scope was the turning point.</h3><p>The initial ambition—to standardize public input across urban design—was too broad for different places and projects. I narrowed it to Bloomington community projects overseen by the City Council, focusing on civic-oriented residents aged 18–35 who were underrepresented in existing channels. That focus made the problem practical to research and the proposed experience specific enough to design and test.</p></aside>`,
+        <aside class="bp-research-pivot"><h3>Narrowing the project scope was the turning point.</h3><p>The initial ambition of standardizing public input across urban design was too broad for different places and projects. I narrowed it to Bloomington community projects overseen by the City Council, focusing on civic-oriented residents aged 18–35 who were underrepresented in existing channels. That focus made the problem practical to research and the proposed experience specific enough to design and test.</p></aside>`,
     })}
 
     ${section({

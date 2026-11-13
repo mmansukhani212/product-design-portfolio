@@ -65,7 +65,7 @@ export default function render(ctx) {
       ])}
       <div class="case-reading-content rokt-story">
 
-      ${section({id:'rokt-problem',title:'A signal could be recorded—and still disappear.',body:`
+      ${section({id:'rokt-problem',title:'A signal could be recorded and still disappear.',body:`
         <div class="case-prose"><p>Gong recorded client calls, but competitor and churn mentions reached retention decision-makers only when an account manager passed them on. Updates arrived through Google Chat and personal spreadsheets, leaving stakeholders without a shared view of what had been heard or needed attention. Important signals could slip through the cracks or reach the right people too late to act.</p></div>
         <figure class="rokt-before-map">
           <ol>

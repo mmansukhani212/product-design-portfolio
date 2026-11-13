@@ -18,7 +18,7 @@ export default function render(ctx) {
     <header class="about-hero">
       <h1>Hi, I'm Monisha!</h1>
         <div class="about-intro-copy">
-          <p>I'm a multidisciplinary Product Designer with a background in architecture and a master's in Human-Computer Interaction and Design from Indiana University Bloomington. My journey from designing physical spaces to digital experiences has shaped how I approach design—combining spatial thinking, user research, and a systems perspective to create intuitive, meaningful products.</p>
+          <p>I'm a multidisciplinary Product Designer with a background in architecture and a master's in Human-Computer Interaction and Design from Indiana University Bloomington. My journey from designing physical spaces to digital experiences has shaped how I approach design, combining spatial thinking, user research, and a systems perspective to create intuitive, meaningful products.</p>
           <p>Today, I work at the intersection of design, strategy, and technology, turning complex problems into simple, human-centered solutions. From interfaces to AI-powered tools, I love bringing ideas to life while balancing form, function, and impact.</p>
           <p>Originally from Bangalore and now based in NYC, I enjoy collaborating across disciplines, exploring new ideas, and creating experiences that make a difference.</p>
         </div>
@@ -43,7 +43,7 @@ export default function render(ctx) {
       <div class="outside-copy">
         <h2 id="interests-title">Outside work</h2>
         <p>Away from my desk, you'll usually find me at the piano, lost in a book, or out on a hiking trail.</p>
-        <p>I love noticing the small details—with a camera in hand, exploring somewhere new, or taking a quick escape to the beach.</p>
+        <p>I love noticing the small details, whether through photography, exploring somewhere new, or taking a quick escape to the beach.</p>
       </div>
       <div class="outside-collage" role="group" aria-label="A few moments outside work">
         <div class="outside-photo-grid">

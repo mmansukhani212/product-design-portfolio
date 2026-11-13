@@ -96,7 +96,7 @@ export default function render(ctx) {
               </dl>
             </div>`})}
 
-          ${section({id: 'iheart-iteration', title: 'Testing changed where controls lived—and what they said.', body: `
+          ${section({id: 'iheart-iteration', title: 'Testing changed where controls lived and what they said.', body: `
             <div class="case-prose"><p>In usability sessions with 10+ users, we observed independent app exploration, including onboarding. We looked for confusion, frustration, and unmet expectations. Two findings led to more visible settings and clearer playback feedback.</p></div>
             <div class="story-iteration-grid">
               ${comparison({id:'location',title:'Put location where listeners looked for it.',before:'Location was nested under Advanced Settings.',finding:'Listeners expected it in account or profile settings.',change:'Surface location selection directly in the profile.',beforeAsset:'iheart-flow-location-before',afterAsset:'iheart-flow-location-after',beforeAlt:'Initial profile: location settings are under Advanced Settings.',afterAlt:'Iteration: the listening location is visible at the top of the profile.',detail:'iheart-flow-location-detail',detailAlt:'Magnified location selector showing Bloomington, IN.',detailWidth:487,detailHeight:144})}

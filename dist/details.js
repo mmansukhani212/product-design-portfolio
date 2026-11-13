@@ -83,7 +83,7 @@ for (const preview of document.querySelectorAll('[data-demo-src]')) {
     const url = new URL(preview.dataset.demoSrc);
     if (!['https://mmansukhani212.github.io/rokt-competitive-intelligence-dashboard/', 'https://mmansukhani212.github.io/block-party/'].includes(url.href)) return;
     const frame = document.createElement('iframe');
-    frame.title = `${document.title.split(' | ')[0]} — interactive prototype with mock data`;
+    frame.title = `${document.title.split(' | ')[0]}: interactive prototype with mock data`;
     frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups');
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
     frame.src = url.href;
