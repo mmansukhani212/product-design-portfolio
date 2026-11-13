@@ -15,7 +15,7 @@ export default function render(ctx) {
     ]}
   ];
   const walkthrough = `<div class="rokt-flow-tabs">
-    <div class="rokt-flow-tablist" role="tablist" aria-label="Choose an audience flow" hidden>${flows.map((flow,index)=>`<button type="button" role="tab" id="rokt-tab-${flow.id}" aria-controls="rokt-flow-${flow.id}" aria-selected="${index===0}" tabindex="${index===0 ? '0' : '-1'}">${e(flow.title)}</button>`).join('')}</div>
+    <div class="rokt-flow-tablist" role="tablist" aria-label="Choose an audience flow" hidden>${flows.map((flow,index)=>`<button type="button" role="tab" id="rokt-tab-${flow.id}" aria-controls="rokt-flow-${flow.id}" aria-selected="${index===0}" tabindex="${index===0 ? '0' : '-1'}"><span class="rokt-flow-tab-kicker">0${index+1} · ${index===0 ? 'Account manager' : 'Decision makers'}</span><strong>${e(flow.title)}</strong><span class="rokt-flow-tab-summary">${index===0 ? 'Review signals and track account health' : 'Monitor risk and explore competitor patterns'}</span></button>`).join('')}</div>
     ${flows.map(flow=>`<section class="rokt-flow" id="rokt-flow-${flow.id}" aria-labelledby="rokt-flow-${flow.id}-title">
       <h3 id="rokt-flow-${flow.id}-title">${e(flow.title)}</h3>
       <div class="rokt-flow-media"><video controls playsinline preload="none" width="1470" height="920" poster="/assets/rokt-flow-${flow.id}-poster.png" aria-labelledby="rokt-flow-${flow.id}-title" aria-describedby="rokt-flow-${flow.id}-steps"><source src="/assets/rokt-flow-${flow.id}.mp4" type="video/mp4">Use the link below to open this flow video.</video></div>
