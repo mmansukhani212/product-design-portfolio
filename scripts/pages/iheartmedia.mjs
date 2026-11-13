@@ -72,7 +72,7 @@ export default function render(ctx) {
                 <li><span class="story-stage">04 · Participate</span><strong>Look for a human connection</strong><p>Listening offered limited two-way interaction.</p></li>
               </ol>
             </figure>
-            <p class="story-hmw"><span>How might we</span> help younger listeners find relevant audio and connect with hosts and one another without friction?</p>`})}
+            <p class="story-hmw"><span>How might we</span> help iHeart listeners under 35 get to relevant audio with less effort and connect with hosts and one another for a more personal, engaging listening experience?</p>`})}
 
           ${section({id: 'iheart-discovery', title: 'Research pointed to clarity and connection.', body: `
             <p class="story-research-line"><strong>5 interviews</strong><span>500+ reviews</span><span>Heuristic evaluation</span></p>
