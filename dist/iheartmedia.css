@@ -42,6 +42,11 @@ body:has(.iheart-study) .viewer-canvas{background:#fff1f4}
 @media(max-width:767px){.iheart-story .story-journey ol{gap:12px}.iheart-story .story-journey li{padding:14px 12px}.iheart-story .story-stage{font-size:9px;margin-bottom:10px}.iheart-story .story-journey strong{font-size:13px}.iheart-story .story-journey li p{font-size:11px}.iheart-story .story-journey li::after{display:none}.iheart-story .story-hmw{font-size:19px;padding-left:17px}.iheart-story .story-research-line{gap:9px 17px;font-size:13px}.iheart-story .story-iteration-grid{grid-template-columns:1fr;gap:38px}.iheart-story .story-iteration h3{min-height:0}.iheart-story .story-comparison{padding:20px}.iheart-story .story-demos{display:flex;overflow-x:auto;scroll-snap-type:x proximity;gap:22px;padding-bottom:16px;scrollbar-width:thin;scrollbar-color:#c8798c var(--wash)}.iheart-story .story-demo{flex:0 0 min(260px,85%);scroll-snap-align:start}.iheart-story .story-demo h3{min-height:54px}.iheart-story .story-demo>p:not(.story-video-status){min-height:98px}.iheart-story .iheart-impact{grid-template-columns:1fr;gap:25px;padding-top:24px}.iheart-story .iheart-impact-number strong{font-size:84px}.iheart-story .iheart-impact-number span{max-width:none}.iheart-story .story-outcomes>div{grid-template-columns:110px minmax(0,1fr);gap:18px}.iheart-story .story-outcomes dd{font-size:13px}}
 
 .iheart-story :is(.story-table-wrap,.story-demos):focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+
+/* Match the split impact layout used in Block Party without changing type styles. */
+.iheart-story .iheart-impact{align-items:center}
+.iheart-story .iheart-impact-number{height:100%;padding-right:26px;border-right:1px solid var(--border)}
+@media(max-width:767px){.iheart-story .iheart-impact-number{height:auto;padding:0 0 18px;border-right:0;border-bottom:1px solid var(--border)}}
 .iheart-story :is(.story-table-wrap,.story-demos):focus-visible{outline-offset:-2px}
 
 .iheart-story .story-outcomes>div:last-child{border-bottom:0}
