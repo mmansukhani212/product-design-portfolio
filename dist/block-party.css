@@ -103,7 +103,7 @@ body:has(.block-party-page) .viewer-canvas{background:#f2edf5}
 .block-party-page .bp-feature-pair article{min-width:0}
 .block-party-page .bp-feature-pair h3{font-size:17px;min-height:2.8em;line-height:1.4;text-align:center;margin:0 0 16px}
 .block-party-page .bp-feature-pair .case-figure{max-width:260px;margin:0 auto}
-.block-party-page .bp-feature-pair article>p{font-size:12px;line-height:1.8;margin-top:16px}
+.block-party-page .bp-feature-pair article>p{font-size:12px;line-height:1.8;margin-top:16px;text-align:center}
 .block-party-page .bp-slide-arrow{display:grid;place-items:center;grid-row:1;width:44px;height:44px;border:1px solid var(--border);border-radius:50%;background:#fff;color:var(--deep);cursor:pointer;font-size:22px}
 .block-party-page .bp-slide-arrow:last-child{grid-column:3}
 .block-party-page .bp-slide-status{text-align:center;font-size:12px;margin-top:22px;color:var(--deep)}
