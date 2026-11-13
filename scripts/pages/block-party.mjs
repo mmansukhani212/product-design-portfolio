@@ -14,7 +14,6 @@ const conceptScenes = {
     </g>
     <path d="M242 78V45" stroke="#ab96bc" stroke-width="3"/><rect x="204" y="20" width="76" height="34" rx="6" fill="#fff" stroke="#ab96bc"/><text x="242" y="34" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor">COMMUNITY KIOSK</text><text x="242" y="46" text-anchor="middle" font-size="7" fill="currentColor">SCALE MODEL</text>
     <g fill="currentColor"><circle cx="28" cy="100" r="11"/><path d="M13 146v-22a15 15 0 0 1 30 0v22z"/><path d="M18 145v57m20-57v57" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="292" cy="100" r="11"/><path d="M277 146v-22a15 15 0 0 1 30 0v22z"/><path d="M282 145v57m20-57v57" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></g>
-    <path d="m41 122 30-11 29-4m179 15-26-9-22 5" fill="none" stroke="#ab96bc" stroke-width="7" stroke-linecap="round"/>
   </svg>`,
   ar: `<svg viewBox="0 0 320 240" role="img" aria-labelledby="bp-ar-title bp-ar-desc">
     <title id="bp-ar-title">Augmented reality concept</title><desc id="bp-ar-desc">A digital interpretation of the paper sketch: a phone overlays a proposed green space on an existing neighborhood street.</desc>
