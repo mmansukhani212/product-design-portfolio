@@ -118,19 +118,9 @@ export default function render(ctx) {
       <div class="case-reading-content bp-story">
 
     ${section({
-      id: 'block-party-problem', title: 'A proposal cannot invite input if people cannot picture it.',
-      body: `<div class="case-prose"><p>Bloomington’s existing input channels included newsletters, surveys, council meetings, and design presentations. Research exposed gaps in awareness, convenience, and visual context. I narrowed a broad urban-design ambition to community projects and civic-oriented residents aged 18–35.</p></div>
-        <figure class="bp-friction-map"><ol>
-          <li><span>01 · Discover</span><strong>Hear about a project</strong><p>Low awareness kept residents out of the conversation.</p></li>
-          <li><span>02 · Understand</span><strong>Picture the change</strong><p>Proposals were difficult to visualize in context.</p></li>
-          <li><span>03 · Contribute</span><strong>Make an opinion useful</strong><p>Input could arrive too late or be misinterpreted.</p></li>
-        </ol></figure>
-        <p class="bp-hmw"><span>How might we</span> improve the public input system for urban design projects in Bloomington to better engage younger residents?</p>
-        <div class="bp-table-wrap" role="region" aria-label="Research evidence and design implications; scroll on small screens" tabindex="0"><table class="bp-evidence"><caption><strong>Documented Findings → Design Implications</strong></caption><thead><tr><th scope="col">Evidence</th><th scope="col">Design implication</th></tr></thead><tbody>
-          <tr><td>Low awareness and inconvenient participation.</td><td>Let residents explore projects beyond a meeting.</td></tr>
-          <tr><td>Proposals shown without enough spatial context.</td><td>Locate a proposed change in its neighborhood.</td></tr>
-          <tr><td>Feedback could be misinterpreted.</td><td>Pair comments with visual ideas and project context.</td></tr>
-        </tbody></table></div>`,
+      id: 'block-party-problem', title: 'Younger residents were missing from the planning conversation.',
+      body: `<div class="case-prose"><p>Younger Bloomington residents were underrepresented in decisions about the neighborhoods they use every day. The public input process made it difficult to discover planning opportunities, understand proposed changes, and contribute ideas, leaving city planners with a limited view of community needs.</p></div>
+        <p class="bp-hmw"><span>How might we</span> improve the public input system for urban design projects in Bloomington to better engage younger residents?</p>`,
     })}
 
     ${section({
@@ -150,7 +140,7 @@ export default function render(ctx) {
             <li><span aria-hidden="true">03</span><strong>Context</strong><p>One method could not fit every community.</p></li>
             <li><span aria-hidden="true">04</span><strong>Capacity</strong><p>Tight timelines could sideline public input.</p></li>
           </ol></div>
-          <aside class="bp-research-pivot"><span class="bp-small-label">The Turning Point</span><h3>Narrow the scope. Make participation specific.</h3><p class="bp-scope-path"><span>Bloomington</span><span aria-hidden="true">→</span><span>Council Community Projects</span><span aria-hidden="true">→</span><span>Residents 18–35</span></p><p>A focused audience and local context made the problem feasible to research, design, and test.</p></aside>
+          <aside class="bp-research-pivot"><span class="bp-small-label">The Turning Point</span><h3>Narrow the scope. Make participation specific.</h3><p class="bp-scope-path"><span>Bloomington</span><span aria-hidden="true">→</span><span>Council Community Projects</span><span aria-hidden="true">→</span><span>Residents 18–35</span></p><p>A universal public-input system was too broad for different communities and project types. Focusing on one city, planning context, and audience made the problem feasible to research, design, and test.</p></aside>
         </div>`,
     })}
 
