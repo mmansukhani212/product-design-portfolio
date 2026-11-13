@@ -135,7 +135,7 @@ export default function render(ctx) {
 
     ${section({
       id: 'block-party-research', title: 'A narrower problem made meaningful participation possible.',
-      body: `<div class="case-prose"><p>My architecture work in India and experiences as a pedestrian in Bloomington raised the same question: how can residents help shape the places they use? I studied participation approaches, then investigated how Bloomington gathered public input.</p></div>
+      body: `<div class="case-prose"><p>My past work as an architect and experiences as a pedestrian in Bloomington raised the same question: how can residents help shape the places they use? I studied participation approaches, then investigated how Bloomington gathered public input.</p></div>
         <p class="bp-research-line"><strong>4 planning interviews</strong><strong>6 resident interviews</strong><span>Secondary research</span><span>Digital ethnography</span></p>
         <div class="case-prose bp-current-system"><h3>Understanding the current system</h3><p>Input came through newsletters and online surveys, public council meetings, and design presentations for larger projects. Interviews revealed that residents often did not know meetings were happening. Attendance represented only a small part of the community, while the effort involved discouraged participation.</p></div>
         <div class="bp-research-insights"><h3>What kept people out</h3><ul>
