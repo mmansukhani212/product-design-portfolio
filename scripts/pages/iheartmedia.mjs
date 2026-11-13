@@ -21,8 +21,8 @@ export default function render(ctx) {
     <div class="story-detail">${screen(d.detail,d.detailAlt,'Control detail',d.detailWidth,d.detailHeight)}</div>
   </article>`;
   const demonstration = d => `<article class="story-demo"><h3 id="demo-${d.id}-title">${e(d.title)}</h3><p>${e(d.description)}</p>
-    <div class="story-video-shell"><video id="demo-${d.id}" controls playsinline preload="none" width="398" height="802" poster="/assets/${d.poster}.webp" aria-labelledby="demo-${d.id}-title"><source src="/assets/iheart-demo-${d.id}.mp4" type="video/mp4">Use the link below to open this recording.</video></div>
-    <a class="text-link iheart-recording" href="/assets/iheart-demo-${d.id}.mp4" target="_blank" rel="noopener">Open Recording ↗<span class="sr-only"> (video, opens in a new tab)</span></a>
+    <div class="story-video-shell"><video id="demo-${d.id}" controls playsinline preload="none" width="448" height="960" poster="/assets/iheart-demo-${d.id}-poster.webp" aria-labelledby="demo-${d.id}-title"><source src="/assets/iheart-demo-${d.id}.mp4?v=2026-11-13-full-frame" type="video/mp4">Use the link below to open this recording.</video></div>
+    <a class="text-link iheart-recording" href="/assets/iheart-demo-${d.id}.mp4?v=2026-11-13-full-frame" target="_blank" rel="noopener">Open Recording ↗<span class="sr-only"> (video, opens in a new tab)</span></a>
     <details class="story-transcript"><summary>Text Walkthrough</summary><ol>${d.steps.map(step=>`<li>${e(step)}</li>`).join('')}</ol></details>
   </article>`;
 

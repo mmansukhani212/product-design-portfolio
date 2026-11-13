@@ -64,7 +64,7 @@ Public iHeartMedia copy credits the studio team and iHeartMedia research/product
 ## iHeartMedia visual story additions — November 11, 2026
 
 - `iheart-sketch-{episodes,chat,karaoke}.webp`: actual extracted sketch UI from the private source pack’s `17-sketch-podcast-list.png`, `19-sketch-live-chat.png`, and `22-sketch-karaoke-player.png`. Original proportions preserved; detailed source mapping remains in the local MANIFEST.json.
-- `iheart-demo-{onboarding,dedication,podcast}.mp4`: portrait crops of the existing supplied prototype recordings.398×802, H.264/MP4, network fast-start, original timing13.23/11.27/7.77s. Full originals unchanged in the local source pack; crop bounds and AVFoundation helper in USER_CONFIRMATIONS.md. Media loads only when requested and provides controls/external open links/text walkthroughs.
+- `iheart-demo-{onboarding,dedication,podcast}.mp4`: re-exported from the supplied original recordings at 448×960, H.264/MP4 with network fast-start. The complete 398×802 phone sits at (25,20), with a 138px bottom gutter to keep native playback controls below the interaction. Original audio streams are copied where present. Full originals remain unchanged; the reproducible helper is ../CASE_STUDY_SOURCE_DATA_2026-11-11/iheartmedia/export-safe-videos.py. Matching `iheart-demo-*-poster.webp` assets show the same uncropped framing. Media loads only when requested and retains controls, external links, and text walkthroughs.
 - Experience journey and evidence matrix: original selectable HTML explanations reconstructed from documented issues and user-confirmed research, labeled appropriately. No fabricated research artifact, new UI, quote or metric.
 
 
