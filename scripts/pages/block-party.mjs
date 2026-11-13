@@ -137,14 +137,21 @@ export default function render(ctx) {
       id: 'block-party-research', title: 'A narrower problem made meaningful participation possible.',
       body: `<div class="case-prose"><p>My past work as an architect and experiences as a pedestrian in Bloomington raised the same question: how can residents help shape the places they use? I studied participation approaches, then investigated how Bloomington gathered public input.</p></div>
         <p class="bp-research-line"><strong>4 planning interviews</strong><strong>6 resident interviews</strong><span>Secondary research</span><span>Digital ethnography</span></p>
-        <div class="case-prose bp-current-system"><h3>Understanding the current system</h3><p>Input came through newsletters and online surveys, public council meetings, and design presentations for larger projects. Interviews revealed that residents often did not know meetings were happening. Attendance represented only a small part of the community, while the effort involved discouraged participation.</p></div>
-        <div class="bp-research-insights"><h3>What kept people out</h3><ul>
-          <li><strong>Awareness comes before access.</strong> Poor outreach and inconvenient participation methods left younger and marginalized residents out of the conversation.</li>
-          <li><strong>Feeling heard affects willingness to engage.</strong> The literature connected unheard community voices with distrust and disengagement; participation needed a clearer sense of purpose.</li>
-          <li><strong>One approach cannot fit every community.</strong> Different places and project types called for context-specific methods. Participatory workshops and interactive platforms offered promising directions.</li>
-          <li><strong>Resources shape whose input is considered.</strong> Tight timelines and limited capacity could leave public involvement overlooked, despite its importance to long-term project sustainability.</li>
-        </ul></div>
-        <aside class="bp-research-pivot"><h3>Narrowing the project scope was the turning point.</h3><p>The initial ambition of standardizing public input across urban design was too broad for different places and projects. I narrowed it to Bloomington community projects overseen by the City Council, focusing on civic-oriented residents aged 18–35 who were underrepresented in existing channels. That focus made the problem practical to research and the proposed experience specific enough to design and test.</p></aside>`,
+        <div class="bp-participation-map">
+          <p class="bp-map-intro">Resident and planner interviews revealed gaps in awareness and access. Literature added concerns around trust, context, and capacity.</p>
+          <div class="bp-current-system"><h3>How input reached the city</h3><ul class="bp-input-channels">
+            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><div><strong>Newsletters &amp; Surveys</strong><p>Written updates and online input</p></div></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-6 9 6H3Zm2 3v6m5-6v6m4-6v6m5-6v6M3 21h18"/></svg><div><strong>Council Meetings</strong><p>Public discussion in person</p></div></li>
+            <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18M4 3v12h16V3M12 15v3m-4 3 4-3 4 3"/></svg><div><strong>Design Presentations</strong><p>For larger projects</p></div></li>
+          </ul></div>
+          <div class="bp-research-insights"><h3>Four barriers to meaningful participation</h3><ol>
+            <li><span aria-hidden="true">01</span><strong>Awareness</strong><p>Residents missed opportunities to participate.</p></li>
+            <li><span aria-hidden="true">02</span><strong>Trust</strong><p>Feeling unheard discouraged engagement.</p></li>
+            <li><span aria-hidden="true">03</span><strong>Context</strong><p>One method could not fit every community.</p></li>
+            <li><span aria-hidden="true">04</span><strong>Capacity</strong><p>Tight timelines could sideline public input.</p></li>
+          </ol></div>
+          <aside class="bp-research-pivot"><span class="bp-small-label">The Turning Point</span><h3>Narrow the scope. Make participation specific.</h3><p class="bp-scope-path"><span>Bloomington</span><span aria-hidden="true">→</span><span>Council Community Projects</span><span aria-hidden="true">→</span><span>Residents 18–35</span></p><p>A focused audience and local context made the problem feasible to research, design, and test.</p></aside>
+        </div>`,
     })}
 
     ${section({
