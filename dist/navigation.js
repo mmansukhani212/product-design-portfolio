@@ -6,11 +6,11 @@ function closeMenu(returnFocus = false) {
   nav.classList.remove('is-open');
   if (returnFocus) toggle.focus();
 }
-toggle.addEventListener('click', () => {
+toggle.addEventListener('click', event => {
   const open = toggle.getAttribute('aria-expanded') !== 'true';
   toggle.setAttribute('aria-expanded', String(open));
   nav.classList.toggle('is-open', open);
-  if (open) nav.querySelector('a').focus();
+  if (open && event.detail === 0) nav.querySelector('a').focus();
 });
 nav.addEventListener('click', event => {if(event.target.closest('a')) closeMenu();});
 document.addEventListener('keydown', event => {
@@ -20,7 +20,8 @@ document.addEventListener('click', event => {
   if (!event.target.closest('.header-inner')) closeMenu();
 });
 document.querySelector('.site-header').addEventListener('focusout', event => {
-  if (!event.currentTarget.contains(event.relatedTarget)) closeMenu();
+  // Touch browsers can omit the next focus target while a navigation link is being tapped.
+  if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) closeMenu();
 });
 matchMedia('(min-width: 768px)').addEventListener('change', () => closeMenu());
 
